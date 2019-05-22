@@ -153,19 +153,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-- DES" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-- const" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- DES/">使用DES加密信息</a>
+      <a class="article-title" href="/2019/05/22/- const/">ES6--let和const</a>
     </h1>
   
 
         
-        <a href="/2019/05/22/- DES/" class="archive-article-date">
+        <a href="/2019/05/22/- const/" class="archive-article-date">
   	<time datetime="2019-05-22T10:40:42.148Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
@@ -173,14 +173,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>DES是一种对称加密算法，所谓对称加密算法即：加密和解密使用相同密钥的算法;<br>DES加密算法出自IBM的研究，后来被美国政府正式采用，之后开始广泛流传;<br>DES算法在POS、ATM、磁卡及智能卡（IC卡）、加油站、高速公路收费站等领域被广泛应用;</p>
-</blockquote>
-<p><code>注意</code>：<code>DES加密和解密过程中，密钥长度都必须是8(8个字节)的倍数</code></p>
-<p></p><p style="color:white;background:#0f88eb;padding:10px;border-radius:3px;font-weight:900">常见算法分类</p><br><strong>线性散列算法（签名算法）</strong><p></p>
-<p>例如MD5、SHA1、HMAC</p>
+        <h3 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h3><p>es6新增let命令用来声明变量，使用let声明的变量具有以下特点：</p>
+<ul>
+<li>使用let声明的变量只在变量声明时所在的代码块内有效</li>
+<li>不存在变量提升现象</li>
+<li>块级作用域内，如果使用let声明变量，那么该变量就会被封闭在当前作用域内，不再受外部作用域的影响；</li>
+<li>在同一作用域内，不允许使用let重复声明同一变量</li>
+</ul>
         
-          <a class="article-more-a" href="/2019/05/22/- DES/#more">more >></a>
+          <a class="article-more-a" href="/2019/05/22/- const/#more">more >></a>
         
       
 
@@ -194,11 +195,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">加密</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DES</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">let</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">const</a>
         		</li>
       		
 		</ul>
@@ -208,7 +213,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- DES/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/22/- const/">展开全文 >></a>
         </p>
       
 
@@ -238,19 +243,19 @@
 
 
   
-    <article id="post-- cookie" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-- es6 (1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- cookie/">cookie</a>
+      <a class="article-title" href="/2019/05/22/- es6 (1)/">ES6--Map和WeakMap</a>
     </h1>
   
 
         
-        <a href="/2019/05/22/- cookie/" class="archive-article-date">
+        <a href="/2019/05/22/- es6 (1)/" class="archive-article-date">
   	<time datetime="2019-05-22T10:40:42.148Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
@@ -258,11 +263,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="cookie是什么"><a href="#cookie是什么" class="headerlink" title="cookie是什么"></a>cookie是什么</h3><p>当用户访问某些web站点时，这些站点会在用户本地的浏览器的本地硬盘上创建一个很小的文本文件用以存储一些信息，这个文件称之为cookie文件；</p>
-<p>cookie可以使用js操作，也可以使用其它语言操作；</p>
-<p>每一个cookie都是名值对的组合，如果有多个名值对，可以使用分好将他们分割，使用document.cookie属性设置或者后去与当前文档相关的所用cookie；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"userName=hehe"</span>;</span><br><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"pw=123123"</span>;</span><br></pre></td></tr></table></figure></p>
+        <blockquote>
+<p>Map和WeakMap是es6新增的数据结构，它们本质与对象一样，都是键值对的集合<br>但是他们与Object对象主要的不同是，键可以是各种类型的数值<br>而Object对象的键只能是字符串类型或者Symbol类型值；</p>
+</blockquote>
+<h3 id="Object数据结构"><a href="#Object数据结构" class="headerlink" title="Object数据结构"></a>Object数据结构</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> test = &#123;&#125;;</span><br><span class="line">obj[test] = <span class="string">"say hi"</span>;</span><br><span class="line">obj[<span class="string">"say"</span>] = <span class="string">"say hello"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj)<span class="comment">//&#123;[object Object]: "say hi", say: "say hello"&#125;</span></span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/05/22/- cookie/#more">more >></a>
+          <a class="article-more-a" href="/2019/05/22/- es6 (1)/#more">more >></a>
         
       
 
@@ -276,11 +282,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">cookie</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
         		</li>
       		
 		</ul>
@@ -290,7 +292,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- cookie/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/22/- es6 (1)/">展开全文 >></a>
         </p>
       
 
@@ -645,14 +647,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
@@ -662,6 +656,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">const</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -153,19 +153,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-- TypeScript (6)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-- TypeScript (5)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- TypeScript (6)/">TypeScript--函数</a>
+      <a class="article-title" href="/2019/05/22/- TypeScript (5)/">TypeScript--类</a>
     </h1>
   
 
         
-        <a href="/2019/05/22/- TypeScript (6)/" class="archive-article-date">
+        <a href="/2019/05/22/- TypeScript (5)/" class="archive-article-date">
   	<time datetime="2019-05-22T10:40:42.227Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
@@ -173,10 +173,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h2><p>相比于js里面的函数，ts里面的函数在创建时，要声明<strong>参数的类型</strong>，并且规定<strong>返回值的类型</strong>；</p>
-<h3 id="以函数声明的方式创建函数"><a href="#以函数声明的方式创建函数" class="headerlink" title="以函数声明的方式创建函数"></a>以函数声明的方式创建函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">gender: string,age: number</span>): <span class="title">string</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gender+age+<span class="string">"岁"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(person(<span class="string">"男"</span>,<span class="number">18</span>))<span class="comment">//男18岁</span></span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>es6中新增了class类的概念，javaScript中没有传统的类的概念<br>js中利用原型链完成继承，class只是模仿传统的继承方式，其本质仍然是使用prototype的委托机制<br>重点是要理解constructor、extends、super</p>
+</blockquote>
+<h2 id="传统js写法"><a href="#传统js写法" class="headerlink" title="传统js写法"></a>传统js写法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'他叫'</span> + <span class="keyword">this</span>.name + <span class="string">','</span> + <span class="keyword">this</span>.age + <span class="string">'岁'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person(<span class="string">'hehe'</span>, <span class="number">18</span>)</span><br><span class="line">person.say()<span class="comment">//他叫hehe,18岁</span></span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/05/22/- TypeScript (6)/#more">more >></a>
+          <a class="article-more-a" href="/2019/05/22/- TypeScript (5)/#more">more >></a>
         
       
 
@@ -200,7 +202,85 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- TypeScript (6)/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/22/- TypeScript (5)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-- TypeScript (3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/- TypeScript (3)/">TypeScript--泛型</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/- TypeScript (3)/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.211Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="泛型类型"><a href="#泛型类型" class="headerlink" title="泛型类型"></a>泛型类型</h3><p>泛型函数的目的就是为了保证传递进函数的参数类型与返回值类型完全一致；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如上，给identity添加了类型变量T，使用&lt;&gt;包裹，它可以捕获用户传入的类型，之后再次使用T当做返回值类型;</p>
+<p>泛型函数相较于普通函数，主要就是在函数签名声明的前面加上泛型类型参数&lt;类型&gt;<br>
+        
+          <a class="article-more-a" href="/2019/05/22/- TypeScript (3)/#more">more >></a>
+        
+      
+
+      
+    </p></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TypeScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/22/- TypeScript (3)/">展开全文 >></a>
         </p>
       
 
@@ -307,19 +387,19 @@
 
 
   
-    <article id="post-- TypeScript (1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-- TypeScript (2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- TypeScript (1)/">TypeScript--类型兼容</a>
+      <a class="article-title" href="/2019/05/22/- TypeScript (2)/">TypeScript--高级类型</a>
     </h1>
   
 
         
-        <a href="/2019/05/22/- TypeScript (1)/" class="archive-article-date">
+        <a href="/2019/05/22/- TypeScript (2)/" class="archive-article-date">
   	<time datetime="2019-05-22T10:40:42.211Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
@@ -327,16 +407,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="函数兼容"><a href="#函数兼容" class="headerlink" title="函数兼容"></a>函数兼容</h3><p>比较两个函数是否兼容，首先要看参数是否兼容，第二个还要看返回值是否兼容；</p>
-<h4 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> funcX = <span class="function">(<span class="params">num: number</span>) =&gt;</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> funcY = <span class="function">(<span class="params">num: number, str: string</span>) =&gt;</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">funcY = funcX;</span><br><span class="line"></span><br><span class="line">funcX = funcY;<span class="comment">//error</span></span><br></pre></td></tr></table></figure>
-<p>如上代码，将funcX赋值给funcY是成立的，但是将funcY赋值给funcX就会报错，也就是说只能从参数少的往参数多的函数赋值，反过来则不行，因为被赋值的函数必须找到对应的参数；<br>
+        <h3 id="keyof用法"><a href="#keyof用法" class="headerlink" title="keyof用法"></a>keyof用法</h3><p>keyof是索引类型查询操作符，假设T是一个类型，那么keyof T产生的类型是T的属性名称、字符串字面量类型构成的联合类型；注意：T是数据类型，而非数据本身；</p>
+<p>就像typeof查询数据类型一样，keyof查询索引类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">interface <span class="built_in">Map</span>&lt;T&gt; &#123;</span><br><span class="line">  [key: string]: T;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> keys: keyof <span class="built_in">Map</span>&lt;number&gt;;<span class="comment">//string</span></span><br></pre></td></tr></table></figure></p>
         
-          <a class="article-more-a" href="/2019/05/22/- TypeScript (1)/#more">more >></a>
+          <a class="article-more-a" href="/2019/05/22/- TypeScript (2)/#more">more >></a>
         
       
 
       
-    </p></div>
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -355,85 +434,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- TypeScript (1)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-- TypeScript (3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- TypeScript (3)/">TypeScript--泛型</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/22/- TypeScript (3)/" class="archive-article-date">
-  	<time datetime="2019-05-22T10:40:42.211Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="泛型类型"><a href="#泛型类型" class="headerlink" title="泛型类型"></a>泛型类型</h3><p>泛型函数的目的就是为了保证传递进函数的参数类型与返回值类型完全一致；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如上，给identity添加了类型变量T，使用&lt;&gt;包裹，它可以捕获用户传入的类型，之后再次使用T当做返回值类型;</p>
-<p>泛型函数相较于普通函数，主要就是在函数签名声明的前面加上泛型类型参数&lt;类型&gt;<br>
-        
-          <a class="article-more-a" href="/2019/05/22/- TypeScript (3)/#more">more >></a>
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TypeScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- TypeScript (3)/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/22/- TypeScript (2)/">展开全文 >></a>
         </p>
       
 
@@ -543,19 +544,19 @@
 
 
   
-    <article id="post-- TypeScript (2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-- TypeScript (1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- TypeScript (2)/">TypeScript--高级类型</a>
+      <a class="article-title" href="/2019/05/22/- TypeScript (1)/">TypeScript--类型兼容</a>
     </h1>
   
 
         
-        <a href="/2019/05/22/- TypeScript (2)/" class="archive-article-date">
+        <a href="/2019/05/22/- TypeScript (1)/" class="archive-article-date">
   	<time datetime="2019-05-22T10:40:42.211Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
@@ -563,15 +564,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="keyof用法"><a href="#keyof用法" class="headerlink" title="keyof用法"></a>keyof用法</h3><p>keyof是索引类型查询操作符，假设T是一个类型，那么keyof T产生的类型是T的属性名称、字符串字面量类型构成的联合类型；注意：T是数据类型，而非数据本身；</p>
-<p>就像typeof查询数据类型一样，keyof查询索引类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">interface <span class="built_in">Map</span>&lt;T&gt; &#123;</span><br><span class="line">  [key: string]: T;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> keys: keyof <span class="built_in">Map</span>&lt;number&gt;;<span class="comment">//string</span></span><br></pre></td></tr></table></figure></p>
+        <h3 id="函数兼容"><a href="#函数兼容" class="headerlink" title="函数兼容"></a>函数兼容</h3><p>比较两个函数是否兼容，首先要看参数是否兼容，第二个还要看返回值是否兼容；</p>
+<h4 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> funcX = <span class="function">(<span class="params">num: number</span>) =&gt;</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> funcY = <span class="function">(<span class="params">num: number, str: string</span>) =&gt;</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">funcY = funcX;</span><br><span class="line"></span><br><span class="line">funcX = funcY;<span class="comment">//error</span></span><br></pre></td></tr></table></figure>
+<p>如上代码，将funcX赋值给funcY是成立的，但是将funcY赋值给funcX就会报错，也就是说只能从参数少的往参数多的函数赋值，反过来则不行，因为被赋值的函数必须找到对应的参数；<br>
         
-          <a class="article-more-a" href="/2019/05/22/- TypeScript (2)/#more">more >></a>
+          <a class="article-more-a" href="/2019/05/22/- TypeScript (1)/#more">more >></a>
         
       
 
       
-    </div>
+    </p></div>
     <div class="article-info article-info-index">
       
       
@@ -590,7 +592,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- TypeScript (2)/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/22/- TypeScript (1)/">展开全文 >></a>
         </p>
       
 
@@ -781,86 +783,6 @@
 
 
   
-    <article id="post-- stream" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- stream/">NodeJs--Stream（流）</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/22/- stream/" class="archive-article-date">
-  	<time datetime="2019-05-22T10:40:42.195Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p style="padding:10px;background:#43853d;color:white;font-weight:900;border-radius:3px;">Stream(流)</p><br>Stream是一个抽象接口，Node中有很多对象实现了这个接口，例如，对http服务器发起请求的request对象就是一个Stream；<br><br><strong>Stream有四种流类型：</strong><br><br> - Readable：可读操作；<br> - Writable：可写操作；<br> - Duplex：可读可写操作；<br> - Transfrom：操作被写入数据，然后读出结果；<br><br><strong>所有的Stream对象都是EventEmitter的实例，常用事件有：</strong><br><br> - data：当有数据可读时触发；<br> - end：没有更多的数据可读时触发；<br> - error：在接收和写入过程中发生错误时触发；<br> - finish：所有数据已经被写入到底层系统时触发；<br><br>
-        
-          <a class="article-more-a" href="/2019/05/22/- stream/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">nodejs</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">stream</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- stream/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-- set" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -913,6 +835,86 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/22/- set/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-- stream" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/- stream/">NodeJs--Stream（流）</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/- stream/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.195Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p style="padding:10px;background:#43853d;color:white;font-weight:900;border-radius:3px;">Stream(流)</p><br>Stream是一个抽象接口，Node中有很多对象实现了这个接口，例如，对http服务器发起请求的request对象就是一个Stream；<br><br><strong>Stream有四种流类型：</strong><br><br> - Readable：可读操作；<br> - Writable：可写操作；<br> - Duplex：可读可写操作；<br> - Transfrom：操作被写入数据，然后读出结果；<br><br><strong>所有的Stream对象都是EventEmitter的实例，常用事件有：</strong><br><br> - data：当有数据可读时触发；<br> - end：没有更多的数据可读时触发；<br> - error：在接收和写入过程中发生错误时触发；<br> - finish：所有数据已经被写入到底层系统时触发；<br><br>
+        
+          <a class="article-more-a" href="/2019/05/22/- stream/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">nodejs</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">stream</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/22/- stream/">展开全文 >></a>
         </p>
       
 
@@ -1043,14 +1045,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
@@ -1060,6 +1054,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">const</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
               </li>
              
               <li class="article-tag-list-item">
