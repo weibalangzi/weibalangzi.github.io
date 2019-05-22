@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>ES6--Map和WeakMap | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="Map和WeakMap是es6新增的数据结构，它们本质与对象一样，都是键值对的集合但是他们与Object对象主要的不同是，键可以是各种类型的数值而Object对象的键只能是字符串类型或者Symbol类型值；  Object数据结构12345let obj = &amp;#123;&amp;#125;;let test = &amp;#123;&amp;#125;;obj[test] = &quot;say hi&quot;;obj[&quot;say&quot;]">
+<meta name="keywords" content="es6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="ES6--Map和WeakMap">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- es6 (1)/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="Map和WeakMap是es6新增的数据结构，它们本质与对象一样，都是键值对的集合但是他们与Object对象主要的不同是，键可以是各种类型的数值而Object对象的键只能是字符串类型或者Symbol类型值；  Object数据结构12345let obj = &amp;#123;&amp;#125;;let test = &amp;#123;&amp;#125;;obj[test] = &quot;say hi&quot;;obj[&quot;say&quot;]">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:38:37.145Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="ES6--Map和WeakMap">
+<meta name="twitter:description" content="Map和WeakMap是es6新增的数据结构，它们本质与对象一样，都是键值对的集合但是他们与Object对象主要的不同是，键可以是各种类型的数值而Object对象的键只能是字符串类型或者Symbol类型值；  Object数据结构12345let obj = &amp;#123;&amp;#125;;let test = &amp;#123;&amp;#125;;obj[test] = &quot;say hi&quot;;obj[&quot;say&quot;]">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- es6 (1)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      ES6--Map和WeakMap
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- es6 (1)/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:38:35.735Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <blockquote>
+<p>Map和WeakMap是es6新增的数据结构，它们本质与对象一样，都是键值对的集合<br>但是他们与Object对象主要的不同是，键可以是各种类型的数值<br>而Object对象的键只能是字符串类型或者Symbol类型值；</p>
+</blockquote>
+<h3 id="Object数据结构"><a href="#Object数据结构" class="headerlink" title="Object数据结构"></a>Object数据结构</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> test = &#123;&#125;;</span><br><span class="line">obj[test] = <span class="string">"say hi"</span>;</span><br><span class="line">obj[<span class="string">"say"</span>] = <span class="string">"say hello"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj)<span class="comment">//&#123;[object Object]: "say hi", say: "say hello"&#125;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>如上，当字符串“say”作为Object的键的时候，可以看到正常的键值对，但是当把对象test当做键的时候，该键被转换为字符串<code>[object Object]</code>，注意，这里的o一个为大写，一个为小写;</p>
+<h3 id="Map数据结构"><a href="#Map数据结构" class="headerlink" title="Map数据结构"></a>Map数据结构</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"><span class="keyword">let</span> test = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">obj.set(test, <span class="string">"hi"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(obj);<span class="comment">//Map(1) &#123;&#123;…&#125; =&gt; "hi"&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.get(test));<span class="comment">//hi</span></span><br></pre></td></tr></table></figure>
+<p>如上，和Object数据结构里的一样，同样是<code>console.log(obj)</code>但是并没有出现<code>[object Object]</code>，而是直接显示所定义的对象；</p>
+<p>由于Map对象的键可以是对象，所以只有对同一个对象的引用，Map对象才将其视为同一个键；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">test.set([<span class="string">"say"</span>], <span class="string">"hello"</span>)</span><br><span class="line"><span class="built_in">console</span>.log(test.get([<span class="string">"say"</span>]));<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
+<p>如上，尽管两个<code>[&quot;say&quot;]</code>看起来是一样的，但是两者在内存中的地址并不相同；</p>
+<p>而如果将以上代码修改一下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"><span class="keyword">let</span> hehe = [<span class="string">"say"</span>]</span><br><span class="line">test.set(hehe, <span class="string">"hello"</span>)</span><br><span class="line"><span class="built_in">console</span>.log(test.get(hehe)); <span class="comment">//hello</span></span><br></pre></td></tr></table></figure></p>
+<p>Map结构具有遍历器接口，所以可以使用展开运算符和for of循环遍历；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">    [<span class="string">"say"</span>, <span class="string">"hi"</span>],</span><br><span class="line">    [<span class="string">"talk"</span>, <span class="string">"hello"</span>]</span><br><span class="line">]);</span><br><span class="line"><span class="keyword">let</span> arr = [...test];</span><br><span class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//(2) [Array(2), Array(2)]</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="WeakMap数据结构"><a href="#WeakMap数据结构" class="headerlink" title="WeakMap数据结构"></a>WeakMap数据结构</h3><p>WeakMap结构与Map结构基本相似，但是WeakMap只接受对象作为键名，不接受其他类型的值作为键名，而且键名所指向的对象不计入垃圾回收机制；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">test.set(<span class="string">"say"</span>, <span class="string">"hi"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(test); <span class="comment">//Map(1) &#123;"say" =&gt; "hi"&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> test2 = <span class="keyword">new</span> <span class="built_in">WeakMap</span>();</span><br><span class="line">test2.set(<span class="string">"say"</span>, <span class="string">"hi"</span>);<span class="comment">//error</span></span><br><span class="line"><span class="built_in">console</span>.log(test2);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> test2 = <span class="keyword">new</span> <span class="built_in">WeakMap</span>();</span><br><span class="line">test2.set(&#123; <span class="attr">say</span>: <span class="string">""</span> &#125;, <span class="string">"hi"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(test2);<span class="comment">//WeakMap &#123;&#123;…&#125; =&gt; "hi"&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>WeakMap是弱引用，所以垃圾回收机制不将该引用考虑在内，其所对应的对象可能会被自动回收，对象呗回收后，WeakMap自动移除对应的键值对，WeakMap结构有助于防止内存泄漏；</p>
+<p>另外，WeakMap无法遍历，因为并没有遍历器接口；</p>
+
       
 
       
@@ -199,6 +215,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +239,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- set/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          ES6--Set和WeakSet
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- es6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6--Proxy和Reflect</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

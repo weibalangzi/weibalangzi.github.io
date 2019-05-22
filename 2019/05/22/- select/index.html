@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>javaScript--select控件 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="length长度获取select下拉菜单中选项的总数1234567&amp;lt;select name=&quot;select&quot; id=&quot;select&quot;&amp;gt;    &amp;lt;option value=&quot;1&quot;&amp;gt;a&amp;lt;/option&amp;gt;    &amp;lt;option value=&quot;2&quot;&amp;gt;b&amp;lt;/option&amp;gt;    &amp;lt;option value=&quot;3&quot;&amp;gt;c&amp;lt;/optio">
+<meta name="keywords" content="js,select">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="javaScript--select控件">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- select/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="length长度获取select下拉菜单中选项的总数1234567&amp;lt;select name=&quot;select&quot; id=&quot;select&quot;&amp;gt;    &amp;lt;option value=&quot;1&quot;&amp;gt;a&amp;lt;/option&amp;gt;    &amp;lt;option value=&quot;2&quot;&amp;gt;b&amp;lt;/option&amp;gt;    &amp;lt;option value=&quot;3&quot;&amp;gt;c&amp;lt;/optio">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:37:00.865Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="javaScript--select控件">
+<meta name="twitter:description" content="length长度获取select下拉菜单中选项的总数1234567&amp;lt;select name=&quot;select&quot; id=&quot;select&quot;&amp;gt;    &amp;lt;option value=&quot;1&quot;&amp;gt;a&amp;lt;/option&amp;gt;    &amp;lt;option value=&quot;2&quot;&amp;gt;b&amp;lt;/option&amp;gt;    &amp;lt;option value=&quot;3&quot;&amp;gt;c&amp;lt;/optio">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- select" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      javaScript--select控件
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- select/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:36:58.697Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h3 id="length长度"><a href="#length长度" class="headerlink" title="length长度"></a>length长度</h3><p>获取select下拉菜单中选项的总数<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"select"</span> <span class="attr">id</span>=<span class="string">"select"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"1"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"2"</span>&gt;</span>b<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"3"</span>&gt;</span>c<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"4"</span>&gt;</span>d<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"5"</span>&gt;</span>e<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sel = <span class="built_in">document</span>.getElementById(<span class="string">"select"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(sel.length)<span class="comment">//5</span></span><br></pre></td></tr></table></figure>
+<h3 id="multiple"><a href="#multiple" class="headerlink" title="multiple"></a>multiple</h3><p>设置或返回下拉列表是否可以选择多个项目<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sel = <span class="built_in">document</span>.getElementById(<span class="string">"select"</span>);</span><br><span class="line">sel.multiple = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="selectedIndex"><a href="#selectedIndex" class="headerlink" title="selectedIndex"></a>selectedIndex</h3><p>设置或返回下拉列表中被选项目的索引值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sel = <span class="built_in">document</span>.getElementById(<span class="string">"select"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(sel.selectedIndex);<span class="comment">//0</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="size属性"><a href="#size属性" class="headerlink" title="size属性"></a>size属性</h3><p>设置或返回下拉列表中的可见选项数目；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sel = <span class="built_in">document</span>.getElementById(<span class="string">"select"</span>);</span><br><span class="line">sel.size = <span class="number">2</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="value属性"><a href="#value属性" class="headerlink" title="value属性"></a>value属性</h3><p>设置或者返回select下拉菜单的value属性值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> op3 = <span class="built_in">document</span>.getElementById(<span class="string">"op3"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(op3.value);<span class="comment">//3</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="test属性"><a href="#test属性" class="headerlink" title="test属性"></a>test属性</h3><p>设置或者返回select下拉菜单的文本内容；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> op3 = <span class="built_in">document</span>.getElementById(<span class="string">"op3"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(op3.text); <span class="comment">//c</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="options集合"><a href="#options集合" class="headerlink" title="options集合"></a>options集合</h3><p>此属性返回包含下拉列表中的所用选项的一个集合；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sel = <span class="built_in">document</span>.getElementById(<span class="string">"select"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(sel.options); <span class="comment">//[option, option, option#op3, option, option]</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="add-方法"><a href="#add-方法" class="headerlink" title="add()方法"></a>add()方法</h3><p>向下拉列表添加一个下拉列表项目<br>语法结构：<code>select.add(option,before)</code><br>option：必需，要添加选项元素；<br>before：必需，在指定项之前添加；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newoption = <span class="built_in">document</span>.createElement(<span class="string">"option"</span>);</span><br><span class="line">newoption.text = <span class="string">"新添加项目"</span>;</span><br><span class="line">newoption.value = <span class="number">6</span>;</span><br><span class="line">sel.add(newoption, sel.options[<span class="number">5</span>]);</span><br></pre></td></tr></table></figure></p>
+<h3 id="remove-方法"><a href="#remove-方法" class="headerlink" title="remove()方法"></a>remove()方法</h3><p>从下拉列表中删除一个选项<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sel = <span class="built_in">document</span>.getElementById(<span class="string">"select"</span>);</span><br><span class="line"><span class="keyword">var</span> newoption = <span class="built_in">document</span>.createElement(<span class="string">"option"</span>);</span><br><span class="line">newoption.text = <span class="string">"新添加项目"</span>;</span><br><span class="line">newoption.value = <span class="number">6</span>;</span><br><span class="line">sel.add(newoption, sel.options[<span class="number">5</span>]);</span><br><span class="line"></span><br><span class="line">sel.remove(<span class="number">5</span>)</span><br></pre></td></tr></table></figure></p>
+<p>可以看到之前添加进去的option已经不存在了；</p>
+
       
 
       
@@ -199,6 +212,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">select</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +240,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- table/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          javaScript--table表格
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- cookie/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">cookie</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

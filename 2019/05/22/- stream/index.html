@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>NodeJs--Stream（流） | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="Stream(流)Stream是一个抽象接口，Node中有很多对象实现了这个接口，例如，对http服务器发起请求的request对象就是一个Stream；Stream有四种流类型： - Readable：可读操作； - Writable：可写操作； - Duplex：可读可写操作； - Transfrom：操作被写入数据，然后读出结果；所有的Stream对象都是EventEmitter的实例，常用">
+<meta name="keywords" content="nodejs,stream">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="NodeJs--Stream（流）">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- stream/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="Stream(流)Stream是一个抽象接口，Node中有很多对象实现了这个接口，例如，对http服务器发起请求的request对象就是一个Stream；Stream有四种流类型： - Readable：可读操作； - Writable：可写操作； - Duplex：可读可写操作； - Transfrom：操作被写入数据，然后读出结果；所有的Stream对象都是EventEmitter的实例，常用">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2015/09/bVcla61">
+<meta property="og:updated_time" content="2019-05-22T03:34:59.867Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="NodeJs--Stream（流）">
+<meta name="twitter:description" content="Stream(流)Stream是一个抽象接口，Node中有很多对象实现了这个接口，例如，对http服务器发起请求的request对象就是一个Stream；Stream有四种流类型： - Readable：可读操作； - Writable：可写操作； - Duplex：可读可写操作； - Transfrom：操作被写入数据，然后读出结果；所有的Stream对象都是EventEmitter的实例，常用">
+<meta name="twitter:image" content="http://www.runoob.com/wp-content/uploads/2015/09/bVcla61">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +153,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- stream" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      NodeJs--Stream（流）
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- stream/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:34:59.285Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <p style="padding:10px;background:#43853d;color:white;font-weight:900;border-radius:3px;">Stream(流)</p><br>Stream是一个抽象接口，Node中有很多对象实现了这个接口，例如，对http服务器发起请求的request对象就是一个Stream；<br><br><strong>Stream有四种流类型：</strong><br><br> - Readable：可读操作；<br> - Writable：可写操作；<br> - Duplex：可读可写操作；<br> - Transfrom：操作被写入数据，然后读出结果；<br><br><strong>所有的Stream对象都是EventEmitter的实例，常用事件有：</strong><br><br> - data：当有数据可读时触发；<br> - end：没有更多的数据可读时触发；<br> - error：在接收和写入过程中发生错误时触发；<br> - finish：所有数据已经被写入到底层系统时触发；<br><br><a id="more"></a><br> <p style="padding:10px;background:#43853d;color:white;font-weight:900;border-radius:3px;">Stream读写操作</p>
+
+<p><strong>写入流</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义将要写入的数据</span></span><br><span class="line"><span class="keyword">let</span> data = <span class="string">'helloKitty'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个可以写入的流，写入到文件test.txt中</span></span><br><span class="line"><span class="keyword">let</span> writerStream = fs.createWriteStream(<span class="string">'test.txt'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用urf8编码并写入数据</span></span><br><span class="line">writerStream.write(data,<span class="string">'UTF8'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//标记文件末尾</span></span><br><span class="line">writerStream.end();</span><br><span class="line"></span><br><span class="line"><span class="comment">//处理流事件</span></span><br><span class="line">writerStream.on(<span class="string">'finish'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'写入完成'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果产生错误，则抛出</span></span><br><span class="line">writerStream.on(<span class="string">'error'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err.stack);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><strong>读取流</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> data = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建可读流</span></span><br><span class="line"><span class="keyword">let</span> readerStream = fs.createReadStream(<span class="string">'test.txt'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置编码为utf8</span></span><br><span class="line">readerStream.setEncoding(<span class="string">'UTF8'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//处理流事件</span></span><br><span class="line">readerStream.on(<span class="string">'data'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">chunk</span>)</span>&#123;</span><br><span class="line">    data += chunk;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//读取完毕后</span></span><br><span class="line">readerStream.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data);<span class="comment">//helloKitty</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果抛出错误</span></span><br><span class="line">readerStream.on(<span class="string">'error'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err.stack)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p></p><p style="padding:10px;background:#43853d;color:white;font-weight:900;border-radius:3px;">管道流</p><br>管道提供了一个输出流到输入流的机制，通常用于从一个流中获取数据并将数据传递到另外一个流中；<br><img src="http://www.runoob.com/wp-content/uploads/2015/09/bVcla61" alt><br>如果将文件比作装水的桶，而水就是文件里内容，我们使用一根管子（pipe）连接两个桶使得水从一个桶流入到另一个桶，这样就慢慢的实现了大文件的复制过程；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个可读流</span></span><br><span class="line"><span class="keyword">let</span> readerStream = fs.createReadStream(<span class="string">'test.txt'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个可写流</span></span><br><span class="line"><span class="keyword">let</span> writerStream = fs.createWriteStream(<span class="string">'test1.txt'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//管道读写操作</span></span><br><span class="line">readerStream.pipe(writerStream);</span><br><span class="line"></span><br><span class="line"><span class="comment">//读取写入后的文件</span></span><br><span class="line">fs.readFile(<span class="string">'./test1.txt'</span>, <span class="string">'utf8'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data);<span class="comment">//helloKitty</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
+<p></p><p style="padding:10px;background:#43853d;color:white;font-weight:900;border-radius:3px;">链式流</p><br>链式是通过连接输出流到另一个流并创建多个流操作链的机制，链式流一般用于管道操作；<p></p>
+<p><strong>压缩文件</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> zlib = <span class="built_in">require</span>(<span class="string">'zlib'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//压缩文件</span></span><br><span class="line">fs.createReadStream(<span class="string">'test.txt'</span>)</span><br><span class="line">    .pipe(zlib.createGzip())</span><br><span class="line">    .pipe(fs.createWriteStream(<span class="string">'test.txt.gz'</span>))</span><br></pre></td></tr></table></figure></p>
+<p><strong>解压文件</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> zlib = <span class="built_in">require</span>(<span class="string">'zlib'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//解压文件</span></span><br><span class="line">fs.createReadStream(<span class="string">'test.txt.gz'</span>)</span><br><span class="line">    .pipe(zlib.createGunzip())</span><br><span class="line">    .pipe(fs.createWriteStream(<span class="string">'test.txt'</span>))</span><br></pre></td></tr></table></figure></p>
+
       
 
       
@@ -199,6 +210,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">nodejs</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">stream</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +238,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- DES/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          使用DES加密信息
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- nodejs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">NodeJs--路由、全局对象</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

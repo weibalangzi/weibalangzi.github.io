@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>ES6--解构赋值 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="数组解构赋值es6允许使用以下方式对变量进行声明并赋值1let [theName,age,address] = [&quot;hehe&quot;,18,&quot;china&quot;] 以上代码就是数组解构赋值，在es6中可以按照一定的模式从数组中提取值，然后给对应模式中的变量进行赋值，而这就是数组的解构赋值； 也可以嵌套多层进行赋值，只要两边模式一样就行；1let [theName,[age,gender],address] =">
+<meta name="keywords" content="es6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="ES6--解构赋值">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- es6 (3)/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="数组解构赋值es6允许使用以下方式对变量进行声明并赋值1let [theName,age,address] = [&quot;hehe&quot;,18,&quot;china&quot;] 以上代码就是数组解构赋值，在es6中可以按照一定的模式从数组中提取值，然后给对应模式中的变量进行赋值，而这就是数组的解构赋值； 也可以嵌套多层进行赋值，只要两边模式一样就行；1let [theName,[age,gender],address] =">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:39:35.980Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="ES6--解构赋值">
+<meta name="twitter:description" content="数组解构赋值es6允许使用以下方式对变量进行声明并赋值1let [theName,age,address] = [&quot;hehe&quot;,18,&quot;china&quot;] 以上代码就是数组解构赋值，在es6中可以按照一定的模式从数组中提取值，然后给对应模式中的变量进行赋值，而这就是数组的解构赋值； 也可以嵌套多层进行赋值，只要两边模式一样就行；1let [theName,[age,gender],address] =">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,52 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- es6 (3)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      ES6--解构赋值
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- es6 (3)/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:39:28.817Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h2 id="数组解构赋值"><a href="#数组解构赋值" class="headerlink" title="数组解构赋值"></a>数组解构赋值</h2><p>es6允许使用以下方式对变量进行声明并赋值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [theName,age,address] = [<span class="string">"hehe"</span>,<span class="number">18</span>,<span class="string">"china"</span>]</span><br></pre></td></tr></table></figure></p>
+<p>以上代码就是数组解构赋值，在es6中可以按照一定的模式从数组中提取值，然后给对应模式中的变量进行赋值，而这就是数组的解构赋值；</p>
+<p>也可以嵌套多层进行赋值，只要两边模式一样就行；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [theName,[age,gender],address] = [<span class="string">"hehe"</span>,[<span class="number">18</span>,<span class="string">"boy"</span>],<span class="string">"china"</span>]</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>如果解构赋值不成功，那么变量值为undefined<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [theName,age] = [<span class="string">"hehe"</span>]</span><br><span class="line"><span class="built_in">console</span>.log(theName);<span class="comment">//hehe</span></span><br><span class="line"><span class="built_in">console</span>.log(age);<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
+<p>也就是说等号左边的模式可不完全匹配右边的数组。</p>
+<p>而如果等号右侧不是数组，那就得分以下两种情况：<br>1、如果是对象，那么判断是否具有<a href="https://weibalangzi.github.io/2017/12/04/TypeScript--%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B/" target="_blank" rel="noopener">Iterator</a>接口；<br>2、如果是值类型，那么首先转换为对象，然后再判断这个对象是否具有Iterator接口；<br>只要有一个机构具有Iterator接口都可以进行数组解构赋值；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">obj[<span class="built_in">Symbol</span>.iterator] = <span class="function"><span class="keyword">function</span>*(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">yield</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">yield</span> <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">yield</span> <span class="number">3</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> [a, b, c] = obj;</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br><span class="line"><span class="built_in">console</span>.log(c);</span><br></pre></td></tr></table></figure></p>
+<p>解构赋值可以为模式中的变量指定默认值；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [age = <span class="number">18</span>,theName,address] = [<span class="literal">undefined</span>,<span class="string">"hehe"</span>,<span class="string">"china"</span>]</span><br></pre></td></tr></table></figure></p>
+<p>如上，如果变量对应的值严格等于undefined，那么就使用默认值；</p>
+<h2 id="对象结构赋值"><a href="#对象结构赋值" class="headerlink" title="对象结构赋值"></a>对象结构赋值</h2><p>感觉和数组解构差不多，只不过在匹配的时候除了匹配模式还会匹配属性名；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;<span class="attr">name</span>:theName,<span class="attr">age</span>:theAge,<span class="attr">address</span>:theAddress&#125; = &#123;<span class="attr">name</span>:<span class="string">"hehe"</span>,<span class="attr">age</span>:<span class="number">18</span>,<span class="attr">address</span>:<span class="string">"china"</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>就是这么简单，上面的代码还可以简化成下面这样：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;name,age,address&#125; = &#123;<span class="attr">name</span>:<span class="string">"hehe"</span>,<span class="attr">age</span>:<span class="number">18</span>,<span class="attr">address</span>:<span class="string">"china"</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>还可以对其作出修改：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;name,age,address&#125; = &#123;<span class="attr">age</span>:<span class="number">18</span>,<span class="attr">name</span>:<span class="string">"hehe"</span>,<span class="attr">address</span>:<span class="string">"china"</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>由此可知对象解构赋值对于顺序并没有要求，而如果没有找到同名属性，那么变量的值为undefined；</p>
+<h2 id="函数参数解构赋值"><a href="#函数参数解构赋值" class="headerlink" title="函数参数解构赋值"></a>函数参数解构赋值</h2><p>函数参数的解构赋值其实就是数组解构赋值和对象解构赋值在函数参数上的应用；<br>先举一个栗子；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">[theName,age]</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> str=<span class="string">""</span>;</span><br><span class="line">    str=theName+age+<span class="string">"岁"</span>;</span><br><span class="line">    <span class="keyword">return</span> str</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(person([<span class="string">"hehe"</span>,<span class="number">18</span>]))</span><br></pre></td></tr></table></figure></p>
+<p>再举一个栗子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">[theName,age]</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> str=<span class="string">""</span>;</span><br><span class="line">    str = theName+<span class="string">"age"</span>+<span class="string">"岁"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(person(&#123;<span class="attr">theName</span>:<span class="string">"hehe"</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;))</span><br></pre></td></tr></table></figure></p>
+<p>如上两个栗子，函数的参数分别为数组和对象，于是在传参的时候进行结构赋值及ok了；<br>所以说所谓函数参数解构赋值，无非是把之前的数组和参数当成了函数中的参数；</p>
+<h2 id="展开运算符"><a href="#展开运算符" class="headerlink" title="展开运算符"></a>展开运算符</h2><p>展开运算符用三个点（…）表示，它可以展开一个数据结构，比如一个数组；<br><strong>具有Iterator接口的对象都可以使用展开运算符</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">"hehe"</span>,<span class="number">18</span>,<span class="string">"china"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(...arr);<span class="comment">//hehe 18 china</span></span><br></pre></td></tr></table></figure></p>
+<p>在数组解构中的运用：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [theName,...detail] = [<span class="string">"hehe"</span>,<span class="number">18</span>,<span class="string">"china"</span>,<span class="string">"boy"</span>]</span><br><span class="line"><span class="built_in">console</span>.log(detail);<span class="comment">//[18, "china", "boy"]</span></span><br></pre></td></tr></table></figure></p>
+<p>如上，detail是由等号右侧剩余的数组元素构成的数组；<br>注意：展开运算符只能在函数参数或者数组文本中使用，不能像<code>let str=...arr</code>这样使用；</p>
+<p>在es6之前，还可以使用Function.prototype.apply方法来将一个数组展开成多个参数；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">theName,age,address</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [theName,age,address]</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> detail = [<span class="string">"hehe"</span>,<span class="number">18</span>,<span class="string">"china"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(person.apply(<span class="literal">null</span>,detail);<span class="comment">// ["hehe", 18, "china"]</span></span><br></pre></td></tr></table></figure></p>
+<p>现在可是直接使用展开运算符<code>person(...detail)</code></p>
+<p>也可以使用展开运算符实现数组合并效果：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line">arr1.push(...arr2)</span><br><span class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure></p>
+<p>可以将一个字符串转换成数组：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"say hi"</span>;</span><br><span class="line"><span class="built_in">console</span>.log([...str]);<span class="comment">//["s", "a", "y", " ", "h", "i"]</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="对象展开运算符"><a href="#对象展开运算符" class="headerlink" title="对象展开运算符"></a>对象展开运算符</h2><p>前面也介绍过，具有Iterator接口的对象可以使用展开运算符，es7中新增Object对象扩展运算符；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;theName,detail&#125; = &#123;<span class="attr">theName</span>:<span class="string">"hehe"</span>,<span class="attr">age</span>:<span class="number">18</span>,<span class="attr">gender</span>:<span class="string">"boy"</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(detail);<span class="comment">//&#123;age: 18, gender: "boy"&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>此外，对象也可以使用展开运算符合并：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj1 = &#123;</span><br><span class="line">    name: <span class="string">"hehe"</span>,</span><br><span class="line">    age: <span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;</span><br><span class="line">    gender: <span class="string">"boy"</span>,</span><br><span class="line">    hair: <span class="string">"black"</span>,</span><br><span class="line">    ...obj1</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj2);<span class="comment">//&#123;gender: "boy", hair: "black", name: "hehe", age: 18&#125;</span></span><br></pre></td></tr></table></figure></p>
+
       
 
       
@@ -199,6 +225,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +249,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- const/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          ES6--let和const
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- promise/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6--Promise</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

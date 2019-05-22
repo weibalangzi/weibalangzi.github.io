@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>SVG--基础 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="SVG是什么SVG(Scalable Vector Graphics)：可缩放矢量图形，它是基于可扩展标记语言（XML）（标准通用标记语言的子集），用于描述二维矢量图像的一种图形格式； 主要特点 SVG是可伸缩矢量图形； SVG用来定义用于网络的基于矢量的图形； SVG使用XML格式定义图形； SVG图像在放大或缩小的情况下，其图形质量不会受损失；">
+<meta name="keywords" content="svg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="SVG--基础">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- svg/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="SVG是什么SVG(Scalable Vector Graphics)：可缩放矢量图形，它是基于可扩展标记语言（XML）（标准通用标记语言的子集），用于描述二维矢量图像的一种图形格式； 主要特点 SVG是可伸缩矢量图形； SVG用来定义用于网络的基于矢量的图形； SVG使用XML格式定义图形； SVG图像在放大或缩小的情况下，其图形质量不会受损失；">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:36:35.990Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="SVG--基础">
+<meta name="twitter:description" content="SVG是什么SVG(Scalable Vector Graphics)：可缩放矢量图形，它是基于可扩展标记语言（XML）（标准通用标记语言的子集），用于描述二维矢量图像的一种图形格式； 主要特点 SVG是可伸缩矢量图形； SVG用来定义用于网络的基于矢量的图形； SVG使用XML格式定义图形； SVG图像在放大或缩小的情况下，其图形质量不会受损失；">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,91 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- svg" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      SVG--基础
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- svg/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:36:28.686Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h1 id="SVG是什么"><a href="#SVG是什么" class="headerlink" title="SVG是什么"></a>SVG是什么</h1><p>SVG(Scalable Vector Graphics)：可缩放矢量图形，它是基于可扩展标记语言（XML）（标准通用标记语言的子集），用于描述二维矢量图像的一种图形格式；</p>
+<h2 id="主要特点"><a href="#主要特点" class="headerlink" title="主要特点"></a>主要特点</h2><ul>
+<li>SVG是可伸缩矢量图形；</li>
+<li>SVG用来定义用于网络的基于矢量的图形；</li>
+<li>SVG使用XML格式定义图形；</li>
+<li><p>SVG图像在放大或缩小的情况下，其图形质量不会受损失；</p>
+<a id="more"></a>
+<h2 id="主要优势"><a href="#主要优势" class="headerlink" title="主要优势"></a>主要优势</h2></li>
+<li><p>SVG可被总舵工具读取和修改；</p>
+</li>
+<li>SVG与JPEG和GIF图像比起来，尺寸更小，且可压缩性更强；</li>
+<li>SVG图像中的文本是可选的，同时也是可搜索的（适合做地图）；</li>
+<li>SVG可以与Java技术一起运行；<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2>SVG代码其实就是标准的XML代码，代码既可以单独写入一个SVG文件，也可以直接内嵌在HTML代码中；</li>
+</ul>
+<p>svg文件是以.svg为后缀的文件；</p>
+<p><strong>首先要有一个XML声明</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>类似于h5的DTD声明，XML也有一个声明<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span>?&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>描述SVG的XML命名空间</strong><br>命名空间是通过xmlns属性规定的：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg xmlns=<span class="string">"http://www.w3.org/2000/svg"</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在HTML中也能找到相应的部分：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;html xmlns=<span class="string">"http://www.w3.org/1999/xhtml"</span> xml:lang=<span class="string">"en"</span> lang=<span class="string">"en"</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>创建SVG文件</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> standalone=<span class="string">"no"</span>?&gt;</span><br><span class="line">&lt;!DOCTYPE svg PUBLIC <span class="string">"-//W3C//DTD SVG 1.1//EN"</span> </span><br><span class="line"><span class="string">"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;svg width=<span class="string">"100%"</span> height=<span class="string">"100%"</span> version=<span class="string">"1.1"</span></span><br><span class="line">xmlns=<span class="string">"http://www.w3.org/2000/svg"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;rect width=<span class="string">"300"</span> height=<span class="string">"100"</span></span><br><span class="line">style=<span class="string">"fill:rgb(0,0,255);stroke-width:1;</span></span><br><span class="line"><span class="string">stroke:rgb(0,0,0)"</span>/&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/svg&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>创建的SVG文件必须以.svg后缀来保存；</p>
+<p>第一行包含了XML声明，standalone规定svg文件是独立的还是有对外部文件的引用，standalone=”no”表示SVG文档会引用一个外部文件，此处引用DTD文件；</p>
+<p>第二行和第三行引用了外部的DTD文件，该DTD位于W3C，含有所有允许的SVG元素；</p>
+<p>SVG代码以<code>&lt;svg&gt;</code>标签开始，以<code>&lt;/svg&gt;</code>标签结束，<code>width</code>和<code>height</code>属性可设置此SVG文档的宽度和高度，<code>version</code>属性可定义所使用的SVG的版本，xmlns属性可以定义SVG的命名空间；</p>
+<p><strong>嵌入HTML的SVG</strong><br>SVG不但可以单独形成一个文件，也可以直接嵌入到HTML代码中；<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>test<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">version</span>=<span class="string">"1.1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">circle</span></span></span><br><span class="line"><span class="tag">                <span class="attr">cx</span>=<span class="string">"100"</span> <span class="attr">cy</span>=<span class="string">"50"</span></span></span><br><span class="line"><span class="tag">                <span class="attr">r</span>=<span class="string">"40"</span></span></span><br><span class="line"><span class="tag">                <span class="attr">stroke</span>=<span class="string">"black"</span></span></span><br><span class="line"><span class="tag">                <span class="attr">stroke-width</span>=<span class="string">"5"</span></span></span><br><span class="line"><span class="tag">                <span class="attr">fill</span>=<span class="string">"green"</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"test.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>以上代码直接在HTML中嵌套了SVG代码，有两点需要注意的就是：XML声明不在需要；由于对SVG支持的问题，HTML的DTD应该采用HTML5的方式；</p>
+<h3 id="嵌入SVG的方式"><a href="#嵌入SVG的方式" class="headerlink" title="嵌入SVG的方式"></a>嵌入SVG的方式</h3><p>SVG文件可以通过以下标签嵌入HTML文档：<code>&lt;embed&gt;</code>、<code>&lt;object</code>、<code>&lt;iframe&gt;</code></p>
+<p><strong>使用<code>&lt;embed&gt;</code>标签</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;embed src=<span class="string">"test.svg"</span> width=<span class="string">"300"</span> height=<span class="string">"100"</span> type=<span class="string">"image/svg+xml"</span> pluginspage=<span class="string">"http://www.adobe.com/svg/viewer/install/"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>使用<code>&lt;object&gt;</code>标签</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;object data=<span class="string">"test.svg"</span> width=<span class="string">"300"</span> height=<span class="string">"100"</span> type=<span class="string">"image/svg+xml"</span> codebase=<span class="string">"http://www.adobe.com/svg/viewer/install/"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="SVG常用形状"><a href="#SVG常用形状" class="headerlink" title="SVG常用形状"></a>SVG常用形状</h2><p><code>矩形&lt;rect&gt;</code>、<code>圆形&lt;circle&gt;</code>、<code>椭圆&lt;ellipse&gt;</code>、<code>直线&lt;line&gt;</code>、<code>折线&lt;polyline&gt;</code>、<code>多边形&lt;polygon&gt;</code>、<code>路径&lt;path&gt;</code>、</p>
+<h2 id="SVG常用属性"><a href="#SVG常用属性" class="headerlink" title="SVG常用属性"></a>SVG常用属性</h2><p><code>x,y=&quot;起点坐标&quot;</code>、<code>r=&quot;半径&quot;</code>、<code>stroke=&quot;描边&quot;</code>、<code>stroke-width=&quot;边框宽度&quot;</code>、<code>fill=&quot;填充颜色&quot;</code></p>
+<h2 id="矩形"><a href="#矩形" class="headerlink" title="矩形"></a>矩形</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;rect x=<span class="string">"20"</span> y=<span class="string">"20"</span> width=<span class="string">"250"</span> height=<span class="string">"250"</span></span><br><span class="line">style=<span class="string">"fill:blue;stroke:pink;stroke-width:5;</span></span><br><span class="line"><span class="string">opacity:0.9"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="圆角矩形"><a href="#圆角矩形" class="headerlink" title="圆角矩形"></a>圆角矩形</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;rect x=<span class="string">"20"</span> y=<span class="string">"20"</span> rx=<span class="string">"10"</span> ry=<span class="string">"10"</span> width=<span class="string">"250"</span></span><br><span class="line">height=<span class="string">"100"</span> style=<span class="string">"fill:red;stroke:black;</span></span><br><span class="line"><span class="string">stroke-width:5;opacity:0.5"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<p>rx 和 ry 属性可使矩形产生圆角，如果是在圆形里面，rx和ry则表示圆点坐标；</p>
+<h2 id="圆形"><a href="#圆形" class="headerlink" title="圆形"></a>圆形</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;circle cx=<span class="string">"100"</span> cy=<span class="string">"50"</span> r=<span class="string">"40"</span> stroke=<span class="string">"black"</span></span><br><span class="line">stroke-width=<span class="string">"2"</span> fill=<span class="string">"red"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="椭圆"><a href="#椭圆" class="headerlink" title="椭圆"></a>椭圆</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;ellipse cx=<span class="string">"300"</span> cy=<span class="string">"150"</span> rx=<span class="string">"200"</span> ry=<span class="string">"80"</span></span><br><span class="line">style=<span class="string">"fill:rgb(200,100,50);</span></span><br><span class="line"><span class="string">stroke:rgb(0,0,100);stroke-width:2"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<p>cx属性定义圆点的x坐标<br>cy属性定义圆点的y坐标<br>rx属性定义水平半径<br>ry属性定义垂直半径</p>
+<h2 id="线条"><a href="#线条" class="headerlink" title="线条"></a>线条</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;line x1=<span class="string">"0"</span> y1=<span class="string">"0"</span> x2=<span class="string">"300"</span> y2=<span class="string">"300"</span></span><br><span class="line">style=<span class="string">"stroke:rgb(99,99,99);stroke-width:2"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="多边形"><a href="#多边形" class="headerlink" title="多边形"></a>多边形</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;polygon points=<span class="string">"220,100 300,210 170,250"</span></span><br><span class="line">style=<span class="string">"fill:#cccccc;</span></span><br><span class="line"><span class="string">stroke:#000000;stroke-width:1"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<p>points属性定义多边形每个角的x和y坐标</p>
+<h2 id="折线"><a href="#折线" class="headerlink" title="折线"></a>折线</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;polyline points=<span class="string">"0,0 0,20 20,20 20,40 40,40 40,60"</span></span><br><span class="line">style=<span class="string">"fill:white;stroke:red;stroke-width:2"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<p>points属性定义多边形每个角的x和y坐标</p>
+<h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;path d=<span class="string">"M250 150 L150 350 L350 350 Z"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="滤镜"><a href="#滤镜" class="headerlink" title="滤镜"></a>滤镜</h2><p><code>&lt;filter&gt;</code>标签用来定义SVG滤镜，该标签使用id属性来定义图形应用哪个滤镜；<br><code>&lt;filter&gt;</code>标签必须嵌套在<code>&lt;defs&gt;</code>标签内，<code>&lt;defs&gt;</code>标签是definitions的缩写，它允许对诸如滤镜等特殊元素进行定义</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;defs&gt;</span><br><span class="line">    &lt;filter id=<span class="string">"Gaussian_Blur"</span>&gt;</span><br><span class="line">        &lt;feGaussianBlur <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span> stdDeviation=<span class="string">"3"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/filter&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>defs&gt;</span><br><span class="line"></span><br><span class="line">&lt;ellipse cx=<span class="string">"200"</span> cy=<span class="string">"150"</span> rx=<span class="string">"70"</span> ry=<span class="string">"40"</span></span><br><span class="line">style=<span class="string">"fill:#ff0000;stroke:#000000;</span></span><br><span class="line"><span class="string">stroke-width:2;filter:url(#Gaussian_Blur)"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>&lt;filter&gt;</code>标签的id属性可为滤镜定义一个唯一的名称；</p>
+</li>
+<li><p>filter:url属性用来把元素链接到滤镜，当链接滤镜id时，必须使用#字符；</p>
+</li>
+<li>滤镜效果是通过<code>&lt;feGaussianBlur&gt;</code>标签进行定义的，fe后缀可用于所有的滤镜；</li>
+<li><code>&lt;feGaussianBlur</code>标签的stdDeviation属性可定义模糊的程度；</li>
+<li><p>in=”SourceGraphic”这个部分定义了由整个图像创建效果；</p>
+<h2 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;defs&gt;</span><br><span class="line">    &lt;linearGradient id=<span class="string">"orange_red"</span> x1=<span class="string">"0%"</span> y1=<span class="string">"0%"</span> x2=<span class="string">"100%"</span> y2=<span class="string">"0%"</span>&gt;</span><br><span class="line">        &lt;stop offset=<span class="string">"0%"</span> style=<span class="string">"stop-color:rgb(255,255,0);</span></span><br><span class="line"><span class="string">        stop-opacity:1"</span>/&gt;</span><br><span class="line">        &lt;stop offset=<span class="string">"100%"</span> style=<span class="string">"stop-color:rgb(255,0,0);</span></span><br><span class="line"><span class="string">        stop-opacity:1"</span>/&gt;</span><br><span class="line">    &lt;<span class="regexp">/linearGradient&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>defs&gt;</span><br><span class="line"></span><br><span class="line">&lt;ellipse cx=<span class="string">"200"</span> cy=<span class="string">"190"</span> rx=<span class="string">"85"</span> ry=<span class="string">"55"</span></span><br><span class="line">style=<span class="string">"fill:url(#orange_red)"</span>/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>&lt;linearGradient&gt;</code>标签的id属性可为渐变定义一个唯一的名称；</p>
+</li>
+<li>fill:url(#orange_red)属性吧ellipse元素链接到此渐变；</li>
+<li><code>&lt;linearGradient&gt;</code>标签的x1、x2、y1、y2属性可定义渐变的开始和结束位置；</li>
+<li>渐变的颜色范围可有两种或多种颜色组成，每种颜色通过一个<code>&lt;stop&gt;</code>标签来规定；offset属性用来定义渐变的开始和结束位置；<h2 id="给SVG添加链接"><a href="#给SVG添加链接" class="headerlink" title="给SVG添加链接"></a>给SVG添加链接</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg xmlns=<span class="string">"http://www.w3.org/2000/svg"</span> xmlns:xlink=<span class="string">"http://www.w3.org/1999/xlink"</span> width=<span class="string">"100%"</span> height=<span class="string">"100%"</span> version=<span class="string">"1.1"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;a xlink:href=<span class="string">"http://www.baidu.com"</span> target=<span class="string">"_blank"</span>&gt;</span><br><span class="line">&lt;rect x=<span class="string">"20"</span> y=<span class="string">"20"</span> width=<span class="string">"250"</span> height=<span class="string">"250"</span> style=<span class="string">"fill:blue;stroke:pink;stroke-width:5;opacity:0.9"</span>/&gt;</span><br><span class="line">&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;/</span>svg&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="给SVG添加事件"><a href="#给SVG添加事件" class="headerlink" title="给SVG添加事件"></a>给SVG添加事件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg xmlns=<span class="string">"http://www.w3.org/2000/svg"</span> xmlns:xlink=<span class="string">"http://www.w3.org/1999/xlink"</span> width=<span class="string">"100%"</span> height=<span class="string">"100%"</span> version=<span class="string">"1.1"</span>&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;rect x=<span class="string">"20"</span> y=<span class="string">"20"</span> width=<span class="string">"250"</span> height=<span class="string">"250"</span> style=<span class="string">"fill:blue;stroke:pink;stroke-width:5;opacity:0.9"</span> onclick=<span class="string">"say()"</span>/&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">say</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">11111</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;/</span>svg&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="给SVG添加动画"><a href="#给SVG添加动画" class="headerlink" title="给SVG添加动画"></a>给SVG添加动画</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg xmlns=<span class="string">"http://www.w3.org/2000/svg"</span> xmlns:xlink=<span class="string">"http://www.w3.org/1999/xlink"</span> width=<span class="string">"100%"</span> height=<span class="string">"100%"</span> version=<span class="string">"1.1"</span>&gt;</span><br><span class="line">    &lt;rect x=<span class="string">"20"</span> y=<span class="string">"20"</span> width=<span class="string">"250"</span> height=<span class="string">"250"</span> style=<span class="string">"fill:blue;stroke:pink;stroke-width:5;opacity:0.9"</span>&gt;</span><br><span class="line">        &lt;animate xmlns=<span class="string">"http://www.w3.org/2000/svg"</span> attributeType=<span class="string">"CSS"</span> attributeName=<span class="string">"opacity"</span> <span class="keyword">from</span>=<span class="string">"1"</span> to=<span class="string">"0"</span> dur=<span class="string">"5s"</span> repeatCount=<span class="string">"indefinite"</span>/&gt;</span><br><span class="line">    &lt;<span class="regexp">/rect&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>svg&gt;</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -199,6 +264,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">svg</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +288,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- 内存泄漏/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          JavaScript--垃圾回收机制
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- canvas/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">canvas基础知识</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

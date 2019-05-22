@@ -6,19 +6,35 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>canvas基础知识 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="canvas和svg的区别Canvas是使用JavaScript程序绘图，SVG是使用XML文档描述来绘图； 相对来说，SVG更时候用来做动态交互，而且SVG绘图很容易编辑，只需要增加或移除相应的元素就可以了； 同事SVG是基于矢量的，所以无论放大或者缩小，图形的质量都不会受到影响，而Canvas是基于位图的图像，放大会失真； 所以Canvas适合像素处理，动态渲染和大数据量绘制；SVG适合静态图">
+<meta name="keywords" content="canvas">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="canvas基础知识">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- canvas/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="canvas和svg的区别Canvas是使用JavaScript程序绘图，SVG是使用XML文档描述来绘图； 相对来说，SVG更时候用来做动态交互，而且SVG绘图很容易编辑，只需要增加或移除相应的元素就可以了； 同事SVG是基于矢量的，所以无论放大或者缩小，图形的质量都不会受到影响，而Canvas是基于位图的图像，放大会失真； 所以Canvas适合像素处理，动态渲染和大数据量绘制；SVG适合静态图">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:image" content="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/37980271.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/37411043.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/41781103.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/29772191.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/23645788.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/78166139.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/27996302.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/73933570.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/65148759.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/88895274.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/21148678.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/44617053.jpg">
+<meta property="og:image" content="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/53022912.jpg">
+<meta property="og:updated_time" content="2019-05-22T03:36:09.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="canvas基础知识">
+<meta name="twitter:description" content="canvas和svg的区别Canvas是使用JavaScript程序绘图，SVG是使用XML文档描述来绘图； 相对来说，SVG更时候用来做动态交互，而且SVG绘图很容易编辑，只需要增加或移除相应的元素就可以了； 同事SVG是基于矢量的，所以无论放大或者缩小，图形的质量都不会受到影响，而Canvas是基于位图的图像，放大会失真； 所以Canvas适合像素处理，动态渲染和大数据量绘制；SVG适合静态图">
+<meta name="twitter:image" content="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +166,104 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- canvas" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      canvas基础知识
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- canvas/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:36:02.499Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h1 id="canvas和svg的区别"><a href="#canvas和svg的区别" class="headerlink" title="canvas和svg的区别"></a>canvas和svg的区别</h1><p>Canvas是使用JavaScript程序绘图，SVG是使用XML文档描述来绘图；</p>
+<p>相对来说，SVG更时候用来做动态交互，而且SVG绘图很容易编辑，只需要增加或移除相应的元素就可以了；</p>
+<p>同事SVG是基于矢量的，所以无论放大或者缩小，图形的质量都不会受到影响，而Canvas是基于位图的图像，放大会失真；</p>
+<p>所以Canvas适合像素处理，动态渲染和大数据量绘制；SVG适合静态图片展示，高保真文档查看和打印的应用场景；<br><a id="more"></a></p>
+<h1 id="Canvas基本使用"><a href="#Canvas基本使用" class="headerlink" title="Canvas基本使用"></a>Canvas基本使用</h1><h4 id="创建画布"><a href="#创建画布" class="headerlink" title="创建画布"></a>创建画布</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"myCanvas"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果不给<code>&lt;canvas&gt;</code>设置width、height属性，则默认width为300、height为150；可以使用css属性来设置宽高，但是如果宽高属性和初始比例不一致，就会出现扭曲；</p>
+<h1 id="渲染上下文（The-Rending-Context）"><a href="#渲染上下文（The-Rending-Context）" class="headerlink" title="渲染上下文（The Rending Context）"></a>渲染上下文（The Rending Context）</h1><p><code>&lt;canvas&gt;</code>会创建一个固定大小的画布，会公开一个或多个<code>渲染上下文</code>，使用渲染上下文来绘制和处理想要展示的内容；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line"><span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>);<span class="comment">//获得2d上下文对象</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="检测支持性"><a href="#检测支持性" class="headerlink" title="检测支持性"></a>检测支持性</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(canvas.getContext)&#123;</span><br><span class="line">    <span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'浏览器不支持canvas'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="基本模板"><a href="#基本模板" class="headerlink" title="基本模板"></a>基本模板</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Canvas tutorial<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        canvas &#123;</span></span><br><span class="line"><span class="undefined">            border: 1px solid black;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"myCanvas"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'myCanvas'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span>(!canvas.getContext) <span class="keyword">return</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> ctx = canvas.getContext(<span class="string">"2d"</span>);</span></span><br><span class="line"><span class="javascript">        <span class="comment">//开始代码</span></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    draw();</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="绘制矩形"><a href="#绘制矩形" class="headerlink" title="绘制矩形"></a>绘制矩形</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!canvas.getContext) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">var</span> c = canvas.getContext(<span class="string">"2d"</span>);</span><br><span class="line">    c.fillStyle = <span class="string">"red"</span>;</span><br><span class="line">    c.fillRect(<span class="number">10</span>, <span class="number">10</span>, <span class="number">80</span>, <span class="number">40</span>)；<span class="comment">//绘制一个填充的矩形</span></span><br><span class="line">    c.strokeRect(<span class="number">10</span>,<span class="number">90</span>,<span class="number">80</span>,<span class="number">40</span>);<span class="comment">//绘制一个矩形的边框</span></span><br><span class="line">    c.clearRect(<span class="number">15</span>,<span class="number">15</span>,<span class="number">30</span>,<span class="number">30</span>);<span class="comment">//清除指定的矩形区域，使该区域透明</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">draw();</span><br></pre></td></tr></table></figure>
+<p>如上，绘制一个宽为80px，长为40px的长方形；</p>
+<h1 id="坐标点"><a href="#坐标点" class="headerlink" title="坐标点"></a>坐标点</h1><p>如下图所示，canvas元素默认被网格覆盖，网格中的一个单元相当于cnavas中的一个像素，栅格的起点为左上角，坐标为（0,0），所有元素的位置都相对于圆点来定位，所以图中蓝色方形左上角的坐标为激励左边x像素，距离上边y像素，坐标（x，y）；<br><img src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" alt></p>
+<h1 id="绘制路径"><a href="#绘制路径" class="headerlink" title="绘制路径"></a>绘制路径</h1><p>图形的基本元素是路径，路径是通过不同颜色和宽度的线段或曲线相连形成的不同形状的点的集合，一个路径，甚至一个子路径，都是闭合的；</p>
+<p>步骤：</p>
+<ul>
+<li>创建路径的起始点 <code>beginPath()</code></li>
+<li>调用绘制方法去绘制出路径 <code>moveTo(x,y)</code></li>
+<li>封闭路径 <code>closePath()</code></li>
+<li>通过描边或填充路径区域来渲染图形 <code>stroke()、fill()</code></li>
+</ul>
+<h1 id="绘制圆弧"><a href="#绘制圆弧" class="headerlink" title="绘制圆弧"></a>绘制圆弧</h1><p>有两个方法可以绘制圆弧：</p>
+<p>1、<code>arc(x,y,r,startAngle,endAngle,anticlockwise)</code><br>以（x，y）为圆心，以r为半径，从startAngle弧度开始到endAngle弧度结束，anticlosewise是布尔值，true表示逆时针，false表示顺时针，默认是顺时针；</p>
+<p>2、<code>arcTo（x1,y1,x2,y2,radius）</code><br>根据给定的控制点和变紧画一段圆弧，最后再以直线连接两个控制点</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c.beginPath();</span><br><span class="line">c.arc(<span class="number">50</span>, <span class="number">50</span>, <span class="number">40</span>, <span class="number">0</span>, <span class="built_in">Math</span>.PI / <span class="number">2</span>, <span class="literal">false</span>);</span><br><span class="line">c.stroke();<span class="comment">//绘制一段90度的圆弧</span></span><br></pre></td></tr></table></figure>
+<h1 id="添加样式和颜色"><a href="#添加样式和颜色" class="headerlink" title="添加样式和颜色"></a>添加样式和颜色</h1><p><code>fillstyle</code> 设置图形的填充颜色<br><code>strokeStyle</code> 设置圆形轮廓的颜色<br><code>lineWidth</code> 线条宽度<br><code>lineGap</code> 线条末端样式<br><code>lineJoin</code> 同一path内，设定线条与线条间结合处的样式<br><code>setLineDash</code> 虚线</p>
+<h1 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h1><p>canvas提供两种方法来渲染文本：</p>
+<p>1、<code>fillText(text,x,y[, maxWidth])</code><br>在指定的位置(x,y)填充指定的文本，绘制的最大宽度是可选的；</p>
+<p>2、<code>strokeText（text,x,y[, maxWidth])</code><br>在指定的位置（x，y）绘制文本边框，绘制的最大宽度是可选的；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c.font = <span class="string">"100px sans-serif"</span></span><br><span class="line">c.fillText(<span class="string">"一个文本"</span>, <span class="number">10</span>, <span class="number">100</span>);</span><br><span class="line">c.strokeText(<span class="string">"两个文本"</span>, <span class="number">10</span>, <span class="number">200</span>)</span><br></pre></td></tr></table></figure>
+<p><code>font = value</code> 文本样式<br><code>textAlign = value</code> 文本对齐<br><code>textBaseline = value</code> 基线对齐选项<br><code>direction = value</code> 文本方向</p>
+<h1 id="绘制文本-1"><a href="#绘制文本-1" class="headerlink" title="绘制文本"></a>绘制文本</h1><p>在canvas上可以直接绘制图片<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> Image();<span class="comment">//创建一个&lt;img&gt;元素</span></span><br><span class="line">img.src = url;<span class="comment">//设置图片源地址</span></span><br><span class="line">c.drawImage(img,<span class="number">0</span>,<span class="number">0</span>);<span class="comment">//参数1：要绘制的img 参数2，3：绘制的img在canvas中的坐标；</span></span><br></pre></td></tr></table></figure></p>
+<p>然而，由于图片是从网络加载的，所以还需要考虑图片尚未加载的情况；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> Image();</span><br><span class="line">img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    c.drawImage(img,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">&#125;</span><br><span class="line">img.src = url;</span><br></pre></td></tr></table></figure></p>
+<h1 id="状态的保存和恢复"><a href="#状态的保存和恢复" class="headerlink" title="状态的保存和恢复"></a>状态的保存和恢复</h1><p>save和restore方法是用来保存和恢复canvas状态的，都没有参数，而canvas的状态就是当前页面应用的所有样式和变形的一个快照；</p>
+<p><code>save()</code><br>Canvas状态存储在栈中，每当save()方法被调用后，当前的状态就会被推送到栈中保存，一个绘画状态包括：</p>
+<ul>
+<li>当前应用的变形（移动，旋转和缩放）</li>
+<li>strokeStyle,fillStyle等值</li>
+<li>当前的裁剪路径</li>
+</ul>
+<p><strong>可以任意多次调用save方法</strong>（类似数组的push()）<br><code>restore()</code><br>每一次调用restore方法，上一个保存的状态就从栈中弹出，所有设定都恢复，类似数组的pop()<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">c.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">150</span>, <span class="number">150</span>);</span><br><span class="line">c.save(); <span class="comment">//保存状态1</span></span><br><span class="line"></span><br><span class="line">c.fillStyle = <span class="string">'gray'</span>;</span><br><span class="line">c.fillRect(<span class="number">12</span>, <span class="number">12</span>, <span class="number">120</span>, <span class="number">120</span>);</span><br><span class="line">c.save(); <span class="comment">//保存状态2</span></span><br><span class="line"></span><br><span class="line">c.fillStyle = <span class="string">'pink'</span>;<span class="comment">//自定义状态</span></span><br><span class="line">c.fillRect(<span class="number">30</span>, <span class="number">30</span>, <span class="number">90</span>, <span class="number">90</span>);<span class="comment">//自定义状态</span></span><br><span class="line"></span><br><span class="line">c.restore();<span class="comment">//调用状态1</span></span><br><span class="line">c.fillRect(<span class="number">45</span>, <span class="number">45</span>, <span class="number">60</span>, <span class="number">60</span>)</span><br><span class="line"></span><br><span class="line">c.restore();<span class="comment">//调用状态2</span></span><br><span class="line">c.fillRect(<span class="number">60</span>, <span class="number">60</span>, <span class="number">30</span>, <span class="number">30</span>)</span><br></pre></td></tr></table></figure></p>
+<p>每次save一个状态就相当于在一个数组中push一个状态，而每次restoe一个状态则相当于在该数组中pop一个状态；</p>
+<h1 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h1><p>使用translate(x,y)来移动canvas的原点到指定的位置，translate方法接受两个参数，x是左右偏移量，y是上下偏移量；</p>
+<p><strong>注意在做变形之前先保存状态</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    c.save();<span class="comment">//保存原点的坐标信息</span></span><br><span class="line"></span><br><span class="line">    c.translate(<span class="number">100</span>, <span class="number">100</span>);<span class="comment">//移动原点坐标</span></span><br><span class="line">    c.strokeRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>);<span class="comment">//绘制矩形边框</span></span><br><span class="line"></span><br><span class="line">    c.restore();<span class="comment">//获取之前保存的原点坐标信息</span></span><br><span class="line">    c.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>);<span class="comment">//绘制矩形</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">draw();</span><br></pre></td></tr></table></figure></p>
+<p>如上，两个矩形设置的起点坐标一样，长宽一样，但是在画布上却并没有重叠，因为绘制第一个矩形时，原点坐标被改变了，而在绘制第二个矩形时，再次获取了之前保存的原点信息，绘制矩形的起点也就发生了改变；</p>
+<h1 id="rotate"><a href="#rotate" class="headerlink" title="rotate"></a>rotate</h1><p>rotate(angle)旋转坐标轴，这个方法只接受一个参数：旋转的角度（angle），它是顺时针方向的，以弧度为单位的值，而旋转的中心点则是坐标原点；<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/37980271.jpg" alt><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    c.save();</span><br><span class="line"></span><br><span class="line">    c.translate(<span class="number">200</span>, <span class="number">200</span>);</span><br><span class="line">    c.fillStyle = <span class="string">'gray'</span>;</span><br><span class="line">    c.rotate(<span class="number">90</span>);</span><br><span class="line">    c.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">    c.restore();</span><br><span class="line">    c.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">50</span>, <span class="number">50</span>);</span><br><span class="line">    c.fillStyle = <span class="string">'red'</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">draw();</span><br></pre></td></tr></table></figure></p>
+<p>如上，先保存最初的原点坐标信息，然后将坐标原点移动到（200,200）的地方，绘制矩形，再旋转90度；最后获取之前保存的原点坐标信息，再次绘制矩形；</p>
+<h1 id="scale"><a href="#scale" class="headerlink" title="scale"></a>scale</h1><p>scale(x,y)对形状，位图进行缩小或者放大；</p>
+<p>x和y表示缩放的量化参数，它们必须是正直，值比1小的表示缩小，比1大的则表示放大，值为1的当然就没什么效果；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    c.fillStyle = <span class="string">'gray'</span>;</span><br><span class="line"></span><br><span class="line">    c.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">    c.save()</span><br><span class="line"></span><br><span class="line">    c.translate(<span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">    c.fillStyle = <span class="string">'blue'</span>;</span><br><span class="line">    c.scale(<span class="number">1.5</span>, <span class="number">1.5</span>);</span><br><span class="line">    c.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">draw();</span><br></pre></td></tr></table></figure></p>
+<p>第二个矩形被放大了1.5倍，需要注意的是必须在定义起点和长宽之前，进行放大或者缩小的操作，即scale必须放在fillRect之前；</p>
+<h1 id="合成"><a href="#合成" class="headerlink" title="合成"></a>合成</h1><p>所谓合成就是处理两个图形产生交集之后的情况，使用属性<code>globalCompositeOperation</code>来规定产生交集之后的效果；</p>
+<h2 id="source-over-default"><a href="#source-over-default" class="headerlink" title="source-over(default)"></a>source-over(default)</h2><p><code>ctx.globalCompositeOperation = &quot;source-over&quot;</code>；<br><code>source-over</code>是默认的效果，即新图像会覆盖在原有的图像之上；</p>
+<h2 id="source-in"><a href="#source-in" class="headerlink" title="source-in"></a>source-in</h2><p>只显示出新图像与原来图像重叠的部分，其他区域都变成透明的（包括老图像和新图像没有重叠的地方）；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    c.fillStyle = <span class="string">'gray'</span>;</span><br><span class="line"></span><br><span class="line">    c.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">    c.save()</span><br><span class="line"></span><br><span class="line">    c.globalCompositeOperation = <span class="string">"source-in"</span></span><br><span class="line">    c.translate(<span class="number">50</span>, <span class="number">50</span>);</span><br><span class="line">    c.fillStyle = <span class="string">'blue'</span>;</span><br><span class="line">    c.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">&#125;</span><br><span class="line">draw();</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/37411043.jpg" alt></p>
+<h2 id="source-out"><a href="#source-out" class="headerlink" title="source-out"></a>source-out</h2><p>只显示新图像与老图像没有重叠的部分，老图像其余部分也不显示；<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/41781103.jpg" alt></p>
+<h2 id="source-stop"><a href="#source-stop" class="headerlink" title="source-stop"></a>source-stop</h2><p>新图像仅仅显示与老图像重叠区域，老图像仍然可以显示；<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/29772191.jpg" alt></p>
+<h2 id="destination-over"><a href="#destination-over" class="headerlink" title="destination-over"></a>destination-over</h2><p>新图像会在旧图像的下面<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/23645788.jpg" alt></p>
+<h2 id="destination-in"><a href="#destination-in" class="headerlink" title="destination-in"></a>destination-in</h2><p>只显示与新图像重叠部分的旧图像，其他区域透明<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/78166139.jpg" alt></p>
+<h2 id="destination-out"><a href="#destination-out" class="headerlink" title="destination-out"></a>destination-out</h2><p>只显示旧图像与新图像没有重叠的部分的旧图像<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/27996302.jpg" alt></p>
+<h2 id="destination-atop"><a href="#destination-atop" class="headerlink" title="destination-atop"></a>destination-atop</h2><p>显示新图像和重叠部分的旧图像<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/73933570.jpg" alt></p>
+<h2 id="lighter"><a href="#lighter" class="headerlink" title="lighter"></a>lighter</h2><p>新图像与旧图像都显示，但是重叠区域的颜色做加色处理<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/65148759.jpg" alt></p>
+<h2 id="darken"><a href="#darken" class="headerlink" title="darken"></a>darken</h2><p>保留重叠部分最黑的像素<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/88895274.jpg" alt></p>
+<h2 id="lighten"><a href="#lighten" class="headerlink" title="lighten"></a>lighten</h2><p>保留重叠部分最亮的像素<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/21148678.jpg" alt></p>
+<h2 id="xor"><a href="#xor" class="headerlink" title="xor"></a>xor</h2><p>重叠部分会变成透明<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/44617053.jpg" alt></p>
+<h2 id="copy"><a href="#copy" class="headerlink" title="copy"></a>copy</h2><p>只有新图像会被保留，其余的部分被清除；</p>
+<h1 id="裁剪路径"><a href="#裁剪路径" class="headerlink" title="裁剪路径"></a>裁剪路径</h1><p>clip()把已经创建的路径转换成裁剪路径。裁剪路径的作用是遮罩，只显示裁剪路径内的区域，裁剪路径外的区域会被隐藏；</p>
+<p>需要注意的是clip只能遮罩在这个方法调用之后绘制的图像，如果是clip方法调用之前绘制的图像，则无法实现遮罩；<br><img src="http://o7cqr8cfk.bkt.clouddn.com/17-6-10/53022912.jpg" alt></p>
+<h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><h2 id="动画的基本步骤"><a href="#动画的基本步骤" class="headerlink" title="动画的基本步骤"></a>动画的基本步骤</h2><p><strong>清空canvas</strong><br>在绘制每一帧动画之前，需要清空所有，清空所有最简单的做法就是clearRect()；</p>
+<p><strong>保存canvas状态</strong><br>如果在绘制的过程中会更改canvas的状态（颜色、移动了坐标原点等），又在绘制每一帧时都是原始状态的话，则最好保存下canvas的状态</p>
+<p><strong>绘制动画图形</strong><br>这一步才是真正的绘制动画帧</p>
+<p><strong>恢复canvas状态</strong><br>如果前面保存了canvas状态，则应该在绘制完成一帧之后恢复canvas状态；</p>
+<h2 id="控制动画"><a href="#控制动画" class="headerlink" title="控制动画"></a>控制动画</h2><p>可以通过canvas的方法或者自定义的方法把图像绘制到canvas上；而为了执行动画，我们需要一些可以定时执行重绘的方法；</p>
+<p>主要使用以下三个方法：</p>
+<ul>
+<li>setInterval()</li>
+<li>setTimeout()</li>
+<li>requestAnimationFrame()</li>
+</ul>
+
       
 
       
@@ -199,6 +292,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">canvas</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +316,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- svg/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          SVG--基础
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- DES/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用DES加密信息</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

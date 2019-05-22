@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="typeScript–枚举 首先，枚举是一种数据类型，就像boolean、string之类的一种数据类型。使用枚举可以定义一些有名字的数字常量，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。枚举类型使用enum进行定义12345678enum Direction&amp;#123;    Up=1,    Down,    Left,    Righ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="他的博客">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/typeScript--枚举/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="typeScript–枚举 首先，枚举是一种数据类型，就像boolean、string之类的一种数据类型。使用枚举可以定义一些有名字的数字常量，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。枚举类型使用enum进行定义12345678enum Direction&amp;#123;    Up=1,    Down,    Left,    Righ">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:40:51.612Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="他的博客">
+<meta name="twitter:description" content="typeScript–枚举 首先，枚举是一种数据类型，就像boolean、string之类的一种数据类型。使用枚举可以定义一些有名字的数字常量，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。枚举类型使用enum进行定义12345678enum Direction&amp;#123;    Up=1,    Down,    Left,    Righ">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +150,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-typeScript--枚举" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      back
-    </h1>
-  
-
-        
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h1 id="typeScript–枚举"><a href="#typeScript–枚举" class="headerlink" title="typeScript–枚举"></a>typeScript–枚举</h1><hr>
+<p>首先，枚举是一种数据类型，就像boolean、string之类的一种<strong>数据类型</strong>。<br>使用枚举可以<strong>定义</strong>一些<strong>有名字</strong>的<strong>数字常量</strong>，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。<br>枚举类型使用<strong>enum</strong>进行定义<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum Direction&#123;</span><br><span class="line">    Up=<span class="number">1</span>,</span><br><span class="line">    Down,</span><br><span class="line">    Left,</span><br><span class="line">    Right</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.info(Direction);<span class="comment">//一个对象</span></span><br><span class="line"><span class="built_in">console</span>.info(Direction.Down);<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
+<p>###console.log()与console.info()<br>在上面的代码中，使用到了console.info()，因为平时只是使用过console.log()，并没有使用过console.info()，所以刚看到的时候真的是一脸懵逼啊。</p>
+<p>查了一下才知道，console后面其实可以接上很多其它的参数，具体有哪些就不多说了，直接控制台console然后回车就能看到。</p>
+<p>关于console，常用的有一下几种：</p>
+<ol>
+<li>console.log用于输出普通信息；</li>
+<li>console.info用于输出提示性信息；</li>
+<li>console.error用于输出错误信息；</li>
+<li>console.warn用于输出警示信息；</li>
+</ol>
+<p>这些东西了解一下就好，重点还是来说一下枚举吧！</p>
+<p>先看以下代码：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Color &#123;</span><br><span class="line">  blue,</span><br><span class="line">  red,</span><br><span class="line">  yellow</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码表达的意思是声明一个枚举类型，该类型具有三个成员，默认情况下，从0开始为元素编号，并且依次递增1；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue,</span><br><span class="line">    red,</span><br><span class="line">    yellow</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Color.blue)<span class="comment">//0</span></span><br><span class="line"><span class="built_in">console</span>.log(Color.red)<span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(Color.yellow)<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
+<p>当然，也可以手动指定它们的值；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue=2,</span><br><span class="line">    red=1,</span><br><span class="line">    yellow=0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Color.blue)//2</span><br><span class="line">console.log(Color.red)//1</span><br><span class="line">console.log(Color.yellow)//0</span><br></pre></td></tr></table></figure></p>
+<p>还可以只指定部分的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue=2,</span><br><span class="line">    red,</span><br><span class="line">    yellow=0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Color.blue)//2</span><br><span class="line">console.log(Color.red)//3</span><br><span class="line">console.log(Color.yellow)//0</span><br></pre></td></tr></table></figure></p>
+<p>如果是没有被指定值得成员，其值为上一个成员的值+1后的结果；</p>
+<p>也可以由枚举值获取成员名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue=2,</span><br><span class="line">    red,</span><br><span class="line">    yellow=0</span><br><span class="line">&#125;</span><br><span class="line">let selectColor:string = Color[2];</span><br><span class="line">console.log(selectColor)//blue</span><br></pre></td></tr></table></figure></p>
+<p>但是，值得注意的一点是，不同枚举类型之间是不允许互相赋值的；</p>
+<p>在TypeScript2.4版本以后，枚举成员变量可以包含字符串：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    Red = &quot;RED&quot;,</span><br><span class="line">    Green,</span><br><span class="line">    Blue = &quot;BLUE&quot;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Color.Red)//RED</span><br><span class="line">console.log(Color.Green)//undefine</span><br></pre></td></tr></table></figure></p>
+<p>但是由上面的结果可以看到，如果某个没有赋值的成员，其前面一个成员的值是字符串，那么就不会出现什么+1了，字符串怎么咧，只能是undefine了；<br>使用已经定义的常数枚举成员的值初始化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue,</span><br><span class="line">    red=2,</span><br><span class="line">    yellow=red</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">console.log(Color.blue)//0</span><br><span class="line">console.log(Color.yellow)//2</span><br></pre></td></tr></table></figure></p>
+<p>不同的枚举类型，引用则需要使用限定名；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue,</span><br><span class="line">    red=2,</span><br><span class="line">    yellow=red</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">enum face&#123;</span><br><span class="line">    happy=Color.red</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(face.happy)//2</span><br></pre></td></tr></table></figure></p>
+<p>在常数枚举表达式中使用运算符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue,</span><br><span class="line">    red=1+2,</span><br><span class="line">    yellow=1*2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Color.red)//3</span><br><span class="line">console.log(Color.yellow)//2</span><br></pre></td></tr></table></figure></p>
+<p>常数枚举：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const enum Color &#123;</span><br><span class="line">    blue,</span><br><span class="line">    red,</span><br><span class="line">    yellow</span><br><span class="line">  &#125;</span><br><span class="line">  let colorArray = [Color.blue, Color.red, Color.yellow]//[0,1,2]</span><br></pre></td></tr></table></figure></p>
+<p>常数枚举只能使用常数表达式，并且不同于常规枚举的是，它们在编译阶段就会被删除，常数枚举成员在使用的地方被内联进来，因为常数枚举不可能有计算成员；</p>
+<p>外部枚举：<br>外部枚举用来描述已经存在的枚举类型的形状,所以。。。形状是什么鬼？？？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">declare enum Enum &#123;</span><br><span class="line">    A = 1,</span><br><span class="line">    B,</span><br><span class="line">    C = 2</span><br><span class="line">&#125;</span><br><span class="line">console.log(Enum.B)</span><br></pre></td></tr></table></figure></p>
+<p>查了一下资料，说是外部枚举的作用就是为了避免重复的问题，即，如果其他的文件中定义有相同的枚举对象，为了避免相同的枚举对象里定义相同枚举名称带来的冲突，这样定义了以后，重复的名称就不能再使用了</p>
+<p>总的来说，一个枚举类型可以包含零个或者多个枚举成员；<br>枚举成员具有一个数字值，可以是常数，或者是计算得出的值；</p>
+
       
 
       
@@ -212,15 +226,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          G2图表的使用
-        
-      </div>
-    </a>
   
+    <a href="/2019/05/22/- TypeScript (6)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">TypeScript--函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>TypeScript--函数 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="函数类型相比于js里面的函数，ts里面的函数在创建时，要声明参数的类型，并且规定返回值的类型； 以函数声明的方式创建函数1234function person(gender: string,age: number): string&amp;#123;    return gender+age+&quot;岁&quot;&amp;#125;console.log(person(&quot;男&quot;,18))//男18岁">
+<meta name="keywords" content="TypeScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="TypeScript--函数">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- TypeScript (6)/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="函数类型相比于js里面的函数，ts里面的函数在创建时，要声明参数的类型，并且规定返回值的类型； 以函数声明的方式创建函数1234function person(gender: string,age: number): string&amp;#123;    return gender+age+&quot;岁&quot;&amp;#125;console.log(person(&quot;男&quot;,18))//男18岁">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:40:43.388Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="TypeScript--函数">
+<meta name="twitter:description" content="函数类型相比于js里面的函数，ts里面的函数在创建时，要声明参数的类型，并且规定返回值的类型； 以函数声明的方式创建函数1234function person(gender: string,age: number): string&amp;#123;    return gender+age+&quot;岁&quot;&amp;#125;console.log(person(&quot;男&quot;,18))//男18岁">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- TypeScript (6)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      TypeScript--函数
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- TypeScript (6)/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:40:36.272Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h2 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h2><p>相比于js里面的函数，ts里面的函数在创建时，要声明<strong>参数的类型</strong>，并且规定<strong>返回值的类型</strong>；</p>
+<h3 id="以函数声明的方式创建函数"><a href="#以函数声明的方式创建函数" class="headerlink" title="以函数声明的方式创建函数"></a>以函数声明的方式创建函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">gender: string,age: number</span>): <span class="title">string</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gender+age+<span class="string">"岁"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(person(<span class="string">"男"</span>,<span class="number">18</span>))<span class="comment">//男18岁</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="以表达式的方式创建函数"><a href="#以表达式的方式创建函数" class="headerlink" title="以表达式的方式创建函数"></a>以表达式的方式创建函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = <span class="function"><span class="keyword">function</span>(<span class="params">gender: string,age: number</span>): <span class="title">string</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gender+age+<span class="string">"岁"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(person(<span class="string">"男"</span>,<span class="number">18</span>))<span class="comment">//男18岁</span></span><br></pre></td></tr></table></figure>
+<h3 id="显示的给出所有数据类型，完整写法如下"><a href="#显示的给出所有数据类型，完整写法如下" class="headerlink" title="显示的给出所有数据类型，完整写法如下"></a>显示的给出所有数据类型，完整写法如下</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person:<span class="function">(<span class="params">gender: string,age: number</span>)=&gt;</span>string=</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">gender: string,age: number</span>): <span class="title">string</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> gender+age+<span class="string">"岁"</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="built_in">console</span>.log(person(<span class="string">"男"</span>,<span class="number">18</span>))<span class="comment">//男18岁</span></span><br></pre></td></tr></table></figure>
+<p>ts中函数的类型必须是完整的，即便函数没有返回值，也要显式的规定void</p>
+<h2 id="可选参数和默认参数"><a href="#可选参数和默认参数" class="headerlink" title="可选参数和默认参数"></a>可选参数和默认参数</h2><p>ts中关于函数传参的规定：给一个函数的参数个数必须与函数期望的参数个数一致；</p>
+<p>同时，ts也给出了可选参数和默认参数；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name: string,age?: number</span>): <span class="title">string</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> name+age+<span class="string">"岁"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Person(<span class="string">"hehe"</span>))<span class="comment">//heheundefined岁</span></span><br></pre></td></tr></table></figure></p>
+<p>如果不添加问号，则在编译成js时会报错；<br>由此可知，<strong>在参数名称后面加一个问号(?)可以规定此参数为可选参数，那么此参数可以省略</strong>；</p>
+<h2 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h2><p>可以为参数提供一个默认值，当没有传递参数值或传递的值是undefined时，就使用默认参数值；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name: string,age = <span class="number">18</span></span>): <span class="title">string</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> name+age+<span class="string">"岁"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Person(<span class="string">"hehe"</span>))<span class="comment">//hehe18岁</span></span><br></pre></td></tr></table></figure></p>
+<p>默认参数就是直接把参数类型替换成默认值就行了，注意是赋值，所以要使用等号=；</p>
+<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>箭头函数就没什么好说的了，只要记住箭头函数可以捕获它声明时所在的上下文中的this的指向；</p>
+<h2 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h2><p>函数重载就是指同一个函数，根据传递的参数不同，会有不同的表现形式；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">x: any</span>): <span class="title">any</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> x == <span class="string">"number"</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> x+<span class="number">1</span></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">typeof</span> x == <span class="string">"string"</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> x+<span class="string">"hi"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Person(<span class="string">"hehe"</span>))<span class="comment">//hehehi</span></span><br><span class="line"><span class="built_in">console</span>.log(Person(<span class="number">1</span>))<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
+
       
 
       
@@ -199,6 +213,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TypeScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +237,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/typeScript--枚举/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          (no title)
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- TypeScript (5)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">TypeScript--类</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

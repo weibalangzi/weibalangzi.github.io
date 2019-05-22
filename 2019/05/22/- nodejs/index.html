@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>NodeJs--路由、全局对象 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="路由机制所谓路由，可以用一句话简单的概括，即通过路由定义匹配规则，url匹配正则，匹配通过就加载对应数据和模板 后端路由浏览器在地址栏中切换不同的url时，每次都向后台服务器发出请求，服务器相应请求，在后台拼接html文件传给前端显示，java web中的jsp就是如此实现的； 常用的后台MVC模式的基本路由处理流程：  浏览器输入一个url请求 从请求中找到Controller和Action的值">
+<meta name="keywords" content="路由,nodejs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="NodeJs--路由、全局对象">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- nodejs/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="路由机制所谓路由，可以用一句话简单的概括，即通过路由定义匹配规则，url匹配正则，匹配通过就加载对应数据和模板 后端路由浏览器在地址栏中切换不同的url时，每次都向后台服务器发出请求，服务器相应请求，在后台拼接html文件传给前端显示，java web中的jsp就是如此实现的； 常用的后台MVC模式的基本路由处理流程：  浏览器输入一个url请求 从请求中找到Controller和Action的值">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:34:45.894Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="NodeJs--路由、全局对象">
+<meta name="twitter:description" content="路由机制所谓路由，可以用一句话简单的概括，即通过路由定义匹配规则，url匹配正则，匹配通过就加载对应数据和模板 后端路由浏览器在地址栏中切换不同的url时，每次都向后台服务器发出请求，服务器相应请求，在后台拼接html文件传给前端显示，java web中的jsp就是如此实现的； 常用的后台MVC模式的基本路由处理流程：  浏览器输入一个url请求 从请求中找到Controller和Action的值">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- nodejs" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      NodeJs--路由、全局对象
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- nodejs/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:34:38.711Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <p></p><p style="padding:10px;color:white;background:#43853d;font-weight:900">路由机制</p><br>所谓路由，可以用一句话简单的概括，即<code>通过路由定义匹配规则，url匹配正则，匹配通过就加载对应数据和模板</code><p></p>
+<p><strong>后端路由</strong><br>浏览器在地址栏中切换不同的url时，每次都向后台服务器发出请求，服务器相应请求，在后台拼接html文件传给前端显示，java web中的jsp就是如此实现的；</p>
+<p>常用的后台MVC模式的基本路由处理流程：</p>
+<ul>
+<li>浏览器输入一个url请求</li>
+<li>从请求中找到Controller和Action的值，将请求传递给Controller处理</li>
+<li>Controller获取Model数据对象，并且将Model传递给View</li>
+<li>View呈现页面</li>
+</ul>
+<p>例如输入一个url：localhost/home/index，其中localhost是域名，对应结构{controller}/{action}/{id}</p>
+<p>后端路由的优点在于分担了前端的压力，html和数据的拼接都是由服务器完成，缺点则是当项目十分庞大时，加大了服务器的压力，同时在浏览器端不能输入指定的url路径进行指定模块的访问，而且在当前网速较慢时，将会延迟页面的加载；</p>
+<p><strong>前端路由</strong><br>随着SPA（单页面应用）的不断普及，前后端开发分离，目前项目基本都适用前端路由，在项目使用期间页面不会重新加载；</p>
+<p>前端路由的优点在于用户体验好，和后台网速没有关系，不需要每次都从服务器全部获取，见面展现快；可以在浏览器中输入指定想要访问的url路径地址；实现了前后端的分离，方便开发；</p>
+<p>前端留有的缺点在于对SEO不是很友好；在浏览器前进和后退时重新发送请求，没有合理缓存数据；初始加载时由于加载所有模块渲染，所以会比较慢；</p>
+<p><strong>前端路由的实现方法</strong><br><code>使用url的hash</code>，就是常用的锚点（#）操作，类似页面中点击某小图标，返回页面顶部，js通过hashChange事件来监听url的变化，IE7及以下需要轮询进行实现</p>
+<p><code>利用HTML5</code>的history模式，使url看起来类似普通网站，以”/“分割，没有”#”，但页面并没有跳转，不过使用这种模式需要服务器端的支持，服务器在接收到所有的请求后，都指向一个html文件，通过historyAPI，监听popState事件，用pushState和replaceState来实现；</p>
+<p><strong>实现一个简单的路由</strong><br><code>创建一个server.js</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</span><br><span class="line"><span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">"url"</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">start</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">onRequest</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> pathname = url.parse(request.url).pathname;</span><br><span class="line">        <span class="keyword">let</span> content </span><br><span class="line">        response.writeHead(<span class="number">200</span>,&#123;<span class="string">"Content-Type"</span>:<span class="string">"text/html;charset=utf-8"</span>&#125; );</span><br><span class="line"></span><br><span class="line">        <span class="keyword">switch</span>(pathname)&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'/page1'</span>:</span><br><span class="line">            content = fs.readFileSync(<span class="string">"./page1.html"</span>)</span><br><span class="line">            response.write(content)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'/page2'</span>:</span><br><span class="line">            content = fs.readFileSync(<span class="string">"./page2.html"</span>)</span><br><span class="line">            response.write(content)</span><br><span class="line">            <span class="keyword">break</span>;            </span><br><span class="line">            <span class="keyword">default</span> :</span><br><span class="line">            response.write(<span class="string">'hello world'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        response.end();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    http.createServer(onRequest).listen(<span class="number">8888</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Server has started"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.start = start;</span><br></pre></td></tr></table></figure></p>
+<p><code>创建一个index.js</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> server = <span class="built_in">require</span>(<span class="string">"./server"</span>);</span><br><span class="line"></span><br><span class="line">server.start();</span><br></pre></td></tr></table></figure></p>
+<p></p><p style="padding:10px;color:white;background:#43853d;font-weight:900">全局对象</p><br>在js中，全局对象是window，而在node.js中，全局对象是global，所有全局变量都是global对象的属性（出列global本身以外）；<p></p>
+<p><strong>全局对象与全局变量</strong><br>global最根本的作用是作为全局变量的宿主，满足以下条件的变量即为全局变量：</p>
+<ul>
+<li>在最外层定义的变量；</li>
+<li>全局对象的属性；</li>
+<li>未定义直接赋值的变量；</li>
+</ul>
+<p>当定义一个全局变量时，这个变量同事也会成为全局对象的属性，反之亦然，但是，在node.js中不可能在最外层定义变量，因为所有用户代码都是属于当前模块的，而模块本身不是最外层上下文；</p>
+<p><strong>__filename</strong><br>__filename表示当前正在执行的脚本的文件名，它将输出文件所在位置的绝对路径，且和命令行参数所指定的文件名不一定相同，如果实在模块中，返回的值是模块文件的路径；</p>
+<p><code>创建一个server.js</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    res.writeHead(<span class="number">200</span>,&#123;<span class="string">"Content-Type"</span>:<span class="string">"text/plain"</span>&#125;);</span><br><span class="line">    res.write(<span class="string">"hello"</span>);</span><br><span class="line">    res.end()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">3000</span>,()=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"server is running at 3000"</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(__filename);<span class="comment">//D:\hewei\reg\server.js</span></span><br><span class="line">    <span class="built_in">console</span>.log(__dirname);<span class="comment">//D:\hewei\reg</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><strong>__dirname</strong><br>__dirname表示当前执行脚本所在的目录</p>
+<p></p><p style="padding:10px;color:white;background:#43853d;font-weight:900">util模块</p><br>util是一个node.js核心模块，提供常用函数的集合，用于弥补核心JavaScript的功能过于精简的不足；<p></p>
+<p><strong>util.inherits</strong><br>util.inherits的面向对象特性是基于原型的，与常见的基于类的不同，JavaScript没有提供对象继承的语言级别特性，而是通过原型复制来实现的；</p>
+
       
 
       
@@ -199,6 +231,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">路由</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">nodejs</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +259,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- stream/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          NodeJs--Stream（流）
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- G2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">G2图表的使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

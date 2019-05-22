@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>ES6--块级作用域 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="在es6之前，js只有函数作用域和全局作用域； 块级作用域的概念任何一对花括号{}中的语句都属于一个块，在这个块中，使用let和const生命的变量和常量对外都是不可见的，这就是块级作用域； 而使用var声明的变量对外依旧是可见的，可以说let和const创建了块级作用域;">
+<meta name="keywords" content="es6,作用域">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="ES6--块级作用域">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- 作用域/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="在es6之前，js只有函数作用域和全局作用域； 块级作用域的概念任何一对花括号{}中的语句都属于一个块，在这个块中，使用let和const生命的变量和常量对外都是不可见的，这就是块级作用域； 而使用var声明的变量对外依旧是可见的，可以说let和const创建了块级作用域;">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:39:48.645Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="ES6--块级作用域">
+<meta name="twitter:description" content="在es6之前，js只有函数作用域和全局作用域； 块级作用域的概念任何一对花括号{}中的语句都属于一个块，在这个块中，使用let和const生命的变量和常量对外都是不可见的，这就是块级作用域； 而使用var声明的变量对外依旧是可见的，可以说let和const创建了块级作用域;">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- 作用域" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      ES6--块级作用域
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- 作用域/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:39:41.495Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <p>在es6之前，js只有函数作用域和全局作用域；</p>
+<h3 id="块级作用域的概念"><a href="#块级作用域的概念" class="headerlink" title="块级作用域的概念"></a>块级作用域的概念</h3><p>任何一对花括号{}中的语句都属于一个块，在这个块中，使用let和const生命的变量和常量对外都是不可见的，这就是块级作用域；</p>
+<p>而使用var声明的变量对外依旧是可见的，可以说let和const创建了块级作用域;</p>
+<a id="more"></a>
+<p>另外，<strong>记住const如果声明的是一个对象集合，那么const存储的是该对象的引用地址</strong>，这个地址是不能改变的，但是地址所指向的对象的属性则是可变的；</p>
+<h3 id="语句块和对象直接量的区别"><a href="#语句块和对象直接量的区别" class="headerlink" title="语句块和对象直接量的区别"></a>语句块和对象直接量的区别</h3><p>不要把<strong>对象直接量</strong>看做是块级作用域；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name: <span class="string">"hehe"</span>,</span><br><span class="line">    age: <span class="string">"18"</span>,</span><br><span class="line">    address: <span class="string">"moon"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面的代码使用大括号创建了一个对象直接量，但这并不能算是一个语句块；</p>
+<p>如果换一种写法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    name: <span class="string">"hehe"</span>,</span><br><span class="line">    age: <span class="string">"18"</span>,</span><br><span class="line">    address: <span class="string">"moon"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>以上代码会报错，因为如果代码最左边为大括号，就会被解读为语句，而不是对象直接量，所以以上代码会被认为是标签语句，而如果在外层再套一个小括号，就不会报错了，为啥呢？<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(&#123;</span><br><span class="line">    name: <span class="string">"hehe"</span>,</span><br><span class="line">    age: <span class="string">"18"</span>,</span><br><span class="line">    address: <span class="string">"moon"</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="函数声明注意事项"><a href="#函数声明注意事项" class="headerlink" title="函数声明注意事项"></a>函数声明注意事项</h3><p>在es5规范的严格模式下，函数us恒明只能存在于全局作用域和函数作用域，在类似if语句这样的块中声明会报错；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>但是，在es6中就不会，因为会解读为函数在块级作用域内声明，但这时候，if后面大括号不能省略；</p>
+<h3 id="全局属性"><a href="#全局属性" class="headerlink" title="全局属性"></a>全局属性</h3><p>在全局作用使用var声明的变量，也是全局属性；可是使用let声明的变量却不是这样；</p>
+
       
 
       
@@ -199,6 +212,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">作用域</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +240,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- TypeScript/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          TypeScript--模块
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- const/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6--let和const</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

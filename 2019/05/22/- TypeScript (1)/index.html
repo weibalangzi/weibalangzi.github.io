@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>TypeScript--类型兼容 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="函数兼容比较两个函数是否兼容，首先要看参数是否兼容，第二个还要看返回值是否兼容； 函数参数123456let funcX = (num: number) =&amp;gt; 0;let funcY = (num: number, str: string) =&amp;gt; 0;funcY = funcX;funcX = funcY;//error 如上代码，将funcX赋值给funcY是成立的，但是将funcY">
+<meta name="keywords" content="TypeScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="TypeScript--类型兼容">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- TypeScript (1)/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="函数兼容比较两个函数是否兼容，首先要看参数是否兼容，第二个还要看返回值是否兼容； 函数参数123456let funcX = (num: number) =&amp;gt; 0;let funcY = (num: number, str: string) =&amp;gt; 0;funcY = funcX;funcX = funcY;//error 如上代码，将funcX赋值给funcY是成立的，但是将funcY">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:39:56.889Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="TypeScript--类型兼容">
+<meta name="twitter:description" content="函数兼容比较两个函数是否兼容，首先要看参数是否兼容，第二个还要看返回值是否兼容； 函数参数123456let funcX = (num: number) =&amp;gt; 0;let funcY = (num: number, str: string) =&amp;gt; 0;funcY = funcX;funcX = funcY;//error 如上代码，将funcX赋值给funcY是成立的，但是将funcY">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- TypeScript (1)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      TypeScript--类型兼容
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- TypeScript (1)/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:39:53.568Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h3 id="函数兼容"><a href="#函数兼容" class="headerlink" title="函数兼容"></a>函数兼容</h3><p>比较两个函数是否兼容，首先要看参数是否兼容，第二个还要看返回值是否兼容；</p>
+<h4 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> funcX = <span class="function">(<span class="params">num: number</span>) =&gt;</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> funcY = <span class="function">(<span class="params">num: number, str: string</span>) =&gt;</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">funcY = funcX;</span><br><span class="line"></span><br><span class="line">funcX = funcY;<span class="comment">//error</span></span><br></pre></td></tr></table></figure>
+<p>如上代码，将funcX赋值给funcY是成立的，但是将funcY赋值给funcX就会报错，也就是说只能从参数少的往参数多的函数赋值，反过来则不行，因为被赋值的函数必须找到对应的参数；<br><a id="more"></a></p>
+<p><strong>参数的名称没必要是相同的，只要类型兼容即可</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> funcX = <span class="function">(<span class="params">ant: number</span>) =&gt;</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> funxY = <span class="function">(<span class="params">num: number, str: string</span>) =&gt;</span> <span class="number">0</span>;</span><br><span class="line"> </span><br><span class="line">funxY = funcX;</span><br></pre></td></tr></table></figure></p>
+<p>如上，参数名并不相同，但是并没有报错;</p>
+<p>也就是说，两个函数参数的类型没必须要完全相同，只需要源函数参数参数可以赋值给目标函数对应参数，或者目标函数参数可以赋值给源函数对应参数即可；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> funcX = <span class="function">(<span class="params">ant: number&amp;boolean</span>) =&gt;</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> funcY = <span class="function">(<span class="params">num: number, str: string</span>) =&gt;</span> <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">funcY = funcX;</span><br></pre></td></tr></table></figure></p>
+<p>如上，源类型上有额外的可选参数不是错误，目标类型的可选参数在源类型里没有对应的参数也不是错误；</p>
+<h3 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h3><p>如果目标函数的返回值类型是void，那么源函数返回值可以是任意类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> funcX:<span class="function">(<span class="params">ant: number</span>) =&gt;</span> <span class="keyword">void</span>;</span><br><span class="line"><span class="keyword">let</span> funxY=<span class="function">(<span class="params">num: number</span>) =&gt;</span> <span class="string">"say hi"</span>;</span><br><span class="line">funcX = funxY;</span><br></pre></td></tr></table></figure></p>
+<p>如果不是void类型，那么源函数的返回值需要能够赋值给目标函数返回值类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> funcX:<span class="function">(<span class="params">ant: number</span>) =&gt;</span> number|string;</span><br><span class="line"><span class="keyword">let</span> funxY=<span class="function">(<span class="params">num: number</span>) =&gt;</span> <span class="string">"say hi"</span>;</span><br><span class="line">funcX = funxY;</span><br></pre></td></tr></table></figure></p>
+<h3 id="类兼容"><a href="#类兼容" class="headerlink" title="类兼容"></a>类兼容</h3><p>TS类和接口的兼容性非常类似，但是类分为实例部分和静态部分；<br>比较连个类的类型数据时，吱哟实例会员会被比较，静态成员和构造函数不会比较；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">  theName: string;</span><br><span class="line">  <span class="keyword">constructor</span>(address: string,age: number)&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span></span>&#123;</span><br><span class="line">  theName: string;</span><br><span class="line">  <span class="keyword">constructor</span>(age: number)&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> person: Person=<span class="keyword">new</span> Person(<span class="string">"say hi"</span>,<span class="number">666</span>);</span><br><span class="line"><span class="keyword">let</span> people: People;</span><br><span class="line"></span><br><span class="line">people = person;</span><br></pre></td></tr></table></figure></p>
+<p>上面的函数会赋值成功，虽然Person中有一个constructor，但是静态成员和构造函数不会被比较</p>
+<p>如果将上面的代码稍微修改一下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">  theName: string;</span><br><span class="line">  <span class="keyword">constructor</span>(address: string,age: number)&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span></span>&#123;</span><br><span class="line">  theName: string;</span><br><span class="line">  say: string;</span><br><span class="line">  <span class="keyword">constructor</span>(age: number)&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> person: Person=<span class="keyword">new</span> Person(<span class="string">"say hi"</span>,<span class="number">666</span>);</span><br><span class="line"><span class="keyword">let</span> people: People;</span><br><span class="line"></span><br><span class="line">people = person;</span><br></pre></td></tr></table></figure></p>
+<p>结果赋值失败，就和函数兼容类似，被赋值的类具有源类所不具有的属性；</p>
+<h3 id="泛型兼容"><a href="#泛型兼容" class="headerlink" title="泛型兼容"></a>泛型兼容</h3><p>TS是结构性的类型系统，泛型的类型参数影响数据的成员；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">interface Empty&lt;T&gt; &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> x: Empty&lt;number&gt;;</span><br><span class="line"><span class="keyword">let</span> y: Empty&lt;string&gt;=&#123;&#125;;</span><br><span class="line"> </span><br><span class="line">x = y;</span><br></pre></td></tr></table></figure></p>
+
       
 
       
@@ -199,6 +214,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TypeScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +238,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- TypeScript (2)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          TypeScript--高级类型
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- TypeScript/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">TypeScript--模块</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

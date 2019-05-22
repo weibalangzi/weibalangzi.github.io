@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>JavaScript--基础知识 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="JavaScript的特点 它是一门脚本语言 它是一门轻量级的编程语言 js代码可直接插入HTML元素之中 以浏览器作为运行环境">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="JavaScript--基础知识">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- js (1)/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="JavaScript的特点 它是一门脚本语言 它是一门轻量级的编程语言 js代码可直接插入HTML元素之中 以浏览器作为运行环境">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:image" content="http://www.softwhy.com/data/attachment/portal/201702/26/001902ddvrm9wv93r3fvwk.gif">
+<meta property="og:updated_time" content="2019-05-22T03:37:31.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="JavaScript--基础知识">
+<meta name="twitter:description" content="JavaScript的特点 它是一门脚本语言 它是一门轻量级的编程语言 js代码可直接插入HTML元素之中 以浏览器作为运行环境">
+<meta name="twitter:image" content="http://www.softwhy.com/data/attachment/portal/201702/26/001902ddvrm9wv93r3fvwk.gif">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +153,109 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- js (1)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      JavaScript--基础知识
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- js (1)/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:37:30.182Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h3 id="JavaScript的特点"><a href="#JavaScript的特点" class="headerlink" title="JavaScript的特点"></a>JavaScript的特点</h3><ul>
+<li>它是一门脚本语言</li>
+<li>它是一门轻量级的编程语言</li>
+<li>js代码可直接插入HTML元素之中</li>
+<li>以浏览器作为运行环境<a id="more"></a>
+<h3 id="JavaScript的构成"><a href="#JavaScript的构成" class="headerlink" title="JavaScript的构成"></a>JavaScript的构成</h3><strong>javaScript是ECMAScript规范在浏览器中的具体实现</strong>，而<code>ECMAScript</code>是一个标准，<code>定义了最基本的行为准则</code>，与特点的宿主环境无关的，它为不同的宿主环境提供核心编程能力，没有与用户交互的功能；</li>
+</ul>
+<p>除了javaScript，Flash和DirectorMX的ActionScript也是它的具体实现；</p>
+<p>所以js可以认为由一下三部分构成<br><code>BOM（浏览器对象模型）</code> <code>DOM（文档对象模型）</code> <code>ECMAScript标准</code></p>
+<p><img src="http://www.softwhy.com/data/attachment/portal/201702/26/001902ddvrm9wv93r3fvwk.gif" alt></p>
+<h3 id="JavaScript如何放置"><a href="#JavaScript如何放置" class="headerlink" title="JavaScript如何放置"></a>JavaScript如何放置</h3><p>理论上，js脚本可以放置在页面的任何位置，比如放置在head或者body之中，甚至放置在html标签之外都可以正常的运行；</p>
+<p>但是，为了边脚本代码找不到对象，一般放置在靠近底部body的地方，或者从外部引用js，在外部文件中定义–待页面加载完毕后执行js；</p>
+<h3 id="书写格式"><a href="#书写格式" class="headerlink" title="书写格式"></a>书写格式</h3><p>JavaScript是一门弱类型语言，所以在变量声明的时候不需要指定类型，变量赋值时会自动判断类型并进行转换；</p>
+<p>js中函数名、变量名和属性名等都是区分大小写的；</p>
+<p>ECMAScript并没有强制要求每一行代码结尾需要分好“；”，如果没有加分好，浏览器就会把每一行代码的结尾看做是一条语句的结尾，为了保持良好的编码习惯，还是加上分号比较好；</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>单行使用<code>//注释内容</code>，多行使用<code>/*注释内容*/</code></p>
+<h3 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则"></a>变量命名规则</h3><ul>
+<li>第一个字符必须是字母、下划线(_)或美元符号（$）</li>
+<li>其它字符可以是下划线、美元符号或任何字母、数字字符</li>
+<li>变量名不能是关键字和保留字</li>
+</ul>
+<p>使用var可以重复声明变量，后面的会覆盖前面的变量；另外需要注意var的变量提升；</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>js中的数据类型分为两类，一为<code>值类型</code>，一为<code>引用类型</code>；</p>
+<p>js为值类型提供了对应包装类型，包装类型和引用类型的差别在于对象的生存周期，在读取模式下访问值类型数据的值时，内部会自动为之创建包装类型的对象，提供了相关的方法和属性，但是操作值类型数据的语句一旦执行完毕，就会立即销毁新创建的包装类型；</p>
+<p>值类型：boolean、number、string；<br>引用类型：引用类型都是Object或者子类，比如Date、Array和RegExp等；</p>
+<h4 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h4><p>字符串类型使用单引号或者双引号包裹形成；</p>
+<h4 id="Number类型"><a href="#Number类型" class="headerlink" title="Number类型"></a>Number类型</h4><p>此类型表示整形和浮点型数字；<br>如果要判断一个值是否是住址类型，可以使用isNaN()；</p>
+<p>NaN（not a number），表示一个本来要返回数值的操作而未返回的情况；</p>
+<ul>
+<li>任何NaN参与的操作返回值都是NaN</li>
+<li>任何值和NaN都不相等，甚至和其本身都不相等<h4 id="Boolean类型"><a href="#Boolean类型" class="headerlink" title="Boolean类型"></a>Boolean类型</h4>Boolean只有两个值，false和true；<h4 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h4>undefined类型只有一个值，即undefined，一个变量声明但是未赋值的时候，其缺省值就是undefined；<h4 id="Null类型"><a href="#Null类型" class="headerlink" title="Null类型"></a>Null类型</h4>此类型和undefined类型一样也只有一个值，即null，null表示一个空对象，虽然是Null类型，但是typeof返回值却是object；<h4 id="Object类型"><a href="#Object类型" class="headerlink" title="Object类型"></a>Object类型</h4>Object对象是无序键值对集合，数组是有序键值对集合；</li>
+</ul>
+<h3 id="转义字符串"><a href="#转义字符串" class="headerlink" title="转义字符串"></a>转义字符串</h3><p>转义字符串允许字符串中包含一些无法直接键入的字符串或者具有特殊含义的字符串；</p>
+<p>使用反斜杠（\）转义符定义一个转义字符串，比如输出一个双引号：<code>console.log(&quot;\&quot;hi&quot;)//&quot;hi</code></p>
+<p>如果需要换行：<code>console.log(&quot;hi \nhello \nbyebye&quot;)</code></p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数是具有特定语法规则，能够完成指定任务且能重复利用的代码块；</p>
+<p>在js中，创建函数的方式有两种</p>
+<ul>
+<li>函数声明方式 <code>function foo(){}</code></li>
+<li>函数表达式方式 <code>var bar = function foo(){}</code></li>
+</ul>
+<p>ECMAScript5中规定，函数声明必须带有函数名，而函数表达式则可以省略；</p>
+<p><code>函数声明</code>会有提升作用，即可以在函数创建之前调用函数；</p>
+<p><code>函数表达式方式</code>实质是给一个变量赋值一个函数对象，变量声明也会有提升效果，但是并不会被赋值，只有代码执行阶段才会赋值；</p>
+<p>通过return语句可以跳出函数执行，也就是return语句后面的代码不再被执行；</p>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p>作用域用来规定变量或者函数的可访问范围，控制着变量与函数的可见性和声明周期；</p>
+<p>js中具有两种作用域，<code>全局作用域</code>和<code>函数作用域</code></p>
+<p>函数中使用var声明的变量是局部变量<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> theName = <span class="string">"hehe"</span>;</span><br><span class="line">    address = <span class="string">"wuhan"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如上，theName就是一个局部变量，该变量只能在声明变量的函数中使用，而address则是一个全局变量，全局变量在函数外部也是可见的；</p>
+<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>作用域链式查找一个变量的时候，一层层的向上查找形成的类似于链子的轨迹；</p>
+<h3 id="递增运算符"><a href="#递增运算符" class="headerlink" title="递增运算符"></a>递增运算符</h3><p>递增运算符为其操作数增加1，返回一个数值；<br>递增运算符分为两种使用方式：</p>
+<ul>
+<li>后置使用，<code>x++</code>将会在递增前返回数值；</li>
+<li>前置使用，<code>++x</code>将会在递增后返回数值；</li>
+</ul>
+<p>在递增前返回数值：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(x++);<span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(x);<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
+<p>在递增后返回数值：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(++x);<span class="comment">//2</span></span><br><span class="line"><span class="built_in">console</span>.log(x);<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="求余运算符（-）"><a href="#求余运算符（-）" class="headerlink" title="求余运算符（%）"></a>求余运算符（%）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">3</span> % <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num);<span class="comment">//1</span></span><br></pre></td></tr></table></figure>
+<p>如上，3除以2余1，num就是最终的余数；</p>
+<p>关于求余需要注意的地方：</p>
+<ul>
+<li>如果被除数是Infinity，或者除数是0，那么结果为NaN</li>
+<li>Infinity被Infinity除，结果为NaN</li>
+<li>如果除数是无穷大的数，结果为被除数</li>
+<li>如果被除数为0，结果为0</li>
+</ul>
+<h3 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h3><p><code>(function(){})()</code>是一个表达式，会强制其理解成函数直接量，也就是表达式方式创建函数，<code>(function(){})</code>它会返回函数对象的引用，最后使用小括号()调用此函数；</p>
+<p><code>(function(){}())</code>的小括号放在里里面，同样也会变成表达式，也会被理解成直接量方式；</p>
+<h3 id="typeof与instanceof"><a href="#typeof与instanceof" class="headerlink" title="typeof与instanceof"></a>typeof与instanceof</h3><p><code>typeof</code>可以实现数据类型的判断，特点如下：</p>
+<ul>
+<li>对值类型数据能够实现准确判断，比如数字、字符串</li>
+<li>对function函数也能够实现准确判断；</li>
+<li>对数组只能返回Object，不能实现精准判断；</li>
+<li>对null返回object；</li>
+<li>对object返回object</li>
+</ul>
+<p>如果要实现精准的判断，可以使用以下代码；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getType</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> type = <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>, <span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> type;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(getType([]))<span class="comment">//Array</span></span><br></pre></td></tr></table></figure></p>
+<p><code>instanceof</code>返回一个布尔值，用以说明指定的对象实例是否是指定类或者构造函数的实例；</p>
+<p>所以typeof和instanceof的区别在于<code>typeof</code>用于判断数据类型，<code>instanceof</code>用于返回当前对象是不是一个类的实例，返回true或者false；</p>
+<h3 id="in运算符"><a href="#in运算符" class="headerlink" title="in运算符"></a>in运算符</h3><p><code>in运算符</code>可以判断当前指定的属性是否属于一个对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">theName</span>: <span class="string">"hehe"</span>, <span class="attr">age</span>: <span class="number">18</span> &#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"theName"</span> <span class="keyword">in</span> obj); <span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="delete运算符"><a href="#delete运算符" class="headerlink" title="delete运算符"></a>delete运算符</h3><p>delete运算符可以删除对象的属性，如果删除成功则返回true，否则返回false；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">theName</span>: <span class="string">"hehe"</span>, <span class="attr">age</span>: <span class="number">18</span> &#125;</span><br><span class="line"><span class="keyword">delete</span> obj.age;</span><br><span class="line"><span class="built_in">console</span>.log(obj);<span class="comment">//&#123;theName: "hehe"&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="void运算符"><a href="#void运算符" class="headerlink" title="void运算符"></a>void运算符</h3><p>void是一个运算符，计算后面的额操作数并且返回undefined；<br>void运算符的返回值一定是undefined；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">6</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">void</span> <span class="number">5</span>); <span class="comment">//undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">void</span>(x == <span class="number">5</span>)); <span class="comment">//undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">void</span> <span class="number">2</span> + <span class="number">3</span>);<span class="comment">//NaN</span></span><br></pre></td></tr></table></figure></p>
+
       
 
       
@@ -199,6 +284,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +308,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- 异步/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          ES6--异步
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- 闭包/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript--函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>TypeScript--接口 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="接口的作用规定数据必须具有的结构和类型可以使用以下方法来规定数据的类型和结构123456function test(obj: &amp;#123; webName: string &amp;#125;) &amp;#123;    console.log(obj.webName);  &amp;#125;     let myObj = &amp;#123; webName: &apos;hehe&apos;&amp;#125;;  test(myObj);//h">
+<meta name="keywords" content="TypeScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="TypeScript--接口">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- TypeScript (4)/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="接口的作用规定数据必须具有的结构和类型可以使用以下方法来规定数据的类型和结构123456function test(obj: &amp;#123; webName: string &amp;#125;) &amp;#123;    console.log(obj.webName);  &amp;#125;     let myObj = &amp;#123; webName: &apos;hehe&apos;&amp;#125;;  test(myObj);//h">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:40:14.715Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="TypeScript--接口">
+<meta name="twitter:description" content="接口的作用规定数据必须具有的结构和类型可以使用以下方法来规定数据的类型和结构123456function test(obj: &amp;#123; webName: string &amp;#125;) &amp;#123;    console.log(obj.webName);  &amp;#125;     let myObj = &amp;#123; webName: &apos;hehe&apos;&amp;#125;;  test(myObj);//h">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- TypeScript (4)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      TypeScript--接口
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- TypeScript (4)/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:40:14.255Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h2 id="接口的作用"><a href="#接口的作用" class="headerlink" title="接口的作用"></a>接口的作用</h2><p><strong>规定数据必须具有的结构和类型</strong><br>可以使用以下方法来规定数据的类型和结构<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">obj: &#123; webName: string &#125;</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(obj.webName);</span><br><span class="line">  &#125;</span><br><span class="line">   </span><br><span class="line">  <span class="keyword">let</span> myObj = &#123; <span class="attr">webName</span>: <span class="string">'hehe'</span>&#125;;</span><br><span class="line">  test(myObj);<span class="comment">//hehe</span></span><br></pre></td></tr></table></figure></p>
+<p>如果webName不是字符串，编译成js的时候就会报错；<br>当然，接口显然不是这么写的，我们可以把test括号里面的内容抽离出来，使用interface声明成一个接口;<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">interface personTest&#123;</span><br><span class="line">    name: string;</span><br><span class="line">    age: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">obj:personTest</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(obj.name,obj.age)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> theObj = &#123;<span class="attr">name</span>:<span class="string">"hehe"</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;</span><br><span class="line">person(theObj)</span><br></pre></td></tr></table></figure></p>
+<p>如上，就是将规定数据类型和结构的部分单独用interface定义成一个接口，替换掉原来的位置；</p>
+<p>如果实际对象结构中多了一个参数：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">interface personTest&#123;</span><br><span class="line">    name: string;</span><br><span class="line">    age: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">obj:personTest</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(obj.name,obj.age)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> theObj = &#123;<span class="attr">name</span>:<span class="string">"hehe"</span>,<span class="attr">age</span>:<span class="number">18</span>,<span class="attr">gender</span>:<span class="string">"boy"</span>&#125;</span><br><span class="line">person(theObj)</span><br></pre></td></tr></table></figure></p>
+<p>只要person里面没有调用gender，就不会报错；可是，如果在函数调用时声明对象，则会报错；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">person(&#123;<span class="attr">name</span>:<span class="string">"hehe"</span>,<span class="attr">age</span>:<span class="number">18</span>,<span class="attr">gender</span>:<span class="string">"boy"</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>如果对象结构中少了一个参数，也会报错<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">interface personTest&#123;</span><br><span class="line">    name: string;</span><br><span class="line">    age: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">obj:personTest</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(obj.name,obj.age)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> theObj = &#123;<span class="attr">name</span>:<span class="string">"hehe"</span>&#125;</span><br><span class="line">person(theObj)<span class="comment">//error</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h3><p>就像可选参数一样在属性名后面添加一个问号就行了，在匹配数据结构和类型的时候，该属性可有可无；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">interface Itest &#123;</span><br><span class="line">  webName: string;</span><br><span class="line">  age?:number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果一旦添加了该属性，则需要遵守该属性的数据类型，也就是说上面的age只能是number类型；</p>
+<h3 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h3><p>如果属性只能在其创建的时候修改值，那么可以将其设置为只读；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">interface Itest &#123;</span><br><span class="line">    readonly name: string;</span><br><span class="line">    readonly age:number;</span><br><span class="line">  &#125;</span><br><span class="line">   </span><br><span class="line">  <span class="keyword">let</span> data:Itest=&#123;</span><br><span class="line">    name:<span class="string">"hehe"</span>,</span><br><span class="line">    age:<span class="number">5</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="built_in">console</span>.log(data)<span class="comment">//&#123;name:"hehe",age:5&#125;</span></span><br><span class="line"></span><br><span class="line">data.age = <span class="number">18</span>;<span class="comment">//error</span></span><br></pre></td></tr></table></figure></p>
+<p>如上，在外部修改属性值的时候会报错，因为age是只读;</p>
+<h4 id="也可以将数组设置为只读"><a href="#也可以将数组设置为只读" class="headerlink" title="也可以将数组设置为只读"></a>也可以将数组设置为只读</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> ro: ReadonlyArray&lt;number&gt;=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>];</span><br></pre></td></tr></table></figure>
+<p>如果数组设置了只读，那么数组相关的方法就不能使用了，比如ro[1]之类的；</p>
+<h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3><p>接口除了可以规定普通对象的类型，也可以规定函数的类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">interface Ifunc &#123;</span><br><span class="line">  (str: string): boolean;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> func:Ifunc=<span class="function"><span class="keyword">function</span>(<span class="params">antString:string</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如上，规定函数接受一个字符串参数，并且返回值是布尔型，且函数的参数名不需要与接口里定义的名字相匹配，只需要类型相同即可;</p>
+<h3 id="可索引的类型"><a href="#可索引的类型" class="headerlink" title="可索引的类型"></a>可索引的类型</h3><p>即规定索引值类型，要么是字符串，要么是数字；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">interface IArray &#123;</span><br><span class="line">  [index: number]: string;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">let</span> arr: IArray= [<span class="string">"hi"</span>, <span class="string">"hello"</span>];</span><br><span class="line"><span class="keyword">let</span> ant: string = arr[<span class="number">0</span>];</span><br></pre></td></tr></table></figure></p>
+<p>共有两种索引签名：字符串和数字；可以同时使用两种类型的索引，但是<strong>数字索引的返回值必然是字符串索引返回值类型的子类型</strong>，因为当使用number来索引时，javaScript会将它转换成string然后再去索引对象；</p>
+<h3 id="类实现接口"><a href="#类实现接口" class="headerlink" title="类实现接口"></a>类实现接口</h3><p>强制一个类符合某种规定<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">interface Itest &#123;</span><br><span class="line">    webName: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">say</span> <span class="title">implements</span> <span class="title">Itest</span> </span>&#123;</span><br><span class="line">    webName: <span class="string">"sayhi"</span>;</span><br><span class="line">    age:<span class="number">4</span>;</span><br><span class="line">    <span class="keyword">constructor</span>() &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如上，实现类接口的关键字是implements</p>
+<h3 id="继承接口"><a href="#继承接口" class="headerlink" title="继承接口"></a>继承接口</h3><p>通过继承，可以将一个接口成员赋值到另一个接口，即一个接口继承另一个接口的规则；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">interface A &#123;</span><br><span class="line">    name: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface B extends A &#123;</span><br><span class="line">    age: number;</span><br><span class="line">    address:string;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如上，B接口继承了A接口中对于name的类型规定，同时自身又对age和address作出规定；</p>
+<h3 id="混合类型接口"><a href="#混合类型接口" class="headerlink" title="混合类型接口"></a>混合类型接口</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">interface Counter &#123;</span><br><span class="line">    (start: number): string;</span><br><span class="line">    interval: number;</span><br><span class="line">    reset(): <span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c: Counter;</span><br><span class="line">c(<span class="number">10</span>);</span><br><span class="line">c.reset();</span><br><span class="line">c.interval = <span class="number">5.0</span>;</span><br></pre></td></tr></table></figure>
+<p>声明一个接口，如果只有(start:number):string一个成员，那么这个几口就是函数接口，如果同时还具有其他两个成员，可以用来描述对象的属性和方法，这样就构成一个混合接口；</p>
+<h3 id="接口继承类"><a href="#接口继承类" class="headerlink" title="接口继承类"></a>接口继承类</h3><p>TypeScript接口可以继承类的成员，包括private和protected成员，但不包括其实现；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassA</span> </span>&#123;</span><br><span class="line">  private privateA: any;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">interface Itest extends ClassA &#123;</span><br><span class="line">  test(): <span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如上，Itest包含了类classA的所有成员，并且只有类classA的子类可以实现Itest接口，即只有classAz子类可以具体的去使用这些成员；</p>
+
       
 
       
@@ -199,6 +224,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TypeScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +248,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- TypeScript (5)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          TypeScript--类
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- TypeScript (3)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">TypeScript--泛型</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

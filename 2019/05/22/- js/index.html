@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>JavaScript--事件 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="addEventListener()方法addEventListener能够为指定的对象注册事件处理函数 但是，IE9以下浏览器不支持此方法 语法结构：target.addEventListener(type,listener,useCapture) targt:需要注册事件处理函数的对象；type:事件类型；listener:事件处理函数，即事件触发后要执行的函数；useCapture:布尔值，">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="JavaScript--事件">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- js/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="addEventListener()方法addEventListener能够为指定的对象注册事件处理函数 但是，IE9以下浏览器不支持此方法 语法结构：target.addEventListener(type,listener,useCapture) targt:需要注册事件处理函数的对象；type:事件类型；listener:事件处理函数，即事件触发后要执行的函数；useCapture:布尔值，">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:image" content="http://www.softwhy.com/data/attachment/portal/201703/02/000619fqy8t8yeh5ft6qqm.png">
+<meta property="og:updated_time" content="2019-05-22T03:37:13.872Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="JavaScript--事件">
+<meta name="twitter:description" content="addEventListener()方法addEventListener能够为指定的对象注册事件处理函数 但是，IE9以下浏览器不支持此方法 语法结构：target.addEventListener(type,listener,useCapture) targt:需要注册事件处理函数的对象；type:事件类型；listener:事件处理函数，即事件触发后要执行的函数；useCapture:布尔值，">
+<meta name="twitter:image" content="http://www.softwhy.com/data/attachment/portal/201703/02/000619fqy8t8yeh5ft6qqm.png">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +153,83 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- js" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      JavaScript--事件
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- js/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:37:10.536Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h3 id="addEventListener-方法"><a href="#addEventListener-方法" class="headerlink" title="addEventListener()方法"></a>addEventListener()方法</h3><p><code>addEventListener</code>能够为指定的对象注册事件处理函数</p>
+<p>但是，IE9以下浏览器不支持此方法</p>
+<p>语法结构：<code>target.addEventListener(type,listener,useCapture)</code></p>
+<p><code>targt</code>:需要注册事件处理函数的对象；<br><code>type</code>:事件类型；<br><code>listener</code>:事件处理函数，即事件触发后要执行的函数；<br><code>useCapture</code>:布尔值，规定是捕获还是冒泡；<br><a id="more"></a></p>
+<h4 id="捕获事件"><a href="#捕获事件" class="headerlink" title="捕获事件"></a>捕获事件</h4><p>事件从根元素开始向目标元素进行传递，在传递过程中，如果中间有元素注册了事件处理函数，并且useCapture参数值为true，那么此事件处理函数就会执行;</p>
+<h4 id="冒泡事件"><a href="#冒泡事件" class="headerlink" title="冒泡事件"></a>冒泡事件</h4><p>从目标元素开始向根元素传递，在传递过程中，如果中间有元素注册了事件处理函数，并且useCapture参数值为false，那么此事件处理函数就会执行；<br><img src="http://www.softwhy.com/data/attachment/portal/201703/02/000619fqy8t8yeh5ft6qqm.png" alt></p>
+<h3 id="attachEvent-方法"><a href="#attachEvent-方法" class="headerlink" title="attachEvent()方法"></a>attachEvent()方法</h3><p>此方法与addEventListener()类似，同样是注册事件处理函数，但是区别很大；</p>
+<p>此方法只会被IE低版本浏览器支持;</p>
+<p>语法结构：<code>target.attachEvent(type,listener)</code><br><code>target</code>：要注册事件处理函数的对象；<br><code>type</code>：事件类型；<br><code>listener</code>：事件处理函数，也就是事件触发后要执行的函数；</p>
+<p>该方法的type值和在addEventListener()不同，例如click事件在attachEvent()中前面要加“on”，在addEventListener()中则不需要；</p>
+<p>如果需要对IE浏览器做兼容性封装，可使用如下方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">element,type,handler</span>)</span>&#123;      </span><br><span class="line">  <span class="keyword">if</span>(element.addEventListener)&#123;        </span><br><span class="line">    element.addEventListener(type,handler,<span class="literal">false</span>);      </span><br><span class="line">  &#125; </span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(element.attachEvent)&#123;        </span><br><span class="line">    element.attachEvent(<span class="string">"on"</span> + type, handler);      </span><br><span class="line">  &#125; </span><br><span class="line">  <span class="keyword">else</span>&#123;        </span><br><span class="line">    element[<span class="string">"on"</span>+type]=handler;      </span><br><span class="line">  &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="animationStart事件"><a href="#animationStart事件" class="headerlink" title="animationStart事件"></a>animationStart事件</h3><p>此事件在animation动画开始时触发</p>
+<h3 id="animationend事件"><a href="#animationend事件" class="headerlink" title="animationend事件"></a>animationend事件</h3><p>此事件在animation动画结束时触发</p>
+<h3 id="contextmenu事件"><a href="#contextmenu事件" class="headerlink" title="contextmenu事件"></a>contextmenu事件</h3><p>点击鼠标右键会触发contextmenu事件，通常使用此事件来禁用右键菜单；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> clickTest = <span class="built_in">document</span>.getElementById(<span class="string">"test"</span>)</span><br><span class="line">clickTest.oncontextmenu = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="DOMContentLoaded事件"><a href="#DOMContentLoaded事件" class="headerlink" title="DOMContentLoaded事件"></a>DOMContentLoaded事件</h3><p>当DOM文档被加载和解析完成之后DOMContentLoaded事件触发，这与load事件相似，但是DOMContentLoaded事件无需等待图片、css样式文件和子框架加载完成；</p>
+<p>IE9以上支持此事件</p>
+<h4 id="添加defer属性"><a href="#添加defer属性" class="headerlink" title="添加defer属性"></a>添加defer属性</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"JS/ts.js"</span> defer type=<span class="string">"text/javascript"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>此时js代码的加载是异步进行，即便是js提前加载完毕，也会等待HTML文档解析完毕再去执行；</p>
+<h4 id="添加async属性"><a href="#添加async属性" class="headerlink" title="添加async属性"></a>添加async属性</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"JS/ts.js"</span> <span class="keyword">async</span> type=<span class="string">"text/javascript"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>此时js代码会异步加载，加载完成之后立即执行并阻塞HTML文档的解析；</p>
+<p>如果<code>&lt;script&gt;</code>中添加了defer，那么DOMContentLoaded事件会在文档解析、CSSOM构建完成和js执行完毕后触发；</p>
+<h3 id="hashchange事件"><a href="#hashchange事件" class="headerlink" title="hashchange事件"></a>hashchange事件</h3><p>事件在当前URL的锚部分发生改变时触发；</p>
+<p>可以触发此事件的方式：</p>
+<ul>
+<li>通过设置location.hash或location.href属性修改锚部分；</li>
+<li>使用不同书签导航到当前页面；</li>
+<li>点击链接跳转到书签锚；<h3 id="reset事件"><a href="#reset事件" class="headerlink" title="reset事件"></a>reset事件</h3>表单中的重置按钮被点击时触发此事件；<h3 id="resize事件"><a href="#resize事件" class="headerlink" title="resize事件"></a>resize事件</h3>当调整浏览器窗口大小时会触发此事件；<h3 id="submit事件"><a href="#submit事件" class="headerlink" title="submit事件"></a>submit事件</h3>表单中的提交按钮被点击的时候会触发此事件；<h3 id="select事件"><a href="#select事件" class="headerlink" title="select事件"></a>select事件</h3>当文本框中的文本被选中时会触发此事件；<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><h3 id="event-button"><a href="#event-button" class="headerlink" title="event.button"></a>event.button</h3>此事假属性可返回一个整数，指示当事件被触发时哪个鼠标按键被点击；<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> clickTest = <span class="built_in">document</span>.getElementById(<span class="string">"test"</span>)</span><br><span class="line">clickTest.onmousedown = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> e = e || event;</span><br><span class="line">    <span class="built_in">console</span>.log(e.button)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//0，鼠标左键被点击</span></span><br><span class="line"><span class="comment">//2，鼠标右键被点击</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="event-bubbles"><a href="#event-bubbles" class="headerlink" title="event.bubbles"></a>event.bubbles</h3><p>此事件属性返回一个布尔值，如果事件是冒泡类型，则返回true，否则返回false；</p>
+<h3 id="event-offsetX和event-offsetY"><a href="#event-offsetX和event-offsetY" class="headerlink" title="event.offsetX和event.offsetY"></a>event.offsetX和event.offsetY</h3><p>这两个属性返回触发事件的位置在事件源元素的坐标系统中的坐标；</p>
+<h3 id="event-clientX和event-clientY"><a href="#event-clientX和event-clientY" class="headerlink" title="event.clientX和event.clientY"></a>event.clientX和event.clientY</h3><p>这两个属性返回当事件被触发时鼠标指针在浏览器页面的坐标；</p>
+<h3 id="event-screenX和event-screenY"><a href="#event-screenX和event-screenY" class="headerlink" title="event.screenX和event.screenY"></a>event.screenX和event.screenY</h3><p>返回事件发生时鼠标指针相对于屏幕的水平坐标；</p>
+<h3 id="event-target"><a href="#event-target" class="headerlink" title="event.target"></a>event.target</h3><p>此事件属性可以返回触发事件的对象；</p>
+<h3 id="event-currentTarget"><a href="#event-currentTarget" class="headerlink" title="event.currentTarget"></a>event.currentTarget</h3><p>此事件属性返回处理该事件的对象；</p>
+<h3 id="enent-keyCode"><a href="#enent-keyCode" class="headerlink" title="enent.keyCode"></a>enent.keyCode</h3><p>此属性可以返回被敲击的按键生成的Unicode字符吗；</p>
+<h3 id="event-preventDefault"><a href="#event-preventDefault" class="headerlink" title="event.preventDefault()"></a>event.preventDefault()</h3><p>此方法可以取消事件的默认动作；</p>
+<h3 id="stopPropagation"><a href="#stopPropagation" class="headerlink" title="stopPropagation()"></a>stopPropagation()</h3><p>此方法可以阻止事件冒泡现象；</p>
+<h2 id="操作DOM的方法"><a href="#操作DOM的方法" class="headerlink" title="操作DOM的方法"></a>操作DOM的方法</h2><h4 id="cloneNode"><a href="#cloneNode" class="headerlink" title="cloneNode()"></a>cloneNode()</h4><p>此方法可以克隆一个节点和节点的内容；<br>语法结构：<code>var newElement=oldElement.cloneNode(bool)</code><br>oldElement：将要被克隆的元素；<br>bool：一个布尔值；</p>
+<h4 id="hasChildNodes"><a href="#hasChildNodes" class="headerlink" title="hasChildNodes()"></a>hasChildNodes()</h4><p>判断当前节点是否包含子节点</p>
+<h4 id="removeChild"><a href="#removeChild" class="headerlink" title="removeChild()"></a>removeChild()</h4><p>删除父元素的指定子元素</p>
+<h4 id="replaceChild"><a href="#replaceChild" class="headerlink" title="replaceChild()"></a>replaceChild()</h4><p>实现节点的替换功能<br>语法结构：<code>nodeObject.replaceChild(new_node,old_node)</code></p>
+<h4 id="getAttribute-hasAttribute-setAttribute，removeAttribute"><a href="#getAttribute-hasAttribute-setAttribute，removeAttribute" class="headerlink" title="getAttribute,hasAttribute,setAttribute，removeAttribute"></a>getAttribute,hasAttribute,setAttribute，removeAttribute</h4><p>操作元素指定属性的属性值</p>
+<h4 id="select"><a href="#select" class="headerlink" title="select()"></a>select()</h4><p>选取文本域中的内容；<br>语法结构：<code>text.select()</code></p>
+<h4 id="write"><a href="#write" class="headerlink" title="write()"></a>write()</h4><p>向文档写入HTML代码或者js代码<br>语法结构：<code>document.write()</code></p>
+<h4 id="add"><a href="#add" class="headerlink" title="add()"></a>add()</h4><p>为指定元素的class类样式集合添加新的样式类，也就是添加class名</p>
+<h4 id="contains"><a href="#contains" class="headerlink" title="contains()"></a>contains()</h4><p>判断指定元素样式类集合上是否具有class样式类，也就是判断class是否存在</p>
+<h4 id="toggle"><a href="#toggle" class="headerlink" title="toggle()"></a>toggle()</h4><p>切换指定class样式类集合中样式类的删除和添加；<br>语法结构：<code>classList.toggle(className)</code>;<br>例如点击的时候切换一个类名是否存在；</p>
+<h2 id="操作DOM属性"><a href="#操作DOM属性" class="headerlink" title="操作DOM属性"></a>操作DOM属性</h2><h4 id="childNodes"><a href="#childNodes" class="headerlink" title="childNodes"></a>childNodes</h4><p>返回指定元素的所有一级子节点，返回值是一个集合</p>
+<h4 id="children"><a href="#children" class="headerlink" title="children"></a>children</h4><p>children本身是不符合w3c标准的，然而所有主流浏览器都支持该属性；<br>此属性能够获取父节点下的所有一级子节点，子节点中不包括文本节点；</p>
+<h4 id="contentDocument"><a href="#contentDocument" class="headerlink" title="contentDocument"></a>contentDocument</h4><p>获取子窗口的document对象，例如获取当前窗口的iframe对象；</p>
+<h4 id="firstChild和lastChild"><a href="#firstChild和lastChild" class="headerlink" title="firstChild和lastChild"></a>firstChild和lastChild</h4><p>获取指定元素节点的第一个子节点或最后一个子节点</p>
+<h4 id="parentNode"><a href="#parentNode" class="headerlink" title="parentNode"></a>parentNode</h4><p>返回指定节点的父节点</p>
+<h4 id="previousSibling"><a href="#previousSibling" class="headerlink" title="previousSibling"></a>previousSibling</h4><p>返回当前元素的上一个兄弟元素节点</p>
+<h4 id="nextSibling"><a href="#nextSibling" class="headerlink" title="nextSibling"></a>nextSibling</h4><p>返回当前节点的下一个同级节点；</p>
+<h4 id="innerHTML"><a href="#innerHTML" class="headerlink" title="innerHTML"></a>innerHTML</h4><p>设置或者返回指定元素开始可借宿标签之中的HTML内容；</p>
+
       
 
       
@@ -199,6 +258,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +282,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- 面向对象/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          JavaScript--面向对象
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- table/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javaScript--table表格</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

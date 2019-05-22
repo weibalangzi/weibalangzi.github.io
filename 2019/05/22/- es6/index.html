@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>ES6--Proxy和Reflect | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="Proxy即代理，而代理就是指当要获取某些东西或者操作某些东西需要经过某些媒介，而不是直接作用于对象本身；  Proxy代理Proxy对象就可以认为是一个媒介，要操作一个对象的话，就需要经过这个媒介的过滤；">
+<meta name="keywords" content="es6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="ES6--Proxy和Reflect">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- es6/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="Proxy即代理，而代理就是指当要获取某些东西或者操作某些东西需要经过某些媒介，而不是直接作用于对象本身；  Proxy代理Proxy对象就可以认为是一个媒介，要操作一个对象的话，就需要经过这个媒介的过滤；">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:38:23.117Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="ES6--Proxy和Reflect">
+<meta name="twitter:description" content="Proxy即代理，而代理就是指当要获取某些东西或者操作某些东西需要经过某些媒介，而不是直接作用于对象本身；  Proxy代理Proxy对象就可以认为是一个媒介，要操作一个对象的话，就需要经过这个媒介的过滤；">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- es6" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      ES6--Proxy和Reflect
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- es6/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:38:15.919Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <blockquote>
+<p>Proxy即代理，而代理就是指当要获取某些东西或者操作某些东西需要经过某些媒介，而不是直接作用于对象本身；</p>
+</blockquote>
+<h3 id="Proxy代理"><a href="#Proxy代理" class="headerlink" title="Proxy代理"></a>Proxy代理</h3><p>Proxy对象就可以认为是一个媒介，要操作一个对象的话，就需要经过这个媒介的过滤；<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line">    theName: <span class="string">"hehe"</span>,</span><br><span class="line">    age: <span class="string">"18"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Proxy</span>(person, &#123;</span><br><span class="line">    <span class="keyword">get</span>: function(target, key) &#123;</span><br><span class="line">        <span class="keyword">if</span> (key <span class="keyword">in</span> target) &#123;</span><br><span class="line">            <span class="keyword">return</span> target[key]</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"没有对应属性"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">set</span>: function(target, key, value) &#123;</span><br><span class="line">        <span class="keyword">return</span> target[key] = value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(p.theName);<span class="comment">//hehe</span></span><br><span class="line"><span class="built_in">console</span>.log(p.gender);<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
+<p>以上代码通过Proxy实现了对指定对象属性读取或者设置的代理操作，而我们实际操作的是Proxy对象实例，而不是被代理的对象；</p>
+<p>Proxy对象的第一个参数是原始对象，第二个参数是代理处理器；</p>
+<p>使用Proxy构造器，可以在对象与各种操作对象的行为之间收集有关请求操作的各种信息，并返回任何开发者想做的事；初步看来,Proxy代理与中间件有很多共同点；</p>
+<p>Proxy代理能够让你<strong>截取原对象的各种操作方法</strong>，Proxy代理也能配置为任何时候停止拦截请求，有效的撤销他们所服务的对象的所有访问代理；</p>
+<p>应用实例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line">    theName: <span class="string">"hehe"</span>,</span><br><span class="line">    age: <span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">person = <span class="keyword">new</span> <span class="built_in">Proxy</span>(person, &#123;</span><br><span class="line">    <span class="keyword">set</span>(target, key, value, proxy) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> target.age !== <span class="string">'number'</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="built_in">Error</span>(<span class="string">"error"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Reflect</span>.set(target, key, value, proxy);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">person.theName = <span class="string">"Mr.he"</span>;</span><br><span class="line">person.age = <span class="number">19</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person);<span class="comment">//Proxy &#123;theName: "Mr.he", age: 19&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>如上，利用Proxy设置一个修改验证，当重新修改的age不是number类型的时候，就会抛出一个错误，而如果修改后的age是一个number类型，就会执行<code>Reflect.set</code>;</p>
+<p>于是，Reflect又是什么呢？</p>
+<h3 id="Reflect对象"><a href="#Reflect对象" class="headerlink" title="Reflect对象"></a>Reflect对象</h3><p>Reflect与Proxy的作用类似，而且新增里一些方法，这些方法可以使一些操作更加规范化；</p>
+<p>只要Proxy对象具有的代理方法，Reflect对象全部具有，以静态方法的形式存在，这些方法能够执行默认行为，无论Proxy怎样修改默认行为，总是可以通过Reflect对应的方法获取默认行为；</p>
+<p>Proxy和Reflect配合使用还可以实现重载，Proxy用于修改某些操作的默认行为，Reflect对象的方法与Proxy对象的方法相对应，所以Proxy对象可以调用对应的Reflect方法完成默认行为；</p>
+
       
 
       
@@ -199,6 +214,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +238,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- es6 (1)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          ES6--Map和WeakMap
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- class/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6--class类</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>TypeScript--泛型 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="泛型类型泛型函数的目的就是为了保证传递进函数的参数类型与返回值类型完全一致；123function identity&amp;lt;T&amp;gt;(arg: T): T &amp;#123;  return arg;&amp;#125; 如上，给identity添加了类型变量T，使用&amp;lt;&amp;gt;包裹，它可以捕获用户传入的类型，之后再次使用T当做返回值类型; 泛型函数相较于普通函数，主要就是在函数签名声明的前面加上泛型类型">
+<meta name="keywords" content="TypeScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="TypeScript--泛型">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- TypeScript (3)/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="泛型类型泛型函数的目的就是为了保证传递进函数的参数类型与返回值类型完全一致；123function identity&amp;lt;T&amp;gt;(arg: T): T &amp;#123;  return arg;&amp;#125; 如上，给identity添加了类型变量T，使用&amp;lt;&amp;gt;包裹，它可以捕获用户传入的类型，之后再次使用T当做返回值类型; 泛型函数相较于普通函数，主要就是在函数签名声明的前面加上泛型类型">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:40:09.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="TypeScript--泛型">
+<meta name="twitter:description" content="泛型类型泛型函数的目的就是为了保证传递进函数的参数类型与返回值类型完全一致；123function identity&amp;lt;T&amp;gt;(arg: T): T &amp;#123;  return arg;&amp;#125; 如上，给identity添加了类型变量T，使用&amp;lt;&amp;gt;包裹，它可以捕获用户传入的类型，之后再次使用T当做返回值类型; 泛型函数相较于普通函数，主要就是在函数签名声明的前面加上泛型类型">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- TypeScript (3)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      TypeScript--泛型
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- TypeScript (3)/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:40:08.434Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h3 id="泛型类型"><a href="#泛型类型" class="headerlink" title="泛型类型"></a>泛型类型</h3><p>泛型函数的目的就是为了保证传递进函数的参数类型与返回值类型完全一致；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如上，给identity添加了类型变量T，使用&lt;&gt;包裹，它可以捕获用户传入的类型，之后再次使用T当做返回值类型;</p>
+<p>泛型函数相较于普通函数，主要就是在函数签名声明的前面加上泛型类型参数&lt;类型&gt;<br><a id="more"></a></p>
+<h3 id="接口中应用泛型"><a href="#接口中应用泛型" class="headerlink" title="接口中应用泛型"></a>接口中应用泛型</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">interface rule&#123;</span><br><span class="line">    &lt;T&gt;(arg:T): T;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> test: rule = identity;</span><br></pre></td></tr></table></figure>
+<p>如上，在普通函数后面加个&lt; T &gt;</p>
+<h3 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    name: T;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> Person&lt;string&gt;();</span><br></pre></td></tr></table></figure>
+<p>泛型类与泛型几口非常相似，在类的名称后面传递泛型类型参数；另外，泛型类指的是实例部分的类型，类的静态属性不能使用这个泛型类型；</p>
+<h3 id="泛型限定"><a href="#泛型限定" class="headerlink" title="泛型限定"></a>泛型限定</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">interface Lengthwise &#123;</span><br><span class="line">    length: number;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span> <span class="title">extends</span> <span class="title">Lengthwise</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(arg.length); </span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br><span class="line">identity(<span class="number">5</span>)<span class="comment">//5是number类型，不具有length属性</span></span><br><span class="line">identity(<span class="string">"sayhi"</span>)<span class="comment">//字符串具有length属性</span></span><br></pre></td></tr></table></figure>
+<p>上面的代码使用extends对泛型添加了约束，所以函数传递的参数也是有限定的，必须具有length属性；</p>
+
       
 
       
@@ -199,6 +209,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TypeScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +233,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- TypeScript (4)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          TypeScript--接口
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- TypeScript (2)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">TypeScript--高级类型</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

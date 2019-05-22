@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>ES6--异步 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="由于js的执行环境是单线程的，所以异步操作尤为重要；异步操作通俗的讲，就是将一件事情分为两个阶段来执行，存在一个先后顺序；  ES5中的异步方式 回调函数 发布订阅 事件监听 Promise对象（Promise在ES6之前是自定义实现的，并没有被标准化）">
+<meta name="keywords" content="es6,async,异步">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="ES6--异步">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- 异步/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="由于js的执行环境是单线程的，所以异步操作尤为重要；异步操作通俗的讲，就是将一件事情分为两个阶段来执行，存在一个先后顺序；  ES5中的异步方式 回调函数 发布订阅 事件监听 Promise对象（Promise在ES6之前是自定义实现的，并没有被标准化）">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:37:40.527Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="ES6--异步">
+<meta name="twitter:description" content="由于js的执行环境是单线程的，所以异步操作尤为重要；异步操作通俗的讲，就是将一件事情分为两个阶段来执行，存在一个先后顺序；  ES5中的异步方式 回调函数 发布订阅 事件监听 Promise对象（Promise在ES6之前是自定义实现的，并没有被标准化）">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- 异步" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      ES6--异步
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- 异步/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:37:36.263Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <blockquote>
+<p>由于js的执行环境是单线程的，所以异步操作尤为重要；<br>异步操作通俗的讲，就是将一件事情分为两个阶段来执行，存在一个先后顺序；</p>
+</blockquote>
+<h3 id="ES5中的异步方式"><a href="#ES5中的异步方式" class="headerlink" title="ES5中的异步方式"></a>ES5中的异步方式</h3><ul>
+<li>回调函数</li>
+<li>发布订阅</li>
+<li>事件监听</li>
+<li>Promise对象（Promise在ES6之前是自定义实现的，并没有被标准化）<a id="more"></a>
+<h3 id="ES6新增的异步编程方式"><a href="#ES6新增的异步编程方式" class="headerlink" title="ES6新增的异步编程方式"></a>ES6新增的异步编程方式</h3></li>
+<li>Promise对象（标准化之后）</li>
+<li>Generator函数<h3 id="常用方式的优缺点"><a href="#常用方式的优缺点" class="headerlink" title="常用方式的优缺点"></a>常用方式的优缺点</h3><code>回调函数</code>显然是不可取的，这种方式本身没有问题，但是代码的可读性很差，如果是多层嵌套简直是一场灾难；</li>
+</ul>
+<p><code>Promise</code>相对于回调函数可以说是非常不错的，使用<code>Promise</code>对象可以实现链式调用，而不是层层嵌套，但是如果异步操作很多的话，<code>then</code>、<code>catch</code>等方法必然会大量出现，所以也会导致逻辑不清楚；</p>
+<p><code>Generator</code>会将执行权移出<code>Generator</code>函数，并且可以使用<code>next()</code>方法再次让其获得执行权，使用<code>Generator</code>函数可以使流程更加清晰，但是缺点也很明显，就是无法自动将异步操作全部执行完毕(当前可以使用<code>co模块</code>解决)；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gen = <span class="function"><span class="keyword">function</span>* (<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> f1 = <span class="keyword">yield</span> readFile(fileA);</span><br><span class="line">  <span class="keyword">var</span> f2 = <span class="keyword">yield</span> readFile(fileB);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> co = <span class="built_in">require</span>(<span class="string">"co"</span>);</span><br><span class="line">co(gen);</span><br></pre></td></tr></table></figure></p>
+<h3 id="async函数-ES7"><a href="#async函数-ES7" class="headerlink" title="async函数(ES7)"></a>async函数(ES7)</h3><p><code>async</code>是js异步操作比较完美的解决方案，同事具有<code>Promise</code>对象和<code>Generator</code>函数的优点，既能避免多层嵌套，又具有逻辑清晰和自动化执行的优点；</p>
+<p><code>async</code>其实就是<code>Generator</code>函数的语法糖；</p>
+<p>假设现在需要异步读取两个文件，<code>Generator</code>写法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gen = <span class="function"><span class="keyword">function</span>* (<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> f1 = <span class="keyword">yield</span> readFile(<span class="string">'文件1'</span>);</span><br><span class="line">    <span class="keyword">var</span> f2 = <span class="keyword">yield</span> readFile(<span class="string">'文件2'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>而如果换成<code>async</code>函数，就会是下面这样：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gen = <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> f1 = <span class="keyword">await</span> readFile(<span class="string">'文件1'</span>);</span><br><span class="line">    <span class="keyword">var</span> f2 = <span class="keyword">await</span> readFile(<span class="string">'文件2'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其实就是将Generator的*换成async，并放在function前面，再讲yield换成await；</p>
+<p><code>async</code>相对于<code>Generator</code>函数做了以下几点改进：</p>
+<h4 id="内置执行器"><a href="#内置执行器" class="headerlink" title="内置执行器"></a>内置执行器</h4><p><code>Generator</code>函数的执行必须依靠执行器，所以出现了<code>co函数库</code>，而<code>asyn</code>c函数自带执行器；</p>
+<h4 id="更好的语义"><a href="#更好的语义" class="headerlink" title="更好的语义"></a>更好的语义</h4><p><code>async</code>表示函数里有异步操作，<code>await</code>表示紧跟在后面的表达式需要等待结果；</p>
+<h4 id="更广的适用性"><a href="#更广的适用性" class="headerlink" title="更广的适用性"></a>更广的适用性</h4><p><code>co函数库</code>约定，<code>yield</code>命令后面只能是<code>Thunk函数</code>或P<code>romise对象</code>，而<code>async</code>函数的<code>await</code>命令后面可以跟<code>Promise对象</code>和<code>原始类型</code>的值；</p>
+<p><code>async</code>是属于<code>ES7</code>的语法功能，但是<code>转码器Babel</code>和<code>regenerator</code>都已经支持，转码后就能使用；</p>
+
       
 
       
@@ -199,6 +224,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">async</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">异步</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +256,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- class/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          ES6--class类
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- js (1)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript--基础知识</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

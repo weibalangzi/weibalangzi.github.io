@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>ES6--Set和WeakSet | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="set数据结构set对象的创建123456let test = new Set();let arr = [1, 2, 1, 2, 4, 5, 6, 4];arr.map((elem) =&amp;gt; &amp;#123;    test.add(elem)&amp;#125;)console.log(test); //Set(5) &amp;#123;1, 2, 4, 5, 6&amp;#125; 如上，可以看出，虽然用大括号包裹，">
+<meta name="keywords" content="es6,set">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="ES6--Set和WeakSet">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- set/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="set数据结构set对象的创建123456let test = new Set();let arr = [1, 2, 1, 2, 4, 5, 6, 4];arr.map((elem) =&amp;gt; &amp;#123;    test.add(elem)&amp;#125;)console.log(test); //Set(5) &amp;#123;1, 2, 4, 5, 6&amp;#125; 如上，可以看出，虽然用大括号包裹，">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:38:51.656Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="ES6--Set和WeakSet">
+<meta name="twitter:description" content="set数据结构set对象的创建123456let test = new Set();let arr = [1, 2, 1, 2, 4, 5, 6, 4];arr.map((elem) =&amp;gt; &amp;#123;    test.add(elem)&amp;#125;)console.log(test); //Set(5) &amp;#123;1, 2, 4, 5, 6&amp;#125; 如上，可以看出，虽然用大括号包裹，">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- set" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      ES6--Set和WeakSet
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- set/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:38:44.527Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h2 id="set数据结构"><a href="#set数据结构" class="headerlink" title="set数据结构"></a>set数据结构</h2><h3 id="set对象的创建"><a href="#set对象的创建" class="headerlink" title="set对象的创建"></a>set对象的创建</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">4</span>];</span><br><span class="line">arr.map(<span class="function">(<span class="params">elem</span>) =&gt;</span> &#123;</span><br><span class="line">    test.add(elem)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(test); <span class="comment">//Set(5) &#123;1, 2, 4, 5, 6&#125;</span></span><br></pre></td></tr></table></figure>
+<p>如上，可以看出，虽然用大括号包裹，但是没有键值对，所以Set更像是一个数组，而且Set里面的元素是不能重复的，会自动剔除重复元素，所以可以用来去重；<br><a id="more"></a><br>Set的构造函数的参数可以是一个数组，这样去重就更方便了；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> test = <span class="keyword">new</span> <span class="built_in">Set</span>(arr);</span><br><span class="line"><span class="built_in">console</span>.log(test);<span class="comment">//Set(4) &#123;1, 2, 4, 6&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>如上，可以看到，数组中的重复元素只会被添加一次；</p>
+<p>Set对象基友遍历器接口，所以可以使用展开运算符和for of循环；</p>
+<p>另外，Set对象具有自己的方法和属性；</p>
+<h3 id="add"><a href="#add" class="headerlink" title="add()"></a>add()</h3><p>给一个Set对象添加元素<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test.add(<span class="number">7</span>)</span><br><span class="line"><span class="built_in">console</span>.log(test);<span class="comment">//Set(5) &#123;1, 2, 4, 6, 7&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="clear"><a href="#clear" class="headerlink" title="clear()"></a>clear()</h3><p>清空Set对象所有元素<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test.clear();</span><br><span class="line"><span class="built_in">console</span>.log(test); <span class="comment">//Set(0) &#123;&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="delete"><a href="#delete" class="headerlink" title="delete()"></a>delete()</h3><p>删除Set对象中指定的元素<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test.delete(<span class="number">4</span>);</span><br><span class="line"><span class="built_in">console</span>.log(test); <span class="comment">//Set(3) &#123;1, 2, 6&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><p>遍历Set对象中的每一个元素；</p>
+<h3 id="has"><a href="#has" class="headerlink" title="has()"></a>has()</h3><p>判断Set对象是否具有指定元素；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> test = <span class="keyword">new</span> <span class="built_in">Set</span>(arr);</span><br><span class="line"><span class="built_in">console</span>.log(test.has(<span class="number">1</span>));<span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
+<p>另外还有entries()和values()，没明白有什么作用；</p>
+<h2 id="WeakSet数据结构"><a href="#WeakSet数据结构" class="headerlink" title="WeakSet数据结构"></a>WeakSet数据结构</h2><p>WeakSet与Set十分类似，对象里面的元素也是不能重复的，但与Set也有不同之处，WeakSet里面的元素只能是对象；</p>
+<p>另外，WeakSet成员的对象都是弱引用，即垃圾回收机制不考虑WeakSet对该对象的引用，如果其他对象不再引用该对象，那么垃圾回收机制会自动回收该对象所占内存，不考虑对象还存在于WeakSet之中，也就是说，无法引用WeakSet的成员，因此WeakSet是不可遍历的；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> weakTest = <span class="keyword">new</span> <span class="built_in">WeakSet</span>([</span><br><span class="line">    [<span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">    [<span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">])</span><br><span class="line">weakTest.add([<span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"><span class="built_in">console</span>.log(weakTest); <span class="comment">//WeakSet &#123;Array(2), Array(2), Array(2)&#125;</span></span><br></pre></td></tr></table></figure>
+<p>如上，WeakSet里面的成员只能是对象，如果单个数字或者字符串就会报错；</p>
+
       
 
       
@@ -199,6 +215,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">set</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +243,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- es6 (2)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          ES6--Symbol
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- es6 (1)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6--Map和WeakMap</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

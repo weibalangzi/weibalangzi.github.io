@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>ES6--Symbol | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="Symbol是es6中新增的数据类型,表示一种绝不重复的值；  创建Symbol类型值使用Symbol()函数可以创建一个symbol类型值，需要注意的是，前面不能使用new，否则会报错；123456let s1 = Symbol(&quot;say hi&quot;);let s2 = Symbol(&quot;hello&quot;);console.log(s1, typeof s1);//Symbol(say hi) &quot;sym">
+<meta name="keywords" content="es6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="ES6--Symbol">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- es6 (2)/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="Symbol是es6中新增的数据类型,表示一种绝不重复的值；  创建Symbol类型值使用Symbol()函数可以创建一个symbol类型值，需要注意的是，前面不能使用new，否则会报错；123456let s1 = Symbol(&quot;say hi&quot;);let s2 = Symbol(&quot;hello&quot;);console.log(s1, typeof s1);//Symbol(say hi) &quot;sym">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:39:13.803Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="ES6--Symbol">
+<meta name="twitter:description" content="Symbol是es6中新增的数据类型,表示一种绝不重复的值；  创建Symbol类型值使用Symbol()函数可以创建一个symbol类型值，需要注意的是，前面不能使用new，否则会报错；123456let s1 = Symbol(&quot;say hi&quot;);let s2 = Symbol(&quot;hello&quot;);console.log(s1, typeof s1);//Symbol(say hi) &quot;sym">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- es6 (2)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      ES6--Symbol
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- es6 (2)/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:39:06.660Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <blockquote>
+<p>Symbol是es6中新增的数据类型,表示一种绝不重复的值；</p>
+</blockquote>
+<h2 id="创建Symbol类型值"><a href="#创建Symbol类型值" class="headerlink" title="创建Symbol类型值"></a>创建Symbol类型值</h2><p>使用Symbol()函数可以创建一个symbol类型值，需要注意的是，前面不能使用new，否则会报错；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s1 = <span class="built_in">Symbol</span>(<span class="string">"say hi"</span>);</span><br><span class="line"><span class="keyword">let</span> s2 = <span class="built_in">Symbol</span>(<span class="string">"hello"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(s1, <span class="keyword">typeof</span> s1);<span class="comment">//Symbol(say hi) "symbol"</span></span><br><span class="line"><span class="built_in">console</span>.log(s2, <span class="keyword">typeof</span> s2);<span class="comment">//Symbol(hello) "symbol"</span></span><br><span class="line"><span class="built_in">console</span>.log(s1.toString());<span class="comment">//Symbol(say hi)</span></span><br><span class="line"><span class="built_in">console</span>.log(s2.toString());<span class="comment">//Symbol(say hi)</span></span><br></pre></td></tr></table></figure></p>
+<p>Symbol()可以接受一个字符串作为参数，用作Symbol值的描述，也可以理解为键，键的作用就是为了便于区分不同的Symbol类型的值；<br><a id="more"></a></p>
+<h3 id="键相同的两个Symbol值并不相同"><a href="#键相同的两个Symbol值并不相同" class="headerlink" title="键相同的两个Symbol值并不相同"></a>键相同的两个Symbol值并不相同</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s1 = <span class="built_in">Symbol</span>(<span class="string">"say hi"</span>);</span><br><span class="line"><span class="keyword">let</span> s2 = <span class="built_in">Symbol</span>(<span class="string">"say hi"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(s1 == s2);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<p>于是，Symbol到底有什么作用呢？</p>
+<p>既然es6中很认真的提出了Symbol这个概念，那么必然有其存在的道理；</p>
+<p>在原来的es5中，对象的属性名都是字符串，如果需要使用别人提供的对象，并为这个对象新增一些属性，那么我们新增的属性名就很可能和原来的属性名发生冲突，而Symbol的出现可以确保每个属性名都是独一无二的，这样就不会产生冲突了；</p>
+<p>所以Symbol的作用就是产生一个具有唯一性的值；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> test = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> s1 = <span class="built_in">Symbol</span>(<span class="string">"say hi"</span>);</span><br><span class="line"><span class="keyword">let</span> s2 = <span class="built_in">Symbol</span>(<span class="string">"say hi"</span>);</span><br><span class="line">test[s1] = <span class="string">"symbolTest"</span>;</span><br><span class="line">test[s2] = <span class="string">"symbolTest"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(test); <span class="comment">//&#123;Symbol(say hi): "symbolTest", Symbol(say hi): "symbolTest"&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>可以看到，即便连个属性的值完全一样，也不会产生冲突，所以每一次新添加的Symbol值都是唯一的；</p>
+<p>Symbol实际上已es6引入的一种原始数据类型，除了Symbol，js还有其他5种数据类型，分别是undefined、null、boolean、string、number；</p>
+<p>需要注意的是，虽然Symbol是一种数据类型，但是Symbol并不能进行运算，不仅不能喝Symbol值进行运算，也不能和其它类型的值进行运算，否则会报错；</p>
+<p>另外，使用for…in和for…of都无法遍历到Symbol值的属性，Symol值作为对象的属性名，也无法通过Object.keys()、Object.getOwnPropertyNames()来获取，但是可以使用Object.getOwnPropertySymbols()方法回去一个对象上的Symbol属性名，也可以使用Reflect.ownKeys()返回所有类型的属性名，包括常规属性名和Symbol属性名；</p>
+
       
 
       
@@ -199,6 +214,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +238,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- promise/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          ES6--Promise
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- set/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6--Set和WeakSet</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

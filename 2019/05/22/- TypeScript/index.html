@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>TypeScript--模块 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="关于模块，基本只需要记住export导出，require导入就行了，而所谓模块就是一个独立的文件，文件与文件之间是相互封闭的； 如果洗碗一个模块能够读取当前模块的内容，就需要使用export来导出指定的变量或者函数； 命名空间这里的命名空间是指声明的分类，不是具体的实体，一个命名空间内可以包含值或类型，对命名空间建立应用需要使用import语句，如果使用const、let会使新的实体不再具有命名空">
+<meta name="keywords" content="TypeScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="TypeScript--模块">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- TypeScript/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="关于模块，基本只需要记住export导出，require导入就行了，而所谓模块就是一个独立的文件，文件与文件之间是相互封闭的； 如果洗碗一个模块能够读取当前模块的内容，就需要使用export来导出指定的变量或者函数； 命名空间这里的命名空间是指声明的分类，不是具体的实体，一个命名空间内可以包含值或类型，对命名空间建立应用需要使用import语句，如果使用const、let会使新的实体不再具有命名空">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:updated_time" content="2019-05-22T03:39:50.013Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="TypeScript--模块">
+<meta name="twitter:description" content="关于模块，基本只需要记住export导出，require导入就行了，而所谓模块就是一个独立的文件，文件与文件之间是相互封闭的； 如果洗碗一个模块能够读取当前模块的内容，就需要使用export来导出指定的变量或者函数； 命名空间这里的命名空间是指声明的分类，不是具体的实体，一个命名空间内可以包含值或类型，对命名空间建立应用需要使用import语句，如果使用const、let会使新的实体不再具有命名空">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +151,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- TypeScript" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      TypeScript--模块
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- TypeScript/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:39:47.935Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <p>关于模块，基本只需要记住export导出，require导入就行了，而所谓模块就是一个独立的文件，文件与文件之间是相互封闭的；</p>
+<p>如果洗碗一个模块能够读取当前模块的内容，就需要使用export来导出指定的变量或者函数；</p>
+<h3 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h3><p>这里的命名空间是指声明的分类，不是具体的实体，一个命名空间内可以包含值或类型，对命名空间建立应用需要使用<code>import</code>语句，如果使用<code>const</code>、<code>let</code>会使新的实体不再具有命名空间的属性；<br><a id="more"></a><br>其作用就是防止产生命名冲突；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">namespace Validation &#123;</span><br><span class="line">    <span class="keyword">export</span> interface StringValidator &#123;</span><br><span class="line">        isAcceptable(s: string): boolean;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> lettersRegexp = <span class="regexp">/^[A-Za-z]+$/</span>;</span><br><span class="line">    <span class="keyword">const</span> numberRegexp = <span class="regexp">/^[0-9]+$/</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">LettersOnlyValidator</span> <span class="title">implements</span> <span class="title">StringValidator</span> </span>&#123;</span><br><span class="line">        isAcceptable(s: string) &#123;</span><br><span class="line">            <span class="keyword">return</span> lettersRegexp.test(s);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">ZipCodeValidator</span> <span class="title">implements</span> <span class="title">StringValidator</span> </span>&#123;</span><br><span class="line">        isAcceptable(s: string) &#123;</span><br><span class="line">            <span class="keyword">return</span> s.length === <span class="number">5</span> &amp;&amp; numberRegexp.test(s);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Some samples to try</span></span><br><span class="line"><span class="keyword">let</span> strings = [<span class="string">"Hello"</span>, <span class="string">"98052"</span>, <span class="string">"101"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Validators to use</span></span><br><span class="line"><span class="keyword">let</span> validators: &#123; [s: string]: Validation.StringValidator; &#125; = &#123;&#125;;</span><br><span class="line">validators[<span class="string">"ZIP code"</span>] = <span class="keyword">new</span> Validation.ZipCodeValidator();</span><br><span class="line">validators[<span class="string">"Letters only"</span>] = <span class="keyword">new</span> Validation.LettersOnlyValidator();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Show whether each string passed each validator</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> s <span class="keyword">of</span> strings) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> name <span class="keyword">in</span> validators) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`"<span class="subst">$&#123; s &#125;</span>" - <span class="subst">$&#123; validators[name].isAcceptable(s) ? <span class="string">"matches"</span> : <span class="string">"does not match"</span> &#125;</span> <span class="subst">$&#123; name &#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如上，将所有与验证器相关的类型都放到了一个叫做Validation的命名空间里。因为需要这些接口和类在空间之外也是可以访问的，所以需要使用export，相反的，变量lettersRegexp和numberRegexp是实现细节，不需要导出，因此在命名空间外是不能访问的；</p>
+<p>如果在多个文件中存在同一个命名空间，那么尽管是不同的文件，但是仍然是同一个命名空间，并且在使用的时候就如同它们在一个文件中定义的一样；</p>
+
       
 
       
@@ -199,6 +205,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TypeScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +229,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- TypeScript (1)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          TypeScript--类型兼容
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- 作用域/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6--块级作用域</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

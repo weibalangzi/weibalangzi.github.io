@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>back | 他的博客</title>
+  <title>JavaScript--垃圾回收机制 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我回来了">
+  <meta name="description" content="垃圾回收机制 js存在内置的垃圾回收机制，也就是说执行环境会负责管理代码执行过程中的使用的内存；js中的垃圾回收主要使用了标记清除算法和引用计数器算法。  标记清除算法基本概念在垃圾回收算法中，经常会出现mutator和collector两个名称； collector：垃圾收集器； mutator：垃圾收集器之外的部分，比如当前的应用程序； mutator roots：mutator根对象，通常是">
+<meta name="keywords" content="js,垃圾回收,内存泄漏">
 <meta property="og:type" content="article">
-<meta property="og:title" content="back">
-<meta property="og:url" content="https://hewill.cc/2019/05/22/back/index.html">
+<meta property="og:title" content="JavaScript--垃圾回收机制">
+<meta property="og:url" content="https://hewill.cc/2019/05/22/- 内存泄漏/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="我回来了">
+<meta property="og:description" content="垃圾回收机制 js存在内置的垃圾回收机制，也就是说执行环境会负责管理代码执行过程中的使用的内存；js中的垃圾回收主要使用了标记清除算法和引用计数器算法。  标记清除算法基本概念在垃圾回收算法中，经常会出现mutator和collector两个名称； collector：垃圾收集器； mutator：垃圾收集器之外的部分，比如当前的应用程序； mutator roots：mutator根对象，通常是">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-22T02:30:54.865Z">
+<meta property="og:image" content="http://www.softwhy.com/data/attachment/portal/201704/10/164802wvtznuvp3bjviq9t.png">
+<meta property="og:image" content="http://staticc.qiniudn.com/detached-nodes.gif">
+<meta property="og:updated_time" content="2019-05-22T03:36:46.885Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="back">
-<meta name="twitter:description" content="我回来了">
+<meta name="twitter:title" content="JavaScript--垃圾回收机制">
+<meta name="twitter:description" content="垃圾回收机制 js存在内置的垃圾回收机制，也就是说执行环境会负责管理代码执行过程中的使用的内存；js中的垃圾回收主要使用了标记清除算法和引用计数器算法。  标记清除算法基本概念在垃圾回收算法中，经常会出现mutator和collector两个名称； collector：垃圾收集器； mutator：垃圾收集器之外的部分，比如当前的应用程序； mutator roots：mutator根对象，通常是">
+<meta name="twitter:image" content="http://www.softwhy.com/data/attachment/portal/201704/10/164802wvtznuvp3bjviq9t.png">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -150,27 +154,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-back" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-- 内存泄漏" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      back
+      JavaScript--垃圾回收机制
     </h1>
   
 
         
-        <a href="/2019/05/22/back/" class="archive-article-date">
-  	<time datetime="2019-05-22T02:30:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- 内存泄漏/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:36:39.728Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我回来了"><a href="#我回来了" class="headerlink" title="我回来了"></a>我回来了</h2>
+        <h1 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h1><blockquote>
+<p>js存在内置的垃圾回收机制，也就是说执行环境会负责管理代码执行过程中的使用的内存；js中的垃圾回收主要使用了标记清除算法和引用计数器算法。</p>
+</blockquote>
+<h2 id="标记清除算法"><a href="#标记清除算法" class="headerlink" title="标记清除算法"></a>标记清除算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>在垃圾回收算法中，经常会出现mutator和collector两个名称；</p>
+<p><code>collector</code>：垃圾收集器；</p>
+<p><code>mutator</code>：垃圾收集器之外的部分，比如当前的应用程序；</p>
+<p><code>mutator roots</code>：mutator根对象，通常是分配在堆内存之外，可以直接被mutator直接访问到的对象，一般指静态、全局变量；</p>
+<p>可到达对象：指从根对象开始遍历，可以访问到的对象，也就是mutator正在使用的对象；<br><a id="more"></a></p>
+<h3 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h3><p>标记清除算法可以拆分为两部分：<code>标记（mark）</code>和<code>清除（sweep）</code>；</p>
+<p><code>标记阶段</code>：此阶段，垃圾回收器会从mutator根对象开始遍历，每一个可以从根对象访问到的对象都会被添加一个标识，于是这个对象就被标识为可到达对象；</p>
+<p><code>清除阶段</code>：此阶段垃圾回收器会怼堆内存从头到尾进行线性遍历，如果发现有对象没有被标识为可到达对象，那么就将此对象占用的内存回收，并且将原来标记为可到达对象的标识清除，以便进行下一次垃圾回收操作；</p>
+<h3 id="开始回收的时间"><a href="#开始回收的时间" class="headerlink" title="开始回收的时间"></a>开始回收的时间</h3><p>在使用标记清除算法时，未引用对象并不会被立即回收，垃圾对象将一直累计到内存耗尽为止，当内存耗尽时，程序将会被挂起，垃圾回收开始执行；</p>
+<h3 id="标记清除算法的缺点"><a href="#标记清除算法的缺点" class="headerlink" title="标记清除算法的缺点"></a>标记清除算法的缺点</h3><p>垃圾收集后有可能会造成大量的内存碎片；</p>
+<h2 id="引用计算器算法"><a href="#引用计算器算法" class="headerlink" title="引用计算器算法"></a>引用计算器算法</h2><h3 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h3><p>为每个对象增加一个字段记录被引用的次数，并在运行时跟踪和更新引用的总数；</p>
+<h3 id="基本原理-1"><a href="#基本原理-1" class="headerlink" title="基本原理"></a>基本原理</h3><p>当声明一个变量并将一个引用类型值赋值该变量时，则这个值的引用次数就是1，如果同一个值又被赋值给另外一个变量，则该值的引用次数为1；</p>
+<p>相反，如果包含对这个值的引用的变量又取得了另外一个值，则这个值的引用次数减1；</p>
+<p>当这个值的引用次数变成0时，则说明没有办法再访问这个值了，因而就可以将其占用的内存空间回收；这样，当垃圾收集器下次再运行时，它就会释放那些引用次数为零的值所占用的内存；</p>
+<h3 id="计数器算法的优点"><a href="#计数器算法的优点" class="headerlink" title="计数器算法的优点"></a>计数器算法的优点</h3><p>无需等待内存耗尽再执行垃圾回收操作，可以在赋值操作的同时，检查计数器是否为0，如果是的话就可以立即回收；</p>
+<h3 id="计数器算法的缺点"><a href="#计数器算法的缺点" class="headerlink" title="计数器算法的缺点"></a>计数器算法的缺点</h3><p>此算法不能解决循环引用的问题，例如，存在两个对象objA和objB，它们通过各自的属性相互引用，当函数执行完毕后，objA和objB还将继续存在，因为它们的引用次数永远不会是0；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">problem</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> objA = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    <span class="keyword">var</span> objB = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    </span><br><span class="line">    objA.someOtherObject = objB;</span><br><span class="line">    objB.anotherObject = objA;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>此时最好的方法是采用标记清除算法，由于函数执行之后，这两个对象都离开了作用域，所以会被标记，从而被垃圾收集器清除所占用的内存；</p>
+<h1 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h1><blockquote>
+<p>内存泄漏就是指被分配的内存既不能被使用，也不能被回收的现象；</p>
+</blockquote>
+<p>在低版本IE浏览器中，DOM对象与JavaScript对象形成循环引用，就有可能产生内存泄漏，除非人为的切断引用；低版本IE浏览器在JavaScript对象中使用标记清除垃圾回收机制，而对于DOM对象则使用引用清除垃圾回收机制；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> elem = <span class="built_in">document</span>.getElementById(<span class="string">'ele'</span>);</span><br><span class="line">    elem.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>以上代码过程如下：</p>
+<ol>
+<li>elem对象通过onclick引用了匿名函数function；</li>
+<li>匿名函数又通过作用域链引用到外部函数的变量对象，变量对象中存储有elem对象，于是形成里一个循环应用；</li>
+</ol>
+<p>整个过程如下如所示：<br><img src="http://www.softwhy.com/data/attachment/portal/201704/10/164802wvtznuvp3bjviq9t.png" alt></p>
+<h3 id="常见的内存泄漏的原因"><a href="#常见的内存泄漏的原因" class="headerlink" title="常见的内存泄漏的原因"></a>常见的内存泄漏的原因</h3><h4 id="全局变量引起的内存泄漏"><a href="#全局变量引起的内存泄漏" class="headerlink" title="全局变量引起的内存泄漏"></a>全局变量引起的内存泄漏</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    test = <span class="string">'aaaaa'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>test会成为一个全局变量，不会被回收；</p>
+<h4 id="闭包引起的内存泄漏"><a href="#闭包引起的内存泄漏" class="headerlink" title="闭包引起的内存泄漏"></a>闭包引起的内存泄漏</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> test = <span class="string">"hehe"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(test)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<p>test被闭包所引用，不会被回收；</p>
+<h4 id="dom清空或删除时，事件未清除导致内存泄漏"><a href="#dom清空或删除时，事件未清除导致内存泄漏" class="headerlink" title="dom清空或删除时，事件未清除导致内存泄漏"></a>dom清空或删除时，事件未清除导致内存泄漏</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'elem'</span>).bind(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'aaaaa'</span>)</span><br><span class="line">&#125;).remove()</span><br></pre></td></tr></table></figure>
+<p>elem还会存在于内存中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'elem'</span>).bind(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'aaaa'</span>)</span><br><span class="line">&#125;).off(<span class="string">'click'</span>).remove()</span><br></pre></td></tr></table></figure></p>
+<p>在事件被清除后，elem即可从内存中移除；</p>
+<h4 id="子元素存在引用导致的内存泄漏"><a href="#子元素存在引用导致的内存泄漏" class="headerlink" title="子元素存在引用导致的内存泄漏"></a>子元素存在引用导致的内存泄漏</h4><p><img src="http://staticc.qiniudn.com/detached-nodes.gif" alt><br>黄色是指直接被 js变量所引用，在内存里；<br>红色是指间接被 js变量所引用，如上图，refB 被 refA 间接引用，导致即使 refB 变量被清空，也是不会被回收的；<br>子元素 refB 由于 parentNode 的间接引用，只要它不被删除，它所有的父元素（图中红色部分）都不会被删除；</p>
+
       
 
       
@@ -199,6 +241,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">垃圾回收</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">内存泄漏</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -212,15 +273,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/22/- G2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/22/- cookie/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          G2图表的使用
+          cookie
         
       </div>
     </a>
   
+  
+    <a href="/2019/05/22/- svg/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SVG--基础</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
