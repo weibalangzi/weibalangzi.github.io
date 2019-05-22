@@ -275,7 +275,7 @@
 <p>如上，v1和v2是不相等的；</p>
 <p>Symbol值不能被隐式转换为字符串类型，即不能在模板字符串中直接作为一个变量来使用；</p>
 <p>Symbol类型的值也可以作为对象的属性名称；</p>
-<p>##类型断言<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:any = <span class="string">"say hi"</span>;</span><br><span class="line"><span class="keyword">let</span> strLength:number = (&lt;string&gt;anyValue).length;</span><br><span class="line">console.log(strLength);//6</span><br></pre></td></tr></table></figure></p>
+<p>##类型断言<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:any = <span class="string">"say hi"</span>;</span><br><span class="line"><span class="keyword">let</span> strLength:number = (<span class="xml"><span class="tag">&lt;<span class="name">string</span>&gt;</span>anyValue).length;</span></span><br><span class="line"><span class="xml">console.log(strLength);//6</span></span><br></pre></td></tr></table></figure></p>
 <p>如上，尖括号&lt;&gt;中的数据类型为目标类型，以上代码将any类型数据转换为string类型；</p>
 
       
