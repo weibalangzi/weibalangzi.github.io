@@ -153,34 +153,37 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-- 闭包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-- promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- 闭包/">JavaScript--函数</a>
+      <a class="article-title" href="/2019/05/22/- promise/">ES6--Promise</a>
     </h1>
   
 
         
-        <a href="/2019/05/22/- 闭包/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:37:23.575Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- promise/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.180Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="函数语句"><a href="#函数语句" class="headerlink" title="函数语句"></a>函数语句</h3><h4 id="if-else"><a href="#if-else" class="headerlink" title="if else"></a>if else</h4><p>这个没什么好说的，记住有时候语句中的大括号是可以省略的，免得下次看到一脸懵逼;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span> == <span class="number">1</span>) <span class="built_in">console</span>.log(<span class="string">"yeah you are right"</span>);<span class="comment">//yeah you are right</span></span><br></pre></td></tr></table></figure></p>
+        <blockquote>
+<p>以往为了实现异步操作的效果，通常需要使用回调函数；<br>但是如果存在多重回调嵌套，就会进入传说中的回调地狱；<br>Promise的出现就是为了解决回调多重嵌套的问题；</p>
+</blockquote>
+<h2 id="Promise概念"><a href="#Promise概念" class="headerlink" title="Promise概念"></a>Promise概念</h2><p>Promise对象是一个新的异步操作解决方案，比原有的回调函数等方式更为合理；<br>Promise对象保存着指定操作的结果，然后通过为此对象提供方法进行相关操作；<br>Promise对象具有三种状态：Pending（等待）、Resolved（已完成）、Rejected（未完成）；<br>Promise对象状态的改变只有两种可能：Pending转变为Resolved或者Pending转变为Rejected；<br>状态一旦改变就无法再次被更改，一直保持；<br>
         
-          <a class="article-more-a" href="/2019/05/22/- 闭包/#more">more >></a>
+          <a class="article-more-a" href="/2019/05/22/- promise/#more">more >></a>
         
       
 
       
-    </div>
+    </p></div>
     <div class="article-info article-info-index">
       
       
@@ -189,11 +192,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">闭包</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">promise</a>
         		</li>
       		
 		</ul>
@@ -203,7 +206,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- 闭包/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/22/- promise/">展开全文 >></a>
         </p>
       
 
@@ -233,39 +236,62 @@
 
 
   
-    <article id="post-- 面向对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-- nodejs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- 面向对象/">JavaScript--面向对象</a>
+      <a class="article-title" href="/2019/05/22/- nodejs/">NodeJs--路由、全局对象</a>
     </h1>
   
 
         
-        <a href="/2019/05/22/- 面向对象/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:37:19.391Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- nodejs/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.180Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>ECMAscript中，对象是无序属性的集合，其属性包含基本值，对象或者函数</p>
-</blockquote>
-<h3 id="面向对象的特点"><a href="#面向对象的特点" class="headerlink" title="面向对象的特点"></a>面向对象的特点</h3><p><code>封装</code>  <code>继承</code>  <code>多态</code></p>
-<p><strong>依附于对象的变量叫属性，依附于对象的函数叫方法</strong></p>
-<h3 id="创建对象的方式"><a href="#创建对象的方式" class="headerlink" title="创建对象的方式"></a>创建对象的方式</h3><p>1、<code>工厂模式</code>，使用简单的函数创建对象，为对象添加属性和方法，然后返回对象；<br>2、<code>构造函数模式</code>，创建自定义引用类型，可以像创建内置对象实例一样使用new操作符，这种方式的特点是–构造函数的每个成员都无法复用，每次创建出的对象只有私有变量和私有方法，不能实现公用；<br>3、<code>原型模式</code>，使用构造函数的prototype属性来指定共享的属性和方法，即使用构造函数定义实例属性，使用原型定义共享的属性和方法；<br>
-        
-          <a class="article-more-a" href="/2019/05/22/- 面向对象/#more">more >></a>
-        
+        <p></p><p style="padding:10px;color:white;background:#43853d;font-weight:900">路由机制</p><br>所谓路由，可以用一句话简单的概括，即<code>通过路由定义匹配规则，url匹配正则，匹配通过就加载对应数据和模板</code><p></p>
+<p><strong>后端路由</strong><br>浏览器在地址栏中切换不同的url时，每次都向后台服务器发出请求，服务器相应请求，在后台拼接html文件传给前端显示，java web中的jsp就是如此实现的；</p>
+<p>常用的后台MVC模式的基本路由处理流程：</p>
+<ul>
+<li>浏览器输入一个url请求</li>
+<li>从请求中找到Controller和Action的值，将请求传递给Controller处理</li>
+<li>Controller获取Model数据对象，并且将Model传递给View</li>
+<li>View呈现页面</li>
+</ul>
+<p>例如输入一个url：localhost/home/index，其中localhost是域名，对应结构{controller}/{action}/{id}</p>
+<p>后端路由的优点在于分担了前端的压力，html和数据的拼接都是由服务器完成，缺点则是当项目十分庞大时，加大了服务器的压力，同时在浏览器端不能输入指定的url路径进行指定模块的访问，而且在当前网速较慢时，将会延迟页面的加载；</p>
+<p><strong>前端路由</strong><br>随着SPA（单页面应用）的不断普及，前后端开发分离，目前项目基本都适用前端路由，在项目使用期间页面不会重新加载；</p>
+<p>前端路由的优点在于用户体验好，和后台网速没有关系，不需要每次都从服务器全部获取，见面展现快；可以在浏览器中输入指定想要访问的url路径地址；实现了前后端的分离，方便开发；</p>
+<p>前端留有的缺点在于对SEO不是很友好；在浏览器前进和后退时重新发送请求，没有合理缓存数据；初始加载时由于加载所有模块渲染，所以会比较慢；</p>
+<p><strong>前端路由的实现方法</strong><br><code>使用url的hash</code>，就是常用的锚点（#）操作，类似页面中点击某小图标，返回页面顶部，js通过hashChange事件来监听url的变化，IE7及以下需要轮询进行实现</p>
+<p><code>利用HTML5</code>的history模式，使url看起来类似普通网站，以”/“分割，没有”#”，但页面并没有跳转，不过使用这种模式需要服务器端的支持，服务器在接收到所有的请求后，都指向一个html文件，通过historyAPI，监听popState事件，用pushState和replaceState来实现；</p>
+<p><strong>实现一个简单的路由</strong><br><code>创建一个server.js</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</span><br><span class="line"><span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">"url"</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">start</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">onRequest</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> pathname = url.parse(request.url).pathname;</span><br><span class="line">        <span class="keyword">let</span> content </span><br><span class="line">        response.writeHead(<span class="number">200</span>,&#123;<span class="string">"Content-Type"</span>:<span class="string">"text/html;charset=utf-8"</span>&#125; );</span><br><span class="line"></span><br><span class="line">        <span class="keyword">switch</span>(pathname)&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'/page1'</span>:</span><br><span class="line">            content = fs.readFileSync(<span class="string">"./page1.html"</span>)</span><br><span class="line">            response.write(content)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'/page2'</span>:</span><br><span class="line">            content = fs.readFileSync(<span class="string">"./page2.html"</span>)</span><br><span class="line">            response.write(content)</span><br><span class="line">            <span class="keyword">break</span>;            </span><br><span class="line">            <span class="keyword">default</span> :</span><br><span class="line">            response.write(<span class="string">'hello world'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        response.end();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    http.createServer(onRequest).listen(<span class="number">8888</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Server has started"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.start = start;</span><br></pre></td></tr></table></figure></p>
+<p><code>创建一个index.js</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> server = <span class="built_in">require</span>(<span class="string">"./server"</span>);</span><br><span class="line"></span><br><span class="line">server.start();</span><br></pre></td></tr></table></figure></p>
+<p></p><p style="padding:10px;color:white;background:#43853d;font-weight:900">全局对象</p><br>在js中，全局对象是window，而在node.js中，全局对象是global，所有全局变量都是global对象的属性（出列global本身以外）；<p></p>
+<p><strong>全局对象与全局变量</strong><br>global最根本的作用是作为全局变量的宿主，满足以下条件的变量即为全局变量：</p>
+<ul>
+<li>在最外层定义的变量；</li>
+<li>全局对象的属性；</li>
+<li>未定义直接赋值的变量；</li>
+</ul>
+<p>当定义一个全局变量时，这个变量同事也会成为全局对象的属性，反之亦然，但是，在node.js中不可能在最外层定义变量，因为所有用户代码都是属于当前模块的，而模块本身不是最外层上下文；</p>
+<p><strong>__filename</strong><br>__filename表示当前正在执行的脚本的文件名，它将输出文件所在位置的绝对路径，且和命令行参数所指定的文件名不一定相同，如果实在模块中，返回的值是模块文件的路径；</p>
+<p><code>创建一个server.js</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    res.writeHead(<span class="number">200</span>,&#123;<span class="string">"Content-Type"</span>:<span class="string">"text/plain"</span>&#125;);</span><br><span class="line">    res.write(<span class="string">"hello"</span>);</span><br><span class="line">    res.end()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">3000</span>,()=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"server is running at 3000"</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(__filename);<span class="comment">//D:\hewei\reg\server.js</span></span><br><span class="line">    <span class="built_in">console</span>.log(__dirname);<span class="comment">//D:\hewei\reg</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p><strong>__dirname</strong><br>__dirname表示当前执行脚本所在的目录</p>
+<p></p><p style="padding:10px;color:white;background:#43853d;font-weight:900">util模块</p><br>util是一个node.js核心模块，提供常用函数的集合，用于弥补核心JavaScript的功能过于精简的不足；<p></p>
+<p><strong>util.inherits</strong><br>util.inherits的面向对象特性是基于原型的，与常见的基于类的不同，JavaScript没有提供对象继承的语言级别特性，而是通过原型复制来实现的；</p>
+
       
 
       
-    </p></div>
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -274,11 +300,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">路由</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">nodejs</a>
         		</li>
       		
 		</ul>
@@ -288,7 +314,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- 面向对象/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/22/- nodejs/">展开全文 >></a>
         </p>
       
 
@@ -331,7 +357,7 @@
 
         
         <a href="/2019/05/22/- js/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:37:10.536Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+  	<time datetime="2019-05-22T10:40:42.180Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
@@ -397,443 +423,33 @@
 
 
   
-    <article id="post-- table" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-- js (1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- table/">javaScript--table表格</a>
+      <a class="article-title" href="/2019/05/22/- js (1)/">JavaScript--基础知识</a>
     </h1>
   
 
         
-        <a href="/2019/05/22/- table/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:37:04.984Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- js (1)/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.180Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="cells属性"><a href="#cells属性" class="headerlink" title="cells属性"></a>cells属性</h3><p>cells可以获取表格中某一行所有单元格的集合；<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--css部分--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">"theTable"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>编号<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>年龄<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>01<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>a<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>18<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span> <span class="attr">id</span>=<span class="string">"tr2"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>02<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>b<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>19<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>03<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>c<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>20<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+        <h3 id="JavaScript的特点"><a href="#JavaScript的特点" class="headerlink" title="JavaScript的特点"></a>JavaScript的特点</h3><ul>
+<li>它是一门脚本语言</li>
+<li>它是一门轻量级的编程语言</li>
+<li>js代码可直接插入HTML元素之中</li>
+<li>以浏览器作为运行环境
         
-          <a class="article-more-a" href="/2019/05/22/- table/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">table</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- table/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-- select" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- select/">javaScript--select控件</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/22/- select/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:36:58.697Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="length长度"><a href="#length长度" class="headerlink" title="length长度"></a>length长度</h3><p>获取select下拉菜单中选项的总数<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"select"</span> <span class="attr">id</span>=<span class="string">"select"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"1"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"2"</span>&gt;</span>b<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"3"</span>&gt;</span>c<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"4"</span>&gt;</span>d<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"5"</span>&gt;</span>e<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2019/05/22/- select/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">select</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- select/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-- cookie" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- cookie/">cookie</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/22/- cookie/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:36:52.717Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="cookie是什么"><a href="#cookie是什么" class="headerlink" title="cookie是什么"></a>cookie是什么</h3><p>当用户访问某些web站点时，这些站点会在用户本地的浏览器的本地硬盘上创建一个很小的文本文件用以存储一些信息，这个文件称之为cookie文件；</p>
-<p>cookie可以使用js操作，也可以使用其它语言操作；</p>
-<p>每一个cookie都是名值对的组合，如果有多个名值对，可以使用分好将他们分割，使用document.cookie属性设置或者后去与当前文档相关的所用cookie；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"userName=hehe"</span>;</span><br><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"pw=123123"</span>;</span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2019/05/22/- cookie/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">cookie</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- cookie/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post--js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/-js/">JavaScript--浏览器对象</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/22/-js/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:36:46.901Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h3><p>window对象表示一个浏览器窗口，该对象是一个全局对象，所有的js的元素都是在此对象环境中运行的，所有的属性和方法集合都可以直接使用，不需要使用window对象来引用；<br>
-        
-          <a class="article-more-a" href="/2019/05/22/-js/#more">more >></a>
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/-js/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-- 内存泄漏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- 内存泄漏/">JavaScript--垃圾回收机制</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/22/- 内存泄漏/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:36:39.728Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h1><blockquote>
-<p>js存在内置的垃圾回收机制，也就是说执行环境会负责管理代码执行过程中的使用的内存；js中的垃圾回收主要使用了标记清除算法和引用计数器算法。</p>
-</blockquote>
-<h2 id="标记清除算法"><a href="#标记清除算法" class="headerlink" title="标记清除算法"></a>标记清除算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>在垃圾回收算法中，经常会出现mutator和collector两个名称；</p>
-<p><code>collector</code>：垃圾收集器；</p>
-<p><code>mutator</code>：垃圾收集器之外的部分，比如当前的应用程序；</p>
-<p><code>mutator roots</code>：mutator根对象，通常是分配在堆内存之外，可以直接被mutator直接访问到的对象，一般指静态、全局变量；</p>
-<p>可到达对象：指从根对象开始遍历，可以访问到的对象，也就是mutator正在使用的对象；<br>
-        
-          <a class="article-more-a" href="/2019/05/22/- 内存泄漏/#more">more >></a>
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">垃圾回收</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">内存泄漏</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- 内存泄漏/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-- svg" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- svg/">SVG--基础</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/22/- svg/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:36:28.686Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="SVG是什么"><a href="#SVG是什么" class="headerlink" title="SVG是什么"></a>SVG是什么</h1><p>SVG(Scalable Vector Graphics)：可缩放矢量图形，它是基于可扩展标记语言（XML）（标准通用标记语言的子集），用于描述二维矢量图像的一种图形格式；</p>
-<h2 id="主要特点"><a href="#主要特点" class="headerlink" title="主要特点"></a>主要特点</h2><ul>
-<li>SVG是可伸缩矢量图形；</li>
-<li>SVG用来定义用于网络的基于矢量的图形；</li>
-<li>SVG使用XML格式定义图形；</li>
-<li><p>SVG图像在放大或缩小的情况下，其图形质量不会受损失；</p>
-        
-          <a class="article-more-a" href="/2019/05/22/- svg/#more">more >></a>
+          <a class="article-more-a" href="/2019/05/22/- js (1)/#more">more >></a>
         
       
 
@@ -847,7 +463,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">svg</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -857,7 +473,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- svg/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/22/- js (1)/">展开全文 >></a>
         </p>
       
 
@@ -887,32 +503,32 @@
 
 
   
-    <article id="post-- canvas" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-- es6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- canvas/">canvas基础知识</a>
+      <a class="article-title" href="/2019/05/22/- es6/">ES6--Proxy和Reflect</a>
     </h1>
   
 
         
-        <a href="/2019/05/22/- canvas/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:36:02.499Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+        <a href="/2019/05/22/- es6/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.164Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="canvas和svg的区别"><a href="#canvas和svg的区别" class="headerlink" title="canvas和svg的区别"></a>canvas和svg的区别</h1><p>Canvas是使用JavaScript程序绘图，SVG是使用XML文档描述来绘图；</p>
-<p>相对来说，SVG更时候用来做动态交互，而且SVG绘图很容易编辑，只需要增加或移除相应的元素就可以了；</p>
-<p>同事SVG是基于矢量的，所以无论放大或者缩小，图形的质量都不会受到影响，而Canvas是基于位图的图像，放大会失真；</p>
-<p>所以Canvas适合像素处理，动态渲染和大数据量绘制；SVG适合静态图片展示，高保真文档查看和打印的应用场景；<br>
+        <blockquote>
+<p>Proxy即代理，而代理就是指当要获取某些东西或者操作某些东西需要经过某些媒介，而不是直接作用于对象本身；</p>
+</blockquote>
+<h3 id="Proxy代理"><a href="#Proxy代理" class="headerlink" title="Proxy代理"></a>Proxy代理</h3><p>Proxy对象就可以认为是一个媒介，要操作一个对象的话，就需要经过这个媒介的过滤；<br>
         
-          <a class="article-more-a" href="/2019/05/22/- canvas/#more">more >></a>
+          <a class="article-more-a" href="/2019/05/22/- es6/#more">more >></a>
         
       
 
@@ -926,7 +542,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">canvas</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
         		</li>
       		
 		</ul>
@@ -936,7 +552,422 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- canvas/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/22/- es6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-- es6 (3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/- es6 (3)/">ES6--解构赋值</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/- es6 (3)/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.164Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="数组解构赋值"><a href="#数组解构赋值" class="headerlink" title="数组解构赋值"></a>数组解构赋值</h2><p>es6允许使用以下方式对变量进行声明并赋值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [theName,age,address] = [<span class="string">"hehe"</span>,<span class="number">18</span>,<span class="string">"china"</span>]</span><br></pre></td></tr></table></figure></p>
+<p>以上代码就是数组解构赋值，在es6中可以按照一定的模式从数组中提取值，然后给对应模式中的变量进行赋值，而这就是数组的解构赋值；</p>
+<p>也可以嵌套多层进行赋值，只要两边模式一样就行；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [theName,[age,gender],address] = [<span class="string">"hehe"</span>,[<span class="number">18</span>,<span class="string">"boy"</span>],<span class="string">"china"</span>]</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2019/05/22/- es6 (3)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/22/- es6 (3)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-- es6 (2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/- es6 (2)/">ES6--Symbol</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/- es6 (2)/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.164Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Symbol是es6中新增的数据类型,表示一种绝不重复的值；</p>
+</blockquote>
+<h2 id="创建Symbol类型值"><a href="#创建Symbol类型值" class="headerlink" title="创建Symbol类型值"></a>创建Symbol类型值</h2><p>使用Symbol()函数可以创建一个symbol类型值，需要注意的是，前面不能使用new，否则会报错；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s1 = <span class="built_in">Symbol</span>(<span class="string">"say hi"</span>);</span><br><span class="line"><span class="keyword">let</span> s2 = <span class="built_in">Symbol</span>(<span class="string">"hello"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(s1, <span class="keyword">typeof</span> s1);<span class="comment">//Symbol(say hi) "symbol"</span></span><br><span class="line"><span class="built_in">console</span>.log(s2, <span class="keyword">typeof</span> s2);<span class="comment">//Symbol(hello) "symbol"</span></span><br><span class="line"><span class="built_in">console</span>.log(s1.toString());<span class="comment">//Symbol(say hi)</span></span><br><span class="line"><span class="built_in">console</span>.log(s2.toString());<span class="comment">//Symbol(say hi)</span></span><br></pre></td></tr></table></figure></p>
+<p>Symbol()可以接受一个字符串作为参数，用作Symbol值的描述，也可以理解为键，键的作用就是为了便于区分不同的Symbol类型的值；<br>
+        
+          <a class="article-more-a" href="/2019/05/22/- es6 (2)/#more">more >></a>
+        
+      
+
+      
+    </p></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/22/- es6 (2)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-- G2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/- G2/">G2图表的使用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/- G2/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.164Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>G2是阿里开发的一套基于可视化编码的图形语法<br>以数据驱动，具有高度的易用性和扩展性</p>
+</blockquote>
+<h3 id="浏览器引入"><a href="#浏览器引入" class="headerlink" title="浏览器引入"></a>浏览器引入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 引入在线资源 --&gt;</span><br><span class="line">&lt;script src=&quot;https://gw.alipayobjects.com/os/antv/assets/g2/3.0.5-beta.4/g2.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="通过npm安装"><a href="#通过npm安装" class="headerlink" title="通过npm安装"></a>通过npm安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @antv/g2 --save</span><br></pre></td></tr></table></figure>
+<p>安装完成后，使用<code>import</code>或<code>require</code>进行引用</p>
+<h3 id="G2图表的组成"><a href="#G2图表的组成" class="headerlink" title="G2图表的组成"></a>G2图表的组成</h3><p><img src="https://zos.alipayobjects.com/skylark/313254aa-ff97-4396-9192-3c0f8fc16867/attach/2378/da07b27fb885206a/image.png" alt></p>
+<h4 id="坐标轴（Axis）"><a href="#坐标轴（Axis）" class="headerlink" title="坐标轴（Axis）"></a>坐标轴（Axis）</h4><p>每个坐标轴由坐标轴线（line）、刻度线（tickLine）、刻度文本（label）、标题（title）以及网格线（grid）组成</p>
+<p><img src="https://gw.alipayobjects.com/zos/rmsportal/XyHrQpWKgHCCbctRzwVT.png" alt></p>
+        
+          <a class="article-more-a" href="/2019/05/22/- G2/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">图表</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">G2</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/22/- G2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-- const" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/- const/">ES6--let和const</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/- const/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.148Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h3><p>es6新增let命令用来声明变量，使用let声明的变量具有以下特点：</p>
+<ul>
+<li>使用let声明的变量只在变量声明时所在的代码块内有效</li>
+<li>不存在变量提升现象</li>
+<li>块级作用域内，如果使用let声明变量，那么该变量就会被封闭在当前作用域内，不再受外部作用域的影响；</li>
+<li>在同一作用域内，不允许使用let重复声明同一变量</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/05/22/- const/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">let</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">const</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/22/- const/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-- es6 (1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/- es6 (1)/">ES6--Map和WeakMap</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/- es6 (1)/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.148Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Map和WeakMap是es6新增的数据结构，它们本质与对象一样，都是键值对的集合<br>但是他们与Object对象主要的不同是，键可以是各种类型的数值<br>而Object对象的键只能是字符串类型或者Symbol类型值；</p>
+</blockquote>
+<h3 id="Object数据结构"><a href="#Object数据结构" class="headerlink" title="Object数据结构"></a>Object数据结构</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> test = &#123;&#125;;</span><br><span class="line">obj[test] = <span class="string">"say hi"</span>;</span><br><span class="line">obj[<span class="string">"say"</span>] = <span class="string">"say hello"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj)<span class="comment">//&#123;[object Object]: "say hi", say: "say hello"&#125;</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/05/22/- es6 (1)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/22/- es6 (1)/">展开全文 >></a>
         </p>
       
 
@@ -1067,6 +1098,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
@@ -1076,14 +1115,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">const</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1099,11 +1130,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">set</a>
+                <a href="javascript:void(0)" class="js-tag color2">select</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">select</a>
+                <a href="javascript:void(0)" class="js-tag color4">set</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1115,11 +1146,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
+                <a href="javascript:void(0)" class="js-tag color1">table</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">table</a>
+                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
               </li>
              
               <li class="article-tag-list-item">
