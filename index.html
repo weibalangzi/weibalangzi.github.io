@@ -156,38 +156,30 @@
     <article id="post-typeScript--枚举" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/typeScript--枚举/">TypeScript--枚举</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/typeScript--枚举/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:40:50.095Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="typeScript–枚举"><a href="#typeScript–枚举" class="headerlink" title="typeScript–枚举"></a>typeScript–枚举</h1><hr>
+        <hr>
 <p>首先，枚举是一种数据类型，就像boolean、string之类的一种<strong>数据类型</strong>。<br>使用枚举可以<strong>定义</strong>一些<strong>有名字</strong>的<strong>数字常量</strong>，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。<br>枚举类型使用<strong>enum</strong>进行定义<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum Direction&#123;</span><br><span class="line">    Up=<span class="number">1</span>,</span><br><span class="line">    Down,</span><br><span class="line">    Left,</span><br><span class="line">    Right</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.info(Direction);<span class="comment">//一个对象</span></span><br><span class="line"><span class="built_in">console</span>.info(Direction.Down);<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
 <p>###console.log()与console.info()<br>在上面的代码中，使用到了console.info()，因为平时只是使用过console.log()，并没有使用过console.info()，所以刚看到的时候真的是一脸懵逼啊。</p>
 <p>查了一下才知道，console后面其实可以接上很多其它的参数，具体有哪些就不多说了，直接控制台console然后回车就能看到。</p>
-<p>关于console，常用的有一下几种：</p>
-<ol>
-<li>console.log用于输出普通信息；</li>
-<li>console.info用于输出提示性信息；</li>
-<li>console.error用于输出错误信息；</li>
-<li>console.warn用于输出警示信息；</li>
-</ol>
-<p>这些东西了解一下就好，重点还是来说一下枚举吧！</p>
-<p>先看以下代码：</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Color &#123;</span><br><span class="line">  blue,</span><br><span class="line">  red,</span><br><span class="line">  yellow</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上代码表达的意思是声明一个枚举类型，该类型具有三个成员，默认情况下，从0开始为元素编号，并且依次递增1；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue,</span><br><span class="line">    red,</span><br><span class="line">    yellow</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Color.blue)<span class="comment">//0</span></span><br><span class="line"><span class="built_in">console</span>.log(Color.red)<span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(Color.yellow)<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
-<p>当然，也可以手动指定它们的值；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue=2,</span><br><span class="line">    red=1,</span><br><span class="line">    yellow=0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Color.blue)//2</span><br><span class="line">console.log(Color.red)//1</span><br><span class="line">console.log(Color.yellow)//0</span><br></pre></td></tr></table></figure></p>
-<p>还可以只指定部分的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue=2,</span><br><span class="line">    red,</span><br><span class="line">    yellow=0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Color.blue)//2</span><br><span class="line">console.log(Color.red)//3</span><br><span class="line">console.log(Color.yellow)//0</span><br></pre></td></tr></table></figure></p>
-<p>如果是没有被指定值得成员，其值为上一个成员的值+1后的结果；</p>
-<p>也可以由枚举值获取成员名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue=2,</span><br><span class="line">    red,</span><br><span class="line">    yellow=0</span><br><span class="line">&#125;</span><br><span class="line">let selectColor:string = Color[2];</span><br><span class="line">console.log(selectColor)//blue</span><br></pre></td></tr></table></figure></p>
-<p>但是，值得注意的一点是，不同枚举类型之间是不允许互相赋值的；</p>
-<p>在TypeScript2.4版本以后，枚举成员变量可以包含字符串：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    Red = &quot;RED&quot;,</span><br><span class="line">    Green,</span><br><span class="line">    Blue = &quot;BLUE&quot;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Color.Red)//RED</span><br><span class="line">console.log(Color.Green)//undefine</span><br></pre></td></tr></table></figure></p>
-<p>但是由上面的结果可以看到，如果某个没有赋值的成员，其前面一个成员的值是字符串，那么就不会出现什么+1了，字符串怎么咧，只能是undefine了；<br>使用已经定义的常数枚举成员的值初始化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue,</span><br><span class="line">    red=2,</span><br><span class="line">    yellow=red</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">console.log(Color.blue)//0</span><br><span class="line">console.log(Color.yellow)//2</span><br></pre></td></tr></table></figure></p>
-<p>不同的枚举类型，引用则需要使用限定名；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue,</span><br><span class="line">    red=2,</span><br><span class="line">    yellow=red</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">enum face&#123;</span><br><span class="line">    happy=Color.red</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(face.happy)//2</span><br></pre></td></tr></table></figure></p>
-<p>在常数枚举表达式中使用运算符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;</span><br><span class="line">    blue,</span><br><span class="line">    red=1+2,</span><br><span class="line">    yellow=1*2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(Color.red)//3</span><br><span class="line">console.log(Color.yellow)//2</span><br></pre></td></tr></table></figure></p>
-<p>常数枚举：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const enum Color &#123;</span><br><span class="line">    blue,</span><br><span class="line">    red,</span><br><span class="line">    yellow</span><br><span class="line">  &#125;</span><br><span class="line">  let colorArray = [Color.blue, Color.red, Color.yellow]//[0,1,2]</span><br></pre></td></tr></table></figure></p>
-<p>常数枚举只能使用常数表达式，并且不同于常规枚举的是，它们在编译阶段就会被删除，常数枚举成员在使用的地方被内联进来，因为常数枚举不可能有计算成员；</p>
-<p>外部枚举：<br>外部枚举用来描述已经存在的枚举类型的形状,所以。。。形状是什么鬼？？？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">declare enum Enum &#123;</span><br><span class="line">    A = 1,</span><br><span class="line">    B,</span><br><span class="line">    C = 2</span><br><span class="line">&#125;</span><br><span class="line">console.log(Enum.B)</span><br></pre></td></tr></table></figure></p>
-<p>查了一下资料，说是外部枚举的作用就是为了避免重复的问题，即，如果其他的文件中定义有相同的枚举对象，为了避免相同的枚举对象里定义相同枚举名称带来的冲突，这样定义了以后，重复的名称就不能再使用了</p>
-<p>总的来说，一个枚举类型可以包含零个或者多个枚举成员；<br>枚举成员具有一个数字值，可以是常数，或者是计算得出的值；</p>
-
+        
+          <a class="article-more-a" href="/2019/05/22/typeScript--枚举/#more">more >></a>
+        
       
 
       
@@ -195,6 +187,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TypeScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,40 +252,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##布尔类型<br>和javascript中一样，没什么好说的，只不过可以定义变量的类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> trueOrFalse:boolean = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></p>
+        <p>###布尔类型<br>和javascript中一样，没什么好说的，只不过可以定义变量的类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> trueOrFalse:boolean = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></p>
 <p>如上，声明一个布尔型变量trueOrFalse，并复制true；</p>
-<p>##数值类型<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num:number = <span class="number">11</span></span><br></pre></td></tr></table></figure></p>
-<p>##字符串类型<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> say:string = <span class="string">"hi"</span></span><br></pre></td></tr></table></figure></p>
-<p>##数组类型<br>数组类型js区别开了，虽然都是数组，但是ts中要规定数组元素的类型；</p>
-<p>在ts中，数组有两种声明方式，一种是只用[]，另一种是只用Array</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr:string[] = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>]</span><br></pre></td></tr></table></figure>
-<p>或者<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr:<span class="built_in">Array</span>&lt;string&gt; = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>]</span><br></pre></td></tr></table></figure></p>
-<p>##元组类型<br>元组类型和数组类似，但是有一个很明显的区别；在<strong>数组类型</strong>中，<strong>数组中的元素的类型必须一致</strong>，要么是数组，要么是字符串，要么是其它的什么；</p>
-<p>但是，在<strong>元组类型</strong>中，数组内可以包含<strong>多个类型</strong>的元素；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sayNum:[string,number] = [<span class="string">"hi"</span>,<span class="number">11</span>]</span><br></pre></td></tr></table></figure></p>
-<p>值得注意的是数组中的数据类型必须和规定的类型顺序对应起来；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sayNum:[string,number] = [<span class="number">11</span>,<span class="string">"hi"</span>]</span><br></pre></td></tr></table></figure></p>
-<p>也就是说上面这种写法就会报错了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.ts(8,5): error TS2322: Type &apos;[number, string]&apos; is not assignable to type &apos;[string, number]&apos;.</span><br></pre></td></tr></table></figure></p>
-<p>##any类型<br>上面的几种数据类型使用的前提是，你得先知道自己将要赋值的数据是个什么类型，但是在实际中，通常碰到的值得类型是不确定的，比如用户的输入值；</p>
-<p>这个时候就需要使用any类型了；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:any = <span class="number">11</span>;</span><br><span class="line"><span class="built_in">console</span>.log(anyValue)<span class="comment">//11</span></span><br><span class="line"></span><br><span class="line">anyValue = <span class="string">"hi"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(anyValue)<span class="comment">//hi</span></span><br><span class="line"></span><br><span class="line">anyValue = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(anyValue)<span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
-<p>如上，any类型的变量可以被赋值为任意值，这与js中的Object类型类似，但是Object赋值后，并不能调用该值得类型所自带的方法；</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:any = <span class="number">11.11111</span>;</span><br><span class="line">anyValue.toFixed(<span class="number">1</span>);</span><br><span class="line"><span class="built_in">console</span>.log(anyValue.toFixed(<span class="number">1</span>))<span class="comment">//11.1</span></span><br></pre></td></tr></table></figure>
-<p>而如果是使用Object<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:<span class="built_in">Object</span> = <span class="number">11.11111</span>;</span><br><span class="line"><span class="built_in">console</span>.log(anyValue.toFixed())</span><br></pre></td></tr></table></figure></p>
-<p>就会报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.ts(9,22): error TS2339: Property &apos;toFixed&apos; does not exist on type &apos;Object&apos;.</span><br></pre></td></tr></table></figure></p>
-<p>any类型数据可以赋值给任何数据类型变量（除了never类型）；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue: any = <span class="number">8</span>;</span><br><span class="line"><span class="keyword">let</span> str:string;</span><br><span class="line">str=anyValue;</span><br><span class="line"><span class="built_in">console</span>.log(str);<span class="comment">//8</span></span><br></pre></td></tr></table></figure></p>
-<p>如果数据是any类型，那么可以访问它的任意属性（即便是不存在的）；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:any = <span class="number">8</span>;</span><br><span class="line"><span class="built_in">console</span>.log(anyValue.say);</span><br></pre></td></tr></table></figure></p>
-<p>any类型的对象，其任意属性值都是any类型；</p>
-<p>any类型数据可以当做函数或者构造函数调用，可以有任意参数；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue: any = <span class="number">111</span>;</span><br><span class="line">anyValue();</span><br></pre></td></tr></table></figure></p>
-<p>如果没有明确的给出数据类型，并且编译器无法推断，那么该数据会被规定为any类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj:&#123;a,b&#125;</span><br></pre></td></tr></table></figure></p>
-<p>##void类型<br>void类型表示没有任何类型；<br>void类型的变量只能被赋值为undefined或者null；<br>void类型是any类型的子类型，是null和undefined类型的父类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nothing:<span class="keyword">void</span> = <span class="literal">null</span></span><br></pre></td></tr></table></figure></p>
-<p>##Null和Undefined类型<br>null和undefined分别是Null和Undefined的直接量，也是唯一值；</p>
-<p>##never类型<br>never类型表示的是那些永不存在的值得类型；<br>即总是会抛出异常，或者根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型；</p>
-<p>##Symbol类型<br>Symbol是es6中新增的一种值类型数据，表示一种绝不重复的值；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> v = <span class="built_in">Symbol</span>();</span><br></pre></td></tr></table></figure></p>
-<p>Symbol()函数可以接受一个字符串作为参数，用作Symbol值得描述，也可以理解为键（key）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> v1 = <span class="built_in">Symbol</span>(<span class="string">"aaaa"</span>)</span><br><span class="line"><span class="keyword">let</span> v2 = <span class="built_in">Symbol</span>(<span class="string">"aaaa"</span>)</span><br><span class="line"><span class="built_in">console</span>.log(v1 == v2)<span class="comment">//false</span></span><br></pre></td></tr></table></figure></p>
-<p>如上，v1和v2是不相等的；</p>
-<p>Symbol值不能被隐式转换为字符串类型，即不能在模板字符串中直接作为一个变量来使用；</p>
-<p>Symbol类型的值也可以作为对象的属性名称；</p>
-<p>##类型断言<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:any = <span class="string">"say hi"</span>;</span><br><span class="line"><span class="keyword">let</span> strLength:number = (<span class="xml"><span class="tag">&lt;<span class="name">string</span>&gt;</span>anyValue).length;</span></span><br><span class="line"><span class="xml">console.log(strLength);//6</span></span><br></pre></td></tr></table></figure></p>
-<p>如上，尖括号&lt;&gt;中的数据类型为目标类型，以上代码将any类型数据转换为string类型；</p>
-
+<p>###数值类型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num:number = <span class="number">11</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/05/22/- TypeScript (7)/#more">more >></a>
+        
       
 
       
@@ -1114,10 +1090,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">垃圾回收</a>
               </li>
              
@@ -1131,6 +1103,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
               </li>
              
               <li class="article-tag-list-item">

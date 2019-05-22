@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://hewill.cc">
   <title>TypeScript--基本类型 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##布尔类型和javascript中一样，没什么好说的，只不过可以定义变量的类型；1var trueOrFalse:boolean = true; 如上，声明一个布尔型变量trueOrFalse，并复制true； ##数值类型1var num:number = 11 ##字符串类型1let say:string = &quot;hi&quot; ##数组类型数组类型js区别开了，虽然都是数组，但是ts中要规定数组元素">
+  <meta name="description" content="###布尔类型和javascript中一样，没什么好说的，只不过可以定义变量的类型；1var trueOrFalse:boolean = true; 如上，声明一个布尔型变量trueOrFalse，并复制true； ###数值类型 1var num:number = 11">
 <meta name="keywords" content="TypeScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TypeScript--基本类型">
 <meta property="og:url" content="https://hewill.cc/2019/05/22/- TypeScript (7)/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="##布尔类型和javascript中一样，没什么好说的，只不过可以定义变量的类型；1var trueOrFalse:boolean = true; 如上，声明一个布尔型变量trueOrFalse，并复制true； ##数值类型1var num:number = 11 ##字符串类型1let say:string = &quot;hi&quot; ##数组类型数组类型js区别开了，虽然都是数组，但是ts中要规定数组元素">
+<meta property="og:description" content="###布尔类型和javascript中一样，没什么好说的，只不过可以定义变量的类型；1var trueOrFalse:boolean = true; 如上，声明一个布尔型变量trueOrFalse，并复制true； ###数值类型 1var num:number = 11">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-22T03:54:07.764Z">
+<meta property="og:updated_time" content="2019-05-22T09:29:32.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TypeScript--基本类型">
-<meta name="twitter:description" content="##布尔类型和javascript中一样，没什么好说的，只不过可以定义变量的类型；1var trueOrFalse:boolean = true; 如上，声明一个布尔型变量trueOrFalse，并复制true； ##数值类型1var num:number = 11 ##字符串类型1let say:string = &quot;hi&quot; ##数组类型数组类型js区别开了，虽然都是数组，但是ts中要规定数组元素">
+<meta name="twitter:description" content="###布尔类型和javascript中一样，没什么好说的，只不过可以定义变量的类型；1var trueOrFalse:boolean = true; 如上，声明一个布尔型变量trueOrFalse，并复制true； ###数值类型 1var num:number = 11">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -175,19 +175,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##布尔类型<br>和javascript中一样，没什么好说的，只不过可以定义变量的类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> trueOrFalse:boolean = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></p>
+        <p>###布尔类型<br>和javascript中一样，没什么好说的，只不过可以定义变量的类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> trueOrFalse:boolean = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></p>
 <p>如上，声明一个布尔型变量trueOrFalse，并复制true；</p>
-<p>##数值类型<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num:number = <span class="number">11</span></span><br></pre></td></tr></table></figure></p>
-<p>##字符串类型<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> say:string = <span class="string">"hi"</span></span><br></pre></td></tr></table></figure></p>
-<p>##数组类型<br>数组类型js区别开了，虽然都是数组，但是ts中要规定数组元素的类型；</p>
+<p>###数值类型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num:number = <span class="number">11</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>###字符串类型<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> say:string = <span class="string">"hi"</span></span><br></pre></td></tr></table></figure></p>
+<p>###数组类型<br>数组类型js区别开了，虽然都是数组，但是ts中要规定数组元素的类型；</p>
 <p>在ts中，数组有两种声明方式，一种是只用[]，另一种是只用Array</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr:string[] = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>]</span><br></pre></td></tr></table></figure>
 <p>或者<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr:<span class="built_in">Array</span>&lt;string&gt; = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>]</span><br></pre></td></tr></table></figure></p>
-<p>##元组类型<br>元组类型和数组类似，但是有一个很明显的区别；在<strong>数组类型</strong>中，<strong>数组中的元素的类型必须一致</strong>，要么是数组，要么是字符串，要么是其它的什么；</p>
+<p>###元组类型<br>元组类型和数组类似，但是有一个很明显的区别；在<strong>数组类型</strong>中，<strong>数组中的元素的类型必须一致</strong>，要么是数组，要么是字符串，要么是其它的什么；</p>
 <p>但是，在<strong>元组类型</strong>中，数组内可以包含<strong>多个类型</strong>的元素；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sayNum:[string,number] = [<span class="string">"hi"</span>,<span class="number">11</span>]</span><br></pre></td></tr></table></figure></p>
 <p>值得注意的是数组中的数据类型必须和规定的类型顺序对应起来；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sayNum:[string,number] = [<span class="number">11</span>,<span class="string">"hi"</span>]</span><br></pre></td></tr></table></figure></p>
 <p>也就是说上面这种写法就会报错了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.ts(8,5): error TS2322: Type &apos;[number, string]&apos; is not assignable to type &apos;[string, number]&apos;.</span><br></pre></td></tr></table></figure></p>
-<p>##any类型<br>上面的几种数据类型使用的前提是，你得先知道自己将要赋值的数据是个什么类型，但是在实际中，通常碰到的值得类型是不确定的，比如用户的输入值；</p>
+<p>###any类型<br>上面的几种数据类型使用的前提是，你得先知道自己将要赋值的数据是个什么类型，但是在实际中，通常碰到的值得类型是不确定的，比如用户的输入值；</p>
 <p>这个时候就需要使用any类型了；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:any = <span class="number">11</span>;</span><br><span class="line"><span class="built_in">console</span>.log(anyValue)<span class="comment">//11</span></span><br><span class="line"></span><br><span class="line">anyValue = <span class="string">"hi"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(anyValue)<span class="comment">//hi</span></span><br><span class="line"></span><br><span class="line">anyValue = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(anyValue)<span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
 <p>如上，any类型的变量可以被赋值为任意值，这与js中的Object类型类似，但是Object赋值后，并不能调用该值得类型所自带的方法；</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:any = <span class="number">11.11111</span>;</span><br><span class="line">anyValue.toFixed(<span class="number">1</span>);</span><br><span class="line"><span class="built_in">console</span>.log(anyValue.toFixed(<span class="number">1</span>))<span class="comment">//11.1</span></span><br></pre></td></tr></table></figure>
@@ -198,15 +200,15 @@
 <p>any类型的对象，其任意属性值都是any类型；</p>
 <p>any类型数据可以当做函数或者构造函数调用，可以有任意参数；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue: any = <span class="number">111</span>;</span><br><span class="line">anyValue();</span><br></pre></td></tr></table></figure></p>
 <p>如果没有明确的给出数据类型，并且编译器无法推断，那么该数据会被规定为any类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj:&#123;a,b&#125;</span><br></pre></td></tr></table></figure></p>
-<p>##void类型<br>void类型表示没有任何类型；<br>void类型的变量只能被赋值为undefined或者null；<br>void类型是any类型的子类型，是null和undefined类型的父类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nothing:<span class="keyword">void</span> = <span class="literal">null</span></span><br></pre></td></tr></table></figure></p>
-<p>##Null和Undefined类型<br>null和undefined分别是Null和Undefined的直接量，也是唯一值；</p>
-<p>##never类型<br>never类型表示的是那些永不存在的值得类型；<br>即总是会抛出异常，或者根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型；</p>
-<p>##Symbol类型<br>Symbol是es6中新增的一种值类型数据，表示一种绝不重复的值；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> v = <span class="built_in">Symbol</span>();</span><br></pre></td></tr></table></figure></p>
+<p>###void类型<br>void类型表示没有任何类型；<br>void类型的变量只能被赋值为undefined或者null；<br>void类型是any类型的子类型，是null和undefined类型的父类型；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nothing:<span class="keyword">void</span> = <span class="literal">null</span></span><br></pre></td></tr></table></figure></p>
+<p>###Null和Undefined类型<br>null和undefined分别是Null和Undefined的直接量，也是唯一值；</p>
+<p>###never类型<br>never类型表示的是那些永不存在的值得类型；<br>即总是会抛出异常，或者根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型；</p>
+<p>###Symbol类型<br>Symbol是es6中新增的一种值类型数据，表示一种绝不重复的值；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> v = <span class="built_in">Symbol</span>();</span><br></pre></td></tr></table></figure></p>
 <p>Symbol()函数可以接受一个字符串作为参数，用作Symbol值得描述，也可以理解为键（key）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> v1 = <span class="built_in">Symbol</span>(<span class="string">"aaaa"</span>)</span><br><span class="line"><span class="keyword">let</span> v2 = <span class="built_in">Symbol</span>(<span class="string">"aaaa"</span>)</span><br><span class="line"><span class="built_in">console</span>.log(v1 == v2)<span class="comment">//false</span></span><br></pre></td></tr></table></figure></p>
 <p>如上，v1和v2是不相等的；</p>
 <p>Symbol值不能被隐式转换为字符串类型，即不能在模板字符串中直接作为一个变量来使用；</p>
 <p>Symbol类型的值也可以作为对象的属性名称；</p>
-<p>##类型断言<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:any = <span class="string">"say hi"</span>;</span><br><span class="line"><span class="keyword">let</span> strLength:number = (<span class="xml"><span class="tag">&lt;<span class="name">string</span>&gt;</span>anyValue).length;</span></span><br><span class="line"><span class="xml">console.log(strLength);//6</span></span><br></pre></td></tr></table></figure></p>
+<p>###类型断言<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> anyValue:any = <span class="string">"say hi"</span>;</span><br><span class="line"><span class="keyword">let</span> strLength:number = (<span class="xml"><span class="tag">&lt;<span class="name">string</span>&gt;</span>anyValue).length;</span></span><br><span class="line"><span class="xml">console.log(strLength);//6</span></span><br></pre></td></tr></table></figure></p>
 <p>如上，尖括号&lt;&gt;中的数据类型为目标类型，以上代码将any类型数据转换为string类型；</p>
 
       
@@ -244,7 +246,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          TypeScript--枚举
         
       </div>
     </a>
@@ -433,10 +435,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">垃圾回收</a>
               </li>
              
@@ -450,6 +448,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
               </li>
              
               <li class="article-tag-list-item">

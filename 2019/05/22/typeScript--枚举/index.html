@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://hewill.cc">
-  <title>他的博客</title>
+  <title>TypeScript--枚举 | 他的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="typeScript–枚举 首先，枚举是一种数据类型，就像boolean、string之类的一种数据类型。使用枚举可以定义一些有名字的数字常量，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。枚举类型使用enum进行定义12345678enum Direction&amp;#123;    Up=1,    Down,    Left,    Righ">
-<meta name="keywords" content="切图仔,搬运工,背锅侠">
+  <meta name="description" content="首先，枚举是一种数据类型，就像boolean、string之类的一种数据类型。使用枚举可以定义一些有名字的数字常量，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。枚举类型使用enum进行定义12345678enum Direction&amp;#123;    Up=1,    Down,    Left,    Right&amp;#125;consol">
+<meta name="keywords" content="TypeScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="他的博客">
+<meta property="og:title" content="TypeScript--枚举">
 <meta property="og:url" content="https://hewill.cc/2019/05/22/typeScript--枚举/index.html">
 <meta property="og:site_name" content="他的博客">
-<meta property="og:description" content="typeScript–枚举 首先，枚举是一种数据类型，就像boolean、string之类的一种数据类型。使用枚举可以定义一些有名字的数字常量，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。枚举类型使用enum进行定义12345678enum Direction&amp;#123;    Up=1,    Down,    Left,    Righ">
+<meta property="og:description" content="首先，枚举是一种数据类型，就像boolean、string之类的一种数据类型。使用枚举可以定义一些有名字的数字常量，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。枚举类型使用enum进行定义12345678enum Direction&amp;#123;    Up=1,    Down,    Left,    Right&amp;#125;consol">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-22T03:40:51.612Z">
+<meta property="og:updated_time" content="2019-05-22T09:26:24.788Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="他的博客">
-<meta name="twitter:description" content="typeScript–枚举 首先，枚举是一种数据类型，就像boolean、string之类的一种数据类型。使用枚举可以定义一些有名字的数字常量，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。枚举类型使用enum进行定义12345678enum Direction&amp;#123;    Up=1,    Down,    Left,    Righ">
+<meta name="twitter:title" content="TypeScript--枚举">
+<meta name="twitter:description" content="首先，枚举是一种数据类型，就像boolean、string之类的一种数据类型。使用枚举可以定义一些有名字的数字常量，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。枚举类型使用enum进行定义12345678enum Direction&amp;#123;    Up=1,    Down,    Left,    Right&amp;#125;consol">
   
     <link rel="alternative" href="/atom.xml" title="他的博客" type="application/atom+xml">
   
@@ -158,12 +158,28 @@
             <article id="post-typeScript--枚举" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      TypeScript--枚举
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/typeScript--枚举/" class="archive-article-date">
+  	<time datetime="2019-05-22T03:40:50.095Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="typeScript–枚举"><a href="#typeScript–枚举" class="headerlink" title="typeScript–枚举"></a>typeScript–枚举</h1><hr>
+        <hr>
 <p>首先，枚举是一种数据类型，就像boolean、string之类的一种<strong>数据类型</strong>。<br>使用枚举可以<strong>定义</strong>一些<strong>有名字</strong>的<strong>数字常量</strong>，枚举类型是一种特殊的原始数据类型，里面列举了每一个带有名字的可能用到的枚举成员，每个枚举成员都是常量。<br>枚举类型使用<strong>enum</strong>进行定义<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum Direction&#123;</span><br><span class="line">    Up=<span class="number">1</span>,</span><br><span class="line">    Down,</span><br><span class="line">    Left,</span><br><span class="line">    Right</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.info(Direction);<span class="comment">//一个对象</span></span><br><span class="line"><span class="built_in">console</span>.info(Direction.Down);<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
 <p>###console.log()与console.info()<br>在上面的代码中，使用到了console.info()，因为平时只是使用过console.log()，并没有使用过console.info()，所以刚看到的时候真的是一脸懵逼啊。</p>
 <p>查了一下才知道，console后面其实可以接上很多其它的参数，具体有哪些就不多说了，直接控制台console然后回车就能看到。</p>
+<a id="more"></a>
 <p>关于console，常用的有一下几种：</p>
 <ol>
 <li>console.log用于输出普通信息；</li>
@@ -197,6 +213,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">TypeScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -394,10 +421,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">垃圾回收</a>
               </li>
              
@@ -411,6 +434,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
               </li>
              
               <li class="article-tag-list-item">
