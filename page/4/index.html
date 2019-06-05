@@ -86,13 +86,13 @@
                     <a class="github" target="_blank" href="https://github.com/weibalangzi" title="github"><i class="icon-github"></i></a>
                 
             </div>
-        
+
             <!--音乐播放插件-->
-            <div style="margin-top:30px;">
+            <div style="margin-top:30px;margin-left:-36px;">
                 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=640565&auto=1&height=66"></iframe>
             </div>
-        </nav>      
-	</header>		
+        </nav>
+	</header>
 </div>
 
     </div>
@@ -243,19 +243,19 @@
 
 
   
-    <article id="post-- es6 (1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-- DES" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- es6 (1)/">ES6--Map和WeakMap</a>
+      <a class="article-title" href="/2019/05/22/- DES/">使用DES加密信息</a>
     </h1>
   
 
         
-        <a href="/2019/05/22/- es6 (1)/" class="archive-article-date">
+        <a href="/2019/05/22/- DES/" class="archive-article-date">
   	<time datetime="2019-05-22T10:40:42.148Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
         
@@ -264,11 +264,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>Map和WeakMap是es6新增的数据结构，它们本质与对象一样，都是键值对的集合<br>但是他们与Object对象主要的不同是，键可以是各种类型的数值<br>而Object对象的键只能是字符串类型或者Symbol类型值；</p>
+<p>DES是一种对称加密算法，所谓对称加密算法即：加密和解密使用相同密钥的算法;<br>DES加密算法出自IBM的研究，后来被美国政府正式采用，之后开始广泛流传;<br>DES算法在POS、ATM、磁卡及智能卡（IC卡）、加油站、高速公路收费站等领域被广泛应用;</p>
 </blockquote>
-<h3 id="Object数据结构"><a href="#Object数据结构" class="headerlink" title="Object数据结构"></a>Object数据结构</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> test = &#123;&#125;;</span><br><span class="line">obj[test] = <span class="string">"say hi"</span>;</span><br><span class="line">obj[<span class="string">"say"</span>] = <span class="string">"say hello"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj)<span class="comment">//&#123;[object Object]: "say hi", say: "say hello"&#125;</span></span><br></pre></td></tr></table></figure>
+<p><code>注意</code>：<code>DES加密和解密过程中，密钥长度都必须是8(8个字节)的倍数</code></p>
+<p></p><p style="color:white;background:#0f88eb;padding:10px;border-radius:3px;font-weight:900">常见算法分类</p><br><strong>线性散列算法（签名算法）</strong><p></p>
+<p>例如MD5、SHA1、HMAC</p>
         
-          <a class="article-more-a" href="/2019/05/22/- es6 (1)/#more">more >></a>
+          <a class="article-more-a" href="/2019/05/22/- DES/#more">more >></a>
         
       
 
@@ -282,86 +284,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">加密</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- es6 (1)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-- canvas" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/22/- canvas/">canvas基础知识</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/22/- canvas/" class="archive-article-date">
-  	<time datetime="2019-05-22T10:40:42.133Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="canvas和svg的区别"><a href="#canvas和svg的区别" class="headerlink" title="canvas和svg的区别"></a>canvas和svg的区别</h1><p>Canvas是使用JavaScript程序绘图，SVG是使用XML文档描述来绘图；</p>
-<p>相对来说，SVG更时候用来做动态交互，而且SVG绘图很容易编辑，只需要增加或移除相应的元素就可以了；</p>
-<p>同事SVG是基于矢量的，所以无论放大或者缩小，图形的质量都不会受到影响，而Canvas是基于位图的图像，放大会失真；</p>
-<p>所以Canvas适合像素处理，动态渲染和大数据量绘制；SVG适合静态图片展示，高保真文档查看和打印的应用场景；<br>
-        
-          <a class="article-more-a" href="/2019/05/22/- canvas/#more">more >></a>
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">canvas</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DES</a>
         		</li>
       		
 		</ul>
@@ -371,7 +298,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/22/- canvas/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/22/- DES/">展开全文 >></a>
         </p>
       
 
@@ -455,6 +382,85 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/22/- class/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-- canvas" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/22/- canvas/">canvas基础知识</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/- canvas/" class="archive-article-date">
+  	<time datetime="2019-05-22T10:40:42.133Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="canvas和svg的区别"><a href="#canvas和svg的区别" class="headerlink" title="canvas和svg的区别"></a>canvas和svg的区别</h1><p>Canvas是使用JavaScript程序绘图，SVG是使用XML文档描述来绘图；</p>
+<p>相对来说，SVG更时候用来做动态交互，而且SVG绘图很容易编辑，只需要增加或移除相应的元素就可以了；</p>
+<p>同事SVG是基于矢量的，所以无论放大或者缩小，图形的质量都不会受到影响，而Canvas是基于位图的图像，放大会失真；</p>
+<p>所以Canvas适合像素处理，动态渲染和大数据量绘制；SVG适合静态图片展示，高保真文档查看和打印的应用场景；<br>
+        
+          <a class="article-more-a" href="/2019/05/22/- canvas/#more">more >></a>
+        
+      
+
+      
+    </p></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">canvas</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/22/- canvas/">展开全文 >></a>
         </p>
       
 
@@ -635,15 +641,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">TypeScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">加密</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">DES</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">TypeScript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -667,11 +673,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">路由</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+                <a href="javascript:void(0)" class="js-tag color2">select</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -679,11 +681,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">select</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">set</a>
+                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -695,11 +693,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">set</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">table</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
+                <a href="javascript:void(0)" class="js-tag color3">路由</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -711,19 +713,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">闭包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">async</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">闭包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -740,6 +738,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">class</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">作用域</a>
               </li>
             
             <div class="clearfix"></div>
